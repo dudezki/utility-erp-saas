@@ -1,6 +1,6 @@
 # Utility ERP landing and preview registration
 
-Public hosted landing for Philippine utility ERP. The signup flow stores name, email, company, selected preview package and applied voucher in hosted D1. Test voucher: 123456. No payment method, real ERP login, email delivery or live paid subscription is created.
+Public hosted landing for Philippine utility ERP. The signup flow stores first_name, last_name, optional middle_name/suffix, email, company_name, selected preview package and applied voucher in hosted D1. Test voucher: 123456. No payment method, real ERP login, email delivery or live paid subscription is created.
 
 ## Build and test
 
@@ -16,3 +16,5 @@ Only run db:generate after schema changes. Commit generated SQL and metadata; pu
 Source: public/ for UI, worker/ for server, db/schema.js for schema, drizzle/ for generated migrations. Build embeds static assets into dist/server/index.js. Preserve .openai/hosting.json's project identity, D1 binding and public audience. Never commit runtime database files, credentials or test submissions.
 
 Preview subscriptions are pre-platform records, not ERP tenants or production subscriptions. Repeated requests with the same request key/payload return the same receipt; separate test registrations can use the same email. No email is considered verified. Private registrations have no public list/read endpoint.
+
+Registration API and database columns use snake_case. First and last names are required for new requests. Migration 0001 preserves previously captured names in full_name without attempting automatic splitting; historic component fields remain null. New full_name values are display snapshots composed from the explicit components.

@@ -1,6 +1,6 @@
 import { sqliteTable, text, integer, uniqueIndex } from 'drizzle-orm/sqlite-core';
 export const registrations=sqliteTable('registrations',{
- id:text('id').primaryKey(),name:text('name').notNull(),email:text('email').notNull(),normalized_email:text('normalized_email').notNull(),company_name:text('company_name').notNull(),
+ id:text('id').primaryKey(),full_name:text('full_name').notNull(),first_name:text('first_name'),middle_name:text('middle_name'),last_name:text('last_name'),suffix:text('suffix'),email:text('email').notNull(),normalized_email:text('normalized_email').notNull(),company_name:text('company_name').notNull(),
  request_key:text('request_key').notNull(),request_fingerprint:text('request_fingerprint').notNull(),privacy_version:text('privacy_version').notNull(),created_at:text('created_at').notNull(),updated_at:text('updated_at').notNull(),deleted_at:text('deleted_at')
 },t=>[uniqueIndex('uq_registrations_request_key').on(t.request_key)]);
 export const previewSubscriptions=sqliteTable('preview_subscriptions',{

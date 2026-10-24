@@ -8,6 +8,13 @@
       "when": 1792861939456,
       "tag": "0000_tranquil_fixer",
       "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1792862726086,
+      "tag": "0001_neat_stellaris",
+      "breakpoints": true
     }
   ]
 }
