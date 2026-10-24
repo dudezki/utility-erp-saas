@@ -15,6 +15,13 @@
       "when": 1792862726086,
       "tag": "0001_neat_stellaris",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1792865409136,
+      "tag": "0002_tired_abomination",
+      "breakpoints": true
     }
   ]
 }

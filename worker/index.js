@@ -1,8 +1,10 @@
 import assets from '../.generated/assets.js';
 import {json,register} from './registration.js';
-const packages=JSON.parse(assets['/assets/catalog.json']).packages;
+import {handleCatalog,bootstrapCatalog} from './catalog.js';
 export default {async fetch(request,env){const path=new URL(request.url).pathname;
- if(path==='/api/registrations')return register(request,env,packages);
+ if(path==='/api/public/package-catalog'||path==='/assets/catalog.json')return handleCatalog(request,env);
+ if(path==='/api/admin/catalog/bootstrap')return bootstrapCatalog(request,env);
+ if(path==='/api/registrations')return register(request,env);
  if(path.startsWith('/api/'))return json({error:'Not found.'},404);
  if(!['GET','HEAD'].includes(request.method))return json({error:'Method not allowed.'},405);
  const key=path==='/'?'/index.html':path,body=assets[key];if(body===undefined)return new Response('Not found',{status:404});
