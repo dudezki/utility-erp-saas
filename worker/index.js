@@ -1,0 +1,11 @@
+import assets from '../.generated/assets.js';
+import {json,register} from './registration.js';
+const packages=JSON.parse(assets['/assets/catalog.json']).packages;
+export default {async fetch(request,env){const path=new URL(request.url).pathname;
+ if(path==='/api/registrations')return register(request,env,packages);
+ if(path.startsWith('/api/'))return json({error:'Not found.'},404);
+ if(!['GET','HEAD'].includes(request.method))return json({error:'Method not allowed.'},405);
+ const key=path==='/'?'/index.html':path,body=assets[key];if(body===undefined)return new Response('Not found',{status:404});
+ const type=key.endsWith('.css')?'text/css':key.endsWith('.js')?'text/javascript':key.endsWith('.json')?'application/json':'text/html';
+ return new Response(request.method==='HEAD'?null:body,{headers:{'content-type':type+'; charset=utf-8','x-content-type-options':'nosniff','referrer-policy':'same-origin','cache-control':'no-cache','content-security-policy':"default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self'; base-uri 'none'; form-action 'self'"}});
+}};

@@ -3,3 +3,10 @@ node_modules/
 .env.*
 *.log
 artifacts/
+
+.generated/
+dist/
+.wrangler/
+.sites-runtime/
+.dev.vars*
+outputs/
