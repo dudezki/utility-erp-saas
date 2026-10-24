@@ -1,0 +1,10 @@
+{
+  "source": "sample_catalog_fixture",
+  "status": "preview_not_database_connected",
+  "currency": "PHP",
+  "packages": [
+    {"id":"core-preview","name":"Core","badge":"THE FOUNDATION","featured":false,"summary":"A clear starting point for customers and service connections.","price":null,"modules":["People & company directory","Customer accounts","Premises & service connections","Basic operational reports"]},
+    {"id":"billing-preview","name":"Billing","badge":"THE SERVICE CYCLE","featured":true,"summary":"Connect metering, bill preparation, and the money coming in.","price":null,"modules":["Everything proposed in Core","Meter inventory & readings","Tariff configuration","Billing review & approval","Payments & account balances"]},
+    {"id":"operations-preview","name":"Operations","badge":"THE CONNECTED OPERATION","featured":false,"summary":"Coordinate the office, the field, and customer self-service.","price":null,"modules":["Everything proposed in Billing","Field work orders","Asset management","Customer portal","Operational reporting"]}
+  ]
+}
