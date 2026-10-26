@@ -1,6 +1,6 @@
 // Owned in-memory D1 verification; never connects to hosted storage or real providers.
 import assert from 'node:assert/strict';
-import {readFile,readdir} from 'node:fs/promises';
+import {readFile,readdir,mkdir} from 'node:fs/promises';
 import {Miniflare} from 'miniflare';
 const key='synthetic_solar_catalog_test_key_not_a_production_secret';
 const base='https://utility-erp-foundation-preview.lj-faderon.chatgpt.site';
@@ -40,6 +40,12 @@ try{
  assert.equal((await post(data)).status,200);
  await db.prepare('UPDATE package_listings SET is_public=1 WHERE id=?').bind(solar.package_listing_id).run();
  assert.equal((await mf.dispatchFetch(base+'/api/registrations')).status,405);
+ for(const path of ['/app-preview','/app-preview/','/app-preview/index.html']){
+  const response=await mf.dispatchFetch(base+path);assert.equal(response.status,200);assert.match(response.headers.get('content-security-policy'),/script-src 'self'/);assert.match(await response.text(),/Read-only design preview/);
+  const head=await mf.dispatchFetch(base+path,{method:'HEAD'});assert.equal(head.status,200);assert.equal(await head.text(),'');
+  assert.equal((await mf.dispatchFetch(base+path,{method:'POST'})).status,405);
+ }
+ assert.equal((await mf.dispatchFetch(base+'/app-preview/unknown')).status,404);
  console.log('PASS: isolated real D1 migrations, Core/Billing/Operations preservation, Solar16 planned modules, immutable version, pinned voucher signup/concurrent retry and withdrawal protection.');
  if(process.argv.includes('--browser')){
   const modulePath=process.argv[process.argv.indexOf('--playwright-module')+1];
@@ -62,9 +68,52 @@ try{
     await page.getByRole('heading',{name:'You’re registered.'}).waitFor();
     assert.ok((await page.locator('.receipt').innerText()).includes('Solar EPC & O&M'));
     assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+    const sampleLink=page.getByRole('link',{name:'Explore sample workspace'});
+    assert.equal(await sampleLink.getAttribute('href'),'/app-preview?package=solar-preview');
+    const requested=[];const errors=[];page.on('request',r=>requested.push(new URL(r.url()).pathname));page.on('pageerror',e=>errors.push(e.message));
+    await sampleLink.click();await page.getByRole('heading',{name:'Workspace overview',exact:true}).waitFor();
+    assert.equal(await page.locator('#workspace-select').inputValue(),'sample-solar');
+    assert.equal(await page.locator('#module-nav button.nav-button').count(),17);
+    assert.ok((await page.locator('.preview-banner').innerText()).includes('Synthetic data'));
+    assert.ok((await page.locator('.workspace-footer').innerText()).includes('planned'));
+    await page.getByRole('searchbox',{name:'Search sample records'}).fill('Acacia');
+    assert.equal(await page.locator('tbody tr').count(),1);
+    await page.getByRole('button',{name:'View Sample Acacia Residence',exact:true}).click();
+    await page.locator('#record-dialog').waitFor({state:'visible'});
+    assert.ok((await page.locator('#record-content').innerText()).includes('not associated with your registration'));
+    await page.keyboard.press('Escape');await page.locator('#record-dialog').waitFor({state:'hidden'});
+    await page.getByRole('searchbox',{name:'Search sample records'}).fill('no matching sample');
+    await page.getByRole('status').filter({hasText:'No sample records match'}).waitFor();
+    await page.getByRole('searchbox',{name:'Search sample records'}).fill('');
+    await page.getByRole('combobox',{name:'Filter sample stage'}).selectOption('Commissioning');assert.equal(await page.locator('tbody tr').count(),1);
+    await page.getByRole('combobox',{name:'Filter sample stage'}).selectOption('all');
+    if(viewport.width<800){
+     assert.equal(await page.locator('#sidebar').evaluate(e=>e.inert),true);
+     await page.locator('#menu-toggle').click();assert.equal(await page.locator('#sidebar').evaluate(e=>e.inert),false);
+     assert.ok(await page.locator('#sidebar').evaluate(e=>e.contains(document.activeElement)));
+     await page.keyboard.press('Escape');assert.equal(await page.locator('#sidebar').evaluate(e=>e.inert),true);
+     assert.equal(await page.evaluate(()=>document.activeElement.id),'menu-toggle');
+    }
+    const layout=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(e=>e.getBoundingClientRect().right>innerWidth+1).slice(0,8).map(e=>({tag:e.tagName,class:e.className,right:e.getBoundingClientRect().right}))}));
+    if(process.argv.includes('--screenshots')){const directory=process.argv[process.argv.indexOf('--screenshots')+1];await mkdir(directory,{recursive:true});await page.screenshot({path:directory+'/app-preview-'+viewport.width+'.png',fullPage:true});}
+    assert.ok(layout.scroll<=layout.width,JSON.stringify(layout));
+    for(const [code,count] of [['sample-core',5],['sample-billing',9],['sample-operations',13],['sample-solar',17]]){
+     await page.locator('#workspace-select').selectOption(code);assert.equal(await page.locator('#module-nav button.nav-button').count(),count);
+     if(code==='sample-core'){assert.ok(!(await page.locator('main').innerText()).includes('Reading review'));assert.ok(!(await page.locator('#module-nav').innerText()).includes('Meters & readings'));}
+     const target=page.locator('#module-nav button.nav-button').nth(1);if(viewport.width<800)await page.locator('#menu-toggle').click();
+     await target.click();assert.ok((await page.locator('h1').innerText()).length>0);
+    }
+    assert.ok(requested.every(path=>!path.startsWith('/api/')),'sample app never requests operational or registration APIs');assert.deepEqual(errors,[]);
+    assert.ok(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth));
+    await page.goto(local+'app-preview?package=%3Cscript%3E');await page.getByRole('heading',{name:'Workspace overview',exact:true}).waitFor();
+    assert.equal(await page.locator('#workspace-select').inputValue(),'sample-solar');
+    await page.route('**/app-preview/catalog.json',route=>route.fulfill({status:503,body:'Unavailable'}));await page.reload();
+    await page.getByRole('heading',{name:'Sample workspace unavailable'}).waitFor();
+    await page.unroute('**/app-preview/catalog.json');await page.getByRole('button',{name:'Try again'}).click();await page.getByRole('heading',{name:'Workspace overview',exact:true}).waitFor();
+    assert.ok(requested.every(path=>!path.startsWith('/api/')));assert.deepEqual(errors,[]);
     await page.close();
    }
   }finally{await browser.close();}
-  console.log('PASS: desktop/mobile Solar card, all16 inclusions, selected package and actual local voucher registration.');
+  console.log('PASS: desktop/mobile Solar card, all16 inclusions, selected package, actual local voucher registration and separate synthetic app navigation/filter/details/privacy.');
  }
 }finally{await mf.dispose();console.log('Disposed only the owned in-memory verification runtime.');}

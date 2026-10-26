@@ -1,0 +1,214 @@
+{
+  "packages": [
+    {
+      "code": "core-preview",
+      "name": "Core",
+      "version_code": "preview-v1",
+      "modules": [
+        {
+          "code": "party_directory",
+          "name": "People & company directory"
+        },
+        {
+          "code": "customer_accounts",
+          "name": "Customer accounts"
+        },
+        {
+          "code": "service_connections",
+          "name": "Premises & service connections"
+        },
+        {
+          "code": "basic_reports",
+          "name": "Basic operational reports"
+        }
+      ]
+    },
+    {
+      "code": "billing-preview",
+      "name": "Billing",
+      "version_code": "preview-v1",
+      "modules": [
+        {
+          "code": "party_directory",
+          "name": "People & company directory"
+        },
+        {
+          "code": "customer_accounts",
+          "name": "Customer accounts"
+        },
+        {
+          "code": "service_connections",
+          "name": "Premises & service connections"
+        },
+        {
+          "code": "basic_reports",
+          "name": "Basic operational reports"
+        },
+        {
+          "code": "metering",
+          "name": "Meter inventory & readings"
+        },
+        {
+          "code": "tariffs",
+          "name": "Tariff configuration"
+        },
+        {
+          "code": "billing",
+          "name": "Billing review & approval"
+        },
+        {
+          "code": "collections",
+          "name": "Payments & account balances"
+        }
+      ]
+    },
+    {
+      "code": "operations-preview",
+      "name": "Operations",
+      "version_code": "preview-v1",
+      "modules": [
+        {
+          "code": "party_directory",
+          "name": "People & company directory"
+        },
+        {
+          "code": "customer_accounts",
+          "name": "Customer accounts"
+        },
+        {
+          "code": "service_connections",
+          "name": "Premises & service connections"
+        },
+        {
+          "code": "basic_reports",
+          "name": "Basic operational reports"
+        },
+        {
+          "code": "metering",
+          "name": "Meter inventory & readings"
+        },
+        {
+          "code": "tariffs",
+          "name": "Tariff configuration"
+        },
+        {
+          "code": "billing",
+          "name": "Billing review & approval"
+        },
+        {
+          "code": "collections",
+          "name": "Payments & account balances"
+        },
+        {
+          "code": "work_orders",
+          "name": "Field work orders"
+        },
+        {
+          "code": "assets",
+          "name": "Asset management"
+        },
+        {
+          "code": "customer_portal",
+          "name": "Customer portal"
+        },
+        {
+          "code": "operational_reports",
+          "name": "Operational reporting"
+        }
+      ]
+    },
+    {
+      "code": "solar-preview",
+      "name": "Solar EPC & O&M",
+      "version_code": "solar-preview-v1",
+      "modules": [
+        {
+          "code": "party_directory",
+          "name": "People & company directory"
+        },
+        {
+          "code": "customer_accounts",
+          "name": "Customer accounts"
+        },
+        {
+          "code": "basic_reports",
+          "name": "Basic operational reports"
+        },
+        {
+          "code": "collections",
+          "name": "Payments & account balances"
+        },
+        {
+          "code": "work_orders",
+          "name": "Field work orders"
+        },
+        {
+          "code": "assets",
+          "name": "Asset management"
+        },
+        {
+          "code": "customer_portal",
+          "name": "Customer portal"
+        },
+        {
+          "code": "operational_reports",
+          "name": "Operational reporting"
+        },
+        {
+          "code": "solar_commercial",
+          "name": "Solar sales, proposals & project contracts"
+        },
+        {
+          "code": "solar_site_surveys",
+          "name": "Solar site surveys & load assessment"
+        },
+        {
+          "code": "solar_engineering",
+          "name": "PV / battery engineering & design reviews"
+        },
+        {
+          "code": "solar_procurement",
+          "name": "Solar BOM, procurement & serial inventory"
+        },
+        {
+          "code": "solar_projects",
+          "name": "Solar installation, QA & commissioning"
+        },
+        {
+          "code": "solar_interconnection",
+          "name": "Solar permits & grid-connection workflow"
+        },
+        {
+          "code": "solar_monitoring",
+          "name": "Read-only solar monitoring & performance"
+        },
+        {
+          "code": "solar_service",
+          "name": "Solar O&M, warranty & service contracts"
+        }
+      ]
+    }
+  ],
+  "workspaces": [
+    {
+      "code": "sample-core",
+      "name": "Sample Harbor Utility",
+      "package_code": "core-preview"
+    },
+    {
+      "code": "sample-billing",
+      "name": "Sample River Electric",
+      "package_code": "billing-preview"
+    },
+    {
+      "code": "sample-operations",
+      "name": "Sample Coast Operations",
+      "package_code": "operations-preview"
+    },
+    {
+      "code": "sample-solar",
+      "name": "Sample Sunfield Solar",
+      "package_code": "solar-preview"
+    }
+  ]
+}

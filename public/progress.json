@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T22:14:39+08:00",
+  "data_as_of": "2026-10-27T01:36:38+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-26T22:15:28+08:00",
+  "published_snapshot_at": "2026-10-27T01:36:38+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -367,22 +367,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T22:15:25+08:00",
-    "summary": "P3-M3 owner-only timezone-aware flat-energy tariff eligibility implemented and verified.",
+    "observed_at": "2026-10-27T01:36:38+08:00",
+    "summary": "Separate synthetic tenant-app walkthrough delivered after CEO registration/app-UI feedback.",
     "completed": [
-      "Selected local dates resolve through the locked tenant timezone to one complete live assignment and published immutable synthetic PHP/kWh version.",
-      "Electric-only parent, exact context, missing/partial coverage and unsupported boundary checks preserve exact rates, revision strings and publication timestamps.",
-      "Tariffs reaches40% for the explicitly scoped schema/rules milestone; billing remains0%. Next selected is authoritative effective-reading boundary composition."
+      "A separate app layout offers Core, Billing, Operations and Solar sample workspaces with package-specific navigation, search, stage filters and sample record details.",
+      "Website and registration receipt open the sample app using only an allowlisted public package code; no private registration data is transferred.",
+      "All sample screens are read-only design previews. Operational milestone percentages remain unchanged: tariffs40%, billing0%."
     ],
     "verification": [
-      "Stable final disposable migration/SQL replay passed; real lock waits verified stale-assignment rejection, suspended human context denial and pinned timezone through caller commit.",
-      "96 backend cases including the250-case arithmetic oracle passed; subscription demo through0028 retains Core4/Billing8/Operations12/provider0.",
-      "Review found and fixed non-electric service-point eligibility; implementationefc8f85."
+      "21 website cases/build passed; isolated actual D1 registration, immutable catalog/retry and existing package preservation checks passed.",
+      "Desktop1440/mobile390 browser checks passed the registration-to-app link, all package menus, search/filter/details, keyboard drawer, error recovery, no operational API calls and no page overflow.",
+      "Implementationb4d8e06; review/QA fixed Core package scope, offscreen keyboard navigation and mobile grid overflow."
     ],
     "limitations": [
-      "Owner-only trusted workflow: no protected API, production identity or billing authority is introduced.",
-      "This selects a tariff for an explicit period; it does not load readings, persist calculations/review or issue a bill.",
-      "Prototype rejects AD-external calendar ranges and timezone offset transitions within24h of selected boundaries; no approved real tariff, tax or proration is invented."
+      "This public walkthrough uses fictional records and does not activate an ERP tenant, login, subscription entitlement or operational workflow.",
+      "Solar capacities and workflow states are illustrative, not an engineering assessment or production integration.",
+      "Private app authentication and persistent workflows remain in the phased roadmap; no PostgreSQL connection or private rows are exposed to the Site."
     ],
     "next_selected": "P3-M3 authoritative effective-reading boundary snapshot composition, then immutable calculation persistence and distinct review.",
     "blocker": null
