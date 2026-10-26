@@ -27,7 +27,7 @@
       "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
     ]
   },
-  "published_snapshot_at": "2026-10-26T10:08:13+08:00",
+  "published_snapshot_at": "2026-10-26T10:14:03+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -249,5 +249,27 @@
       "is_current_priority": false,
       "current_or_next_work": "Queued; researched package scope only"
     }
-  ]
+  ],
+  "latest_update": {
+    "observed_at": "2026-10-26T10:14:03+08:00",
+    "summary": "Solar EPC & O&M preview package is publicly selectable.",
+    "completed": [
+      "Added an immutable Solar preview version with8 shared and8 solar-specific planned module inclusions.",
+      "Published research-backed solar lifecycle and P4/P5 implementation milestones.",
+      "Expanded progress reporting to20 modules; all8 new solar operational modules remain0%."
+    ],
+    "verification": [
+      "18 website test cases passed.",
+      "Owned D1 migration preserved existing package versions and a saved registration; desktop/mobile Solar signup passed.",
+      "Anonymous hosted catalog shows4 packages; existing package/listing IDs unchanged.",
+      "Synthetic hosted Solar signup returned201 and identical retry200 with a pinned16-module snapshot."
+    ],
+    "limitations": [
+      "Preview registration does not create an ERP login or activate operational modules.",
+      "Commercial prices and real design/inverter integrations are not configured.",
+      "Standards-informed planning is not engineering certification or regulatory approval."
+    ],
+    "next_selected": "P3-M2 protected ordered-ingestion API; Solar operational delivery queued under P4-SOL1–4/P5-SOL.",
+    "blocker": null
+  }
 }

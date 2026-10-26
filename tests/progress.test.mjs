@@ -10,9 +10,10 @@ test('public progress is independently readable without database/auth bindings',
  const data=await r.json();assert.ok(data.modules.length>=12);assert.equal(new Set(data.modules.map(m=>m.module_code)).size,data.modules.length);assert.equal(data.modules.filter(m=>m.is_current_priority).length,1);
  assert.equal(data.progress_basis.is_production_readiness,false);
  for(const module of data.modules)assert.equal(module.completion_percent,module.completed_checkpoints.length*20);
+ assert.equal(typeof data.latest_update.summary,'string');assert.ok(Array.isArray(data.latest_update.verification));
  assert.ok(data.data_as_of);assert.ok(data.published_snapshot_at);
  assert.equal(data.evidence,undefined);assert.equal(data.registrations,undefined);assert.equal(data.subscriptions,undefined);
- assert.deepEqual(Object.keys(data).sort(),['schema_version','project_name','data_as_of','timezone','current_phase','current_milestone','current_work_state','current_priority','progress_basis','published_snapshot_at','source_url','update_policy','modules'].sort());
+ assert.deepEqual(Object.keys(data).sort(),['schema_version','project_name','data_as_of','timezone','current_phase','current_milestone','current_work_state','current_priority','progress_basis','published_snapshot_at','source_url','update_policy','modules','latest_update'].sort());
 });
 test('progress permits only GET/HEAD and has no public update operation',async()=>{
  assert.equal((await serveProgress(new Request('https://example.invalid/progress.json',{method:'HEAD'}),body).text()),'');
