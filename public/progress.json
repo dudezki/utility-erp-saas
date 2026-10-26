@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-27T01:36:38+08:00",
+  "data_as_of": "2026-10-27T02:14:50+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "authoritative effective-reading boundary snapshots",
+  "current_priority": "immutable full calculation persistence and deterministic retry",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-27T01:36:38+08:00",
+  "published_snapshot_at": "2026-10-27T02:15:05+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -123,7 +123,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "authoritative effective-reading boundary snapshots"
+      "current_or_next_work": "immutable full calculation persistence and deterministic retry"
     },
     {
       "module_code": "collections",
@@ -367,24 +367,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-27T01:36:38+08:00",
-    "summary": "Separate synthetic tenant-app walkthrough delivered after CEO registration/app-UI feedback.",
+    "observed_at": "2026-10-27T02:14:50+08:00",
+    "summary": "P3-M3 authoritative meter-reading inputs now compose with eligible synthetic tariffs; immutable calculation persistence is next.",
     "completed": [
-      "A separate app layout offers Core, Billing, Operations and Solar sample workspaces with package-specific navigation, search, stage filters and sample record details.",
-      "Website and registration receipt open the sample app using only an allowlisted public package code; no private registration data is transferred.",
-      "All sample screens are read-only design previews. Operational milestone percentages remain unchanged: tariffs40%, billing0%."
+      "Owner-only loader selects one full-period installation and exact effective cumulative kWh boundaries for an agreement and explicit register.",
+      "Exact decimal values, original raw/validation facts, source correction provenance and financial/physical revisions are retained in transient calculator-ready inputs.",
+      "Missing evidence, unsupported timestamp precision, unavailable sources and periods spanning replacements fail closed. No operational module gate changes: tariffs40%, billing0%."
     ],
     "verification": [
-      "21 website cases/build passed; isolated actual D1 registration, immutable catalog/retry and existing package preservation checks passed.",
-      "Desktop1440/mobile390 browser checks passed the registration-to-app link, all package menus, search/filter/details, keyboard drawer, error recovery, no operational API calls and no page overflow.",
-      "Implementationb4d8e06; review/QA fixed Core package scope, offscreen keyboard navigation and mobile grid overflow."
+      "Implementation9bf65db; independent review found no material issue. New disposable SQL checks and96 backend cases pass.",
+      "Real PostgreSQL inputs feed the exact-decimal calculator successfully; observed correction/application and register mutation waits verify fresh effective values and retained source locking.",
+      "All11 integrated foundation stages passed on final migration bytes: history/application, SQL policies, clean install, atomicity, backend contracts, tariff/snapshot/reading concurrency, actual ingestion and private HTTP PostgreSQL authorization. 21 website cases passed."
     ],
     "limitations": [
-      "This public walkthrough uses fictional records and does not activate an ERP tenant, login, subscription entitlement or operational workflow.",
-      "Solar capacities and workflow states are illustrative, not an engineering assessment or production integration.",
-      "Private app authentication and persistent workflows remain in the phased roadmap; no PostgreSQL connection or private rows are exposed to the Site."
+      "Inputs remain transient under caller transaction locks; no saved calculation, distinct review, protected billing API or issued invoice is delivered.",
+      "All rates/readings used for validation are synthetic. Existing public sample app remains a read-only design walkthrough and registration does not create ERP login.",
+      "No private registration/tenant data or PostgreSQL connection is exposed to the public Site."
     ],
-    "next_selected": "P3-M3 authoritative effective-reading boundary snapshot composition, then immutable calculation persistence and distinct review.",
+    "next_selected": "P3-M3 immutable full calculation persistence with deterministic retry, then distinct review.",
     "blocker": null
   }
 }
