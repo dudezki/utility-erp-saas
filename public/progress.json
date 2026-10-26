@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-27T02:14:50+08:00",
+  "data_as_of": "2026-10-27T07:07:35+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "immutable full calculation persistence and deterministic retry",
+  "current_priority": "immutable distinct-human calculation review",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-27T02:15:05+08:00",
+  "published_snapshot_at": "2026-10-27T07:07:35+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -123,7 +123,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "immutable full calculation persistence and deterministic retry"
+      "current_or_next_work": "immutable distinct-human calculation review"
     },
     {
       "module_code": "collections",
@@ -367,24 +367,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-27T02:14:50+08:00",
-    "summary": "P3-M3 authoritative meter-reading inputs now compose with eligible synthetic tariffs; immutable calculation persistence is next.",
+    "observed_at": "2026-10-27T07:07:35+08:00",
+    "summary": "P3-M3 now saves immutable synthetic calculation inputs and results with authoritative verification and safe retries.",
     "completed": [
-      "Owner-only loader selects one full-period installation and exact effective cumulative kWh boundaries for an agreement and explicit register.",
-      "Exact decimal values, original raw/validation facts, source correction provenance and financial/physical revisions are retained in transient calculator-ready inputs.",
-      "Missing evidence, unsupported timestamp precision, unavailable sources and periods spanning replacements fail closed. No operational module gate changes: tariffs40%, billing0%."
+      "Complete authoritative reading/tariff inputs and exact calculation results are saved as immutable tenant-owned attempts with original actor/system attribution and audit.",
+      "New saves reload and compare current sources under transaction locks, independently check exact arithmetic and reject stale or forged facts.",
+      "Identical concurrent retries return one original receipt/audit; changed requests conflict. Historical replay requires the original still-authorized identity."
     ],
     "verification": [
-      "Implementation9bf65db; independent review found no material issue. New disposable SQL checks and96 backend cases pass.",
-      "Real PostgreSQL inputs feed the exact-decimal calculator successfully; observed correction/application and register mutation waits verify fresh effective values and retained source locking.",
-      "All11 integrated foundation stages passed on final migration bytes: history/application, SQL policies, clean install, atomicity, backend contracts, tariff/snapshot/reading concurrency, actual ingestion and private HTTP PostgreSQL authorization. 21 website cases passed."
+      "Implementation51296be; targeted SQL and real PostgreSQL→TypeScript→save/concurrent-retry checks pass.",
+      "33 full-result SQL/TypeScript arithmetic cases passed, including synthetic half-cent edges, zero/scales, tiny rates and128-digit extremes.",
+      "All12 integrated foundation stages passed on final migration bytes, including history/policies/clean install/atomicity, backend contracts, tariff/snapshot/calculation/reading concurrency, actual ingestion and private HTTP PostgreSQL authorization."
     ],
     "limitations": [
-      "Inputs remain transient under caller transaction locks; no saved calculation, distinct review, protected billing API or issued invoice is delivered.",
-      "All rates/readings used for validation are synthetic. Existing public sample app remains a read-only design walkthrough and registration does not create ERP login.",
-      "No private registration/tenant data or PostgreSQL connection is exposed to the public Site."
+      "Saved calculation attempts are not reviewed, approved or issued invoices. Distinct review, protected billing API and operational UI remain pending.",
+      "Different request keys can preserve separate attempts; duplicate issued-bill prevention remains in the later invoice workflow.",
+      "All verification uses synthetic data. Public registration/sample app and private PostgreSQL remain separate; no private records or credentials are published."
     ],
-    "next_selected": "P3-M3 immutable full calculation persistence with deterministic retry, then distinct review.",
+    "next_selected": "P3-M3 immutable distinct-human calculation review, then protected API and separate tenant-app workflow.",
     "blocker": null
   }
 }
