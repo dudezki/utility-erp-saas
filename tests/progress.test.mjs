@@ -39,3 +39,12 @@ test('package stats match the canonical catalog and scoped module evidence',asyn
   assert.deepEqual(p.current_priority_modules,members.filter(m=>m.is_current_priority).map(m=>m.module_code));
  }
 });
+
+
+test('current phase and milestone match the selected module and readable page',async()=>{
+ const data=JSON.parse(body);const active=data.modules.find(m=>m.is_current_priority);
+ const scope=/P([1-9][0-9]*)-M([1-9][0-9]*)/.exec(active.milestone_scope);
+ assert.ok(scope);assert.equal(data.current_phase,Number(scope[1]));assert.equal(data.current_milestone,`P${scope[1]}-M${scope[2]}`);
+ const html=await readFile(new URL('../public/progress.html',import.meta.url),'utf8');
+ assert.ok(html.includes(`Phase ${data.current_phase} / ${data.current_milestone}.`));
+});

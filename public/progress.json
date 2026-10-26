@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T16:19:34+08:00",
+  "data_as_of": "2026-10-26T17:17:56+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
-  "current_milestone": "P3-M2",
+  "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "integrated P3-M2 acceptance and handoff",
+  "current_priority": "parameterized exact-decimal calculator and complete-boundary tests",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -24,10 +24,10 @@
       "100% for customer_accounts and service_connections covers their read-foundation milestone, not full CRUD or production login.",
       "No overall average is supplied because milestone scopes differ.",
       "No historical trend or completion-date estimate is supplied.",
-      "Initial direct-grant metering API and local CSV preview UI are verified; milestone acceptance and production identity remain pending."
+      "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-26T16:19:34+08:00",
+  "published_snapshot_at": "2026-10-26T17:17:57+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,16 +90,17 @@
       "module_code": "metering",
       "module_name": "Metering and readings",
       "milestone_scope": "P3-M2 initial import workflow",
-      "completion_percent": 80,
+      "completion_percent": 100,
       "completed_checkpoints": [
         "Schema",
         "rules",
         "API",
-        "UI"
+        "UI",
+        "acceptance"
       ],
-      "milestone_status": "in_progress",
-      "is_current_priority": true,
-      "current_or_next_work": "integrated P3-M2 acceptance and handoff"
+      "milestone_status": "complete",
+      "is_current_priority": false,
+      "current_or_next_work": "Accepted development prototype; production limits retained"
     },
     {
       "module_code": "tariffs",
@@ -108,8 +109,8 @@
       "completion_percent": 0,
       "completed_checkpoints": [],
       "milestone_status": "queued",
-      "is_current_priority": false,
-      "current_or_next_work": "Queued after P3-M2"
+      "is_current_priority": true,
+      "current_or_next_work": "parameterized exact-decimal calculator and complete-boundary tests"
     },
     {
       "module_code": "billing",
@@ -119,7 +120,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": false,
-      "current_or_next_work": "Queued after P3-M2"
+      "current_or_next_work": "Queued after demonstration calculator foundation"
     },
     {
       "module_code": "collections",
@@ -290,11 +291,11 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 3,
+      "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 4,
       "current_priority_modules": [
-        "metering"
+        "tariffs"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -320,11 +321,11 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 3,
+      "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 8,
       "current_priority_modules": [
-        "metering"
+        "tariffs"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -363,24 +364,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T16:19:34+08:00",
-    "summary": "P3-M2 CSV import and private preview UI verified; scoped initial-import workflow advances to80%.",
+    "observed_at": "2026-10-26T17:17:56+08:00",
+    "summary": "P3-M2 development prototype accepted; initial-import scope100%. P3-M3 demonstration billing selected.",
     "completed": [
-      "Strict bounded UTF-8 CSV parser preserves exact string values and rejects structural failures without partial rows.",
-      "Separate local tenant-app upload preview provides safe text rendering, frozen identical-payload retries and guarded uncertain-outcome reset.",
-      "Schema, rules, protected API and preview UI gates now complete for the named initial-import workflow."
+      "Fresh integrated acceptance and independent review close the metering-input development prototype with explicit limits.",
+      "All five named initial-import gates complete; this does not mean full production metering.",
+      "P3-M3 design prepared for parameterized exact-decimal calculations with complete boundary checks; module gates remain0%."
     ],
     "verification": [
-      "85 backend cases passed, including8 CSV cases and expanded private asset allowlist.",
-      "Desktop/mobile browser checks passed real default401 plus controlled synthetic receipt, retry, size, stale-read and responsive-layout cases.",
-      "Parsed CSV passed through actual private HTTP/restricted PostgreSQL: exact accepted decimals, quarantine, receipt retry, revocation and lock-wait expiry. Implementation1a4bdc5."
+      "All9 integrated foundation stages passed, including85 backend cases and actual CSV/HTTP/restricted PostgreSQL retry, revocation and expiry checks.",
+      "Desktop/mobile import browser checks passed; successful browser receipt responses were controlled synthetic fixtures.",
+      "Separate subscription checks retain Core4/Billing8/Operations12/provider0. Acceptance commit94c9a6a."
     ],
     "limitations": [
-      "80% measures named prototype gates; milestone acceptance and production identity remain pending.",
-      "Browser success receipts used controlled synthetic responses; real database/API integration was verified independently.",
-      "Direct grants only; coarse database locks and uncertain disconnect receipts remain explicit prototype limits."
+      "Phase3 remains open; no approved tariff, production login, issued bill or payment capability is delivered.",
+      "Direct-only import grants, coarse locks, one correction application per chain and deferred full CRUD/correction UI remain prototype limits.",
+      "Missing predecessor rejection is not billing-period completeness; P3-M3 must refuse absent/ambiguous period boundaries."
     ],
-    "next_selected": "P3-M2 integrated milestone acceptance, reconciliation and handoff; then select P3-M3 demonstration tariff/billing.",
+    "next_selected": "P3-M3 parameterized exact-decimal demonstration calculator and synthetic arithmetic/boundary tests.",
     "blocker": null
   }
 }
