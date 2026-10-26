@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T18:07:03+08:00",
+  "data_as_of": "2026-10-26T20:09:52+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "synthetic tariff versions and immutable publication",
+  "current_priority": "authoritative tariff eligibility and calculation snapshots",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-26T18:07:04+08:00",
+  "published_snapshot_at": "2026-10-26T20:11:04+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -106,11 +106,13 @@
       "module_code": "tariffs",
       "module_name": "Tariffs",
       "milestone_scope": "P3-M3 demonstration tariffs",
-      "completion_percent": 0,
-      "completed_checkpoints": [],
-      "milestone_status": "queued",
+      "completion_percent": 20,
+      "completed_checkpoints": [
+        "Schema"
+      ],
+      "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "synthetic tariff versions and immutable publication"
+      "current_or_next_work": "authoritative tariff eligibility and calculation snapshots"
     },
     {
       "module_code": "billing",
@@ -292,8 +294,8 @@
       ],
       "module_count": 8,
       "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 4,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 3,
       "current_priority_modules": [
         "tariffs"
       ],
@@ -322,8 +324,8 @@
       ],
       "module_count": 12,
       "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 8,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 7,
       "current_priority_modules": [
         "tariffs"
       ],
@@ -364,24 +366,25 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T18:07:03+08:00",
-    "summary": "P3-M3 first exact-decimal synthetic energy calculator implemented and verified.",
+    "observed_at": "2026-10-26T20:11:03+08:00",
+    "summary": "P3-M3 synthetic tariff schema implemented with immutable published versions and exact flat-energy components.",
     "completed": [
-      "Pure parameterized calculation preserves exact usage, unrounded charges and half-up PHP minor-unit strings without floating-point money.",
-      "Strict supplied-snapshot checks reject missing/mismatched boundaries, cross-installation periods, invalid provenance and unsupported tariff metadata.",
-      "No rates are published and no invoice, authentication or persistence path is introduced."
+      "Private tenant-owned tariffs, versions and components preserve UUIDv7 identities, lifecycle/audit and read-only isolation.",
+      "Publication requires one active synthetic PHP/kWh component; published facts are immutable and half-open effective periods cannot overlap.",
+      "Tariff schema checkpoint is20%; billing remains0% pending authoritative snapshots and review."
     ],
     "verification": [
-      "96 backend cases passed, including10 targeted calculator cases and an independent250-case integer rounding/equivalent-scale oracle.",
-      "Review tightened installation-boundary kind checks; immutable input and exact values beyond JS integer precision verified.",
-      "Implementation28b10f6; no SQL migration or persistent data changed."
+      "Disposable clean install and SQL policies passed, including exact decimals, publication/history, effectivity, audit and tenant isolation.",
+      "Observed PostgreSQL lock waits verified component removal blocks publication and publication blocks later rate editing; stale isolation rejected.",
+      "96 backend cases and independent250-case arithmetic oracle passed; subscription demo remains Core4/Billing8/Operations12/provider0.",
+      "Implementation59f1bc0; no earlier migration changed and no tariff rate seeded."
     ],
     "limitations": [
-      "This is pure calculation on a trusted supplied snapshot, not proof of database freshness, publication or actual billing-period completeness.",
-      "Tariff/billing gates remain0%; one verified component does not complete full module gates.",
-      "No approved tariff, public calculator endpoint, issued bill, payment or production login is delivered."
+      "Owner/bootstrap schema only: no tariff writer API, production identity or billing authority introduced.",
+      "Only synthetic flat-energy PHP/kWh; no approved tariff, tax, proration, invoice or payment.",
+      "Published effectivity cannot be shortened; explicitly bounded versions required for prototype replacement."
     ],
-    "next_selected": "P3-M3 tenant-owned synthetic tariffs and immutable published versions/components with effectivity rules.",
+    "next_selected": "P3-M3 authoritative agreement/period/tariff eligibility and source-backed immutable calculation snapshots, then distinct review.",
     "blocker": null
   }
 }
