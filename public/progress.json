@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T12:05:14+08:00",
+  "data_as_of": "2026-10-26T13:04:23+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M2",
@@ -27,7 +27,7 @@
       "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
     ]
   },
-  "published_snapshot_at": "2026-10-26T12:05:14+08:00",
+  "published_snapshot_at": "2026-10-26T13:04:23+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -361,21 +361,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T12:05:14+08:00",
-    "summary": "P3-M2 bounded reading-import transport decoder implemented and verified.",
+    "observed_at": "2026-10-26T13:04:23+08:00",
+    "summary": "P3-M2 private reading-import HTTP boundary implemented with default-deny behavior.",
     "completed": [
-      "Strict import envelopes reject client-supplied tenant/actor fields and unsupported encoded payloads.",
-      "Streaming byte limits, strict UTF-8 and exact raw-row preservation support the future ingestion boundary."
+      "Verified identity precedes body decoding; only server-owned actor and route tenant reach the command interface.",
+      "Bounded receipt DTO and safe error codes exclude raw rows and internal diagnostics.",
+      "Review fixed coercible non-string UUID values; regression coverage added."
     ],
     "verification": [
-      "56 backend cases passed, including6 new transport checks and existing loopback regressions.",
-      "Implementation commit788ab3c; no database migrations or privileges changed."
+      "66 backend cases passed, including real loopback default401 and unconfigured503 checks.",
+      "Implementation7f2d51e; existing local database container healthy with no published port."
     ],
     "limitations": [
-      "Decoder is not yet wired to a route, authorization transaction or database writer.",
-      "Metering remains40% scoped milestones; CSV upload and API acceptance remain pending."
+      "No database writer implementation or writable loopback flow yet; role, scope and transaction integration remain pending.",
+      "Metering stays40% scoped milestones; operational readiness is not claimed."
     ],
-    "next_selected": "P3-M2 verified-principal ingestion handler and narrow transaction writer with fresh module, permission and record-scope checks.",
+    "next_selected": "P3-M2 narrow-role PostgreSQL ingestion writer with fresh atomic module/permission/record-scope checks, then bounded HTTP stream forwarding.",
     "blocker": null
   }
 }
