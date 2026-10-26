@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T21:30:37+08:00",
+  "data_as_of": "2026-10-26T22:14:39+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "timezone-aware authoritative tariff eligibility loader",
+  "current_priority": "authoritative effective-reading boundary snapshots",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-26T21:30:38+08:00",
+  "published_snapshot_at": "2026-10-26T22:15:28+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -105,14 +105,15 @@
     {
       "module_code": "tariffs",
       "module_name": "Tariffs",
-      "milestone_scope": "P3-M3 demonstration tariffs",
-      "completion_percent": 20,
+      "milestone_scope": "P3-M3 flat-energy tariff eligibility",
+      "completion_percent": 40,
       "completed_checkpoints": [
-        "Schema"
+        "Schema",
+        "rules"
       ],
       "milestone_status": "in_progress",
-      "is_current_priority": true,
-      "current_or_next_work": "timezone-aware authoritative tariff eligibility loader"
+      "is_current_priority": false,
+      "current_or_next_work": "Verified owner-only eligibility; protected API and preview UI pending"
     },
     {
       "module_code": "billing",
@@ -121,8 +122,8 @@
       "completion_percent": 0,
       "completed_checkpoints": [],
       "milestone_status": "queued",
-      "is_current_priority": false,
-      "current_or_next_work": "Calculator component verified; persisted snapshots/review remain pending"
+      "is_current_priority": true,
+      "current_or_next_work": "authoritative effective-reading boundary snapshots"
     },
     {
       "module_code": "collections",
@@ -297,7 +298,7 @@
       "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 3,
       "current_priority_modules": [
-        "tariffs"
+        "billing"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -327,7 +328,7 @@
       "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 7,
       "current_priority_modules": [
-        "tariffs"
+        "billing"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -366,25 +367,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T21:30:37+08:00",
-    "summary": "P3-M3 dated synthetic agreement-to-tariff assignments implemented and verified.",
+    "observed_at": "2026-10-26T22:15:25+08:00",
+    "summary": "P3-M3 owner-only timezone-aware flat-energy tariff eligibility implemented and verified.",
     "completed": [
-      "Private same-tenant tariff assignments use finite half-open calendar dates, nonoverlap, UUIDv7, controlled lifecycle and audit.",
-      "Agreement-date changes cannot strand live assignments; concurrent assignment/date mutations serialize and recheck committed bounds.",
-      "Tariffs remains20% for its schema checkpoint; billing remains0% pending authoritative eligibility, snapshots and review."
+      "Selected local dates resolve through the locked tenant timezone to one complete live assignment and published immutable synthetic PHP/kWh version.",
+      "Electric-only parent, exact context, missing/partial coverage and unsupported boundary checks preserve exact rates, revision strings and publication timestamps.",
+      "Tariffs reaches40% for the explicitly scoped schema/rules milestone; billing remains0%. Next selected is authoritative effective-reading boundary composition."
     ],
     "verification": [
-      "Disposable clean install/all SQL and final assignment regressions passed, including stale-snapshot parent-date rejection.",
-      "Observed PostgreSQL lock waits verified both containment mutation orders and one live binding under competing overlaps.",
-      "96 backend cases including the250-case arithmetic oracle passed; implementationff721ac.",
-      "Existing expiry verifier timing fixed in abe7689: nonblocking lock observation and database-clock lease expiry pass, with production timeouts unchanged."
+      "Stable final disposable migration/SQL replay passed; real lock waits verified stale-assignment rejection, suspended human context denial and pinned timezone through caller commit.",
+      "96 backend cases including the250-case arithmetic oracle passed; subscription demo through0028 retains Core4/Billing8/Operations12/provider0.",
+      "Review found and fixed non-electric service-point eligibility; implementationefc8f85."
     ],
     "limitations": [
-      "Calendar assignment dates do not select a published tariff version or establish a complete billing period.",
-      "No rate seeded, protected writer/API, production identity, approved tariff, invoice or payment introduced.",
-      "A future loader must pin tenant timezone and explicitly resolve local dates to UTC, then reject absent or partial version coverage."
+      "Owner-only trusted workflow: no protected API, production identity or billing authority is introduced.",
+      "This selects a tariff for an explicit period; it does not load readings, persist calculations/review or issue a bill.",
+      "Prototype rejects AD-external calendar ranges and timezone offset transitions within24h of selected boundaries; no approved real tariff, tax or proration is invented."
     ],
-    "next_selected": "P3-M3 timezone-aware authoritative agreement/period/tariff eligibility loader, then immutable source-backed calculation snapshots and distinct review.",
+    "next_selected": "P3-M3 authoritative effective-reading boundary snapshot composition, then immutable calculation persistence and distinct review.",
     "blocker": null
   }
 }
