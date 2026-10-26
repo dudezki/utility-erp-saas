@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T13:04:23+08:00",
+  "data_as_of": "2026-10-26T14:12:46+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M2",
   "current_work_state": "next_selected",
-  "current_priority": "protected ordered-ingestion API; then upload UI/acceptance",
+  "current_priority": "bounded HTTP stream/writer integration; then upload UI/acceptance",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
     ]
   },
-  "published_snapshot_at": "2026-10-26T13:04:23+08:00",
+  "published_snapshot_at": "2026-10-26T14:12:46+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -97,7 +97,7 @@
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "protected ordered-ingestion API; then upload UI/acceptance"
+      "current_or_next_work": "bounded HTTP stream/writer integration; then upload UI/acceptance"
     },
     {
       "module_code": "tariffs",
@@ -361,22 +361,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T13:04:23+08:00",
-    "summary": "P3-M2 private reading-import HTTP boundary implemented with default-deny behavior.",
+    "observed_at": "2026-10-26T14:12:46+08:00",
+    "summary": "P3-M2 purpose-limited PostgreSQL reading ingestion writer implemented and verified.",
     "completed": [
-      "Verified identity precedes body decoding; only server-owned actor and route tenant reach the command interface.",
-      "Bounded receipt DTO and safe error codes exclude raw rows and internal diagnostics.",
-      "Review fixed coercible non-string UUID values; regression coverage added."
+      "New narrow database role executes only authorized imports; existing read-only role remains unchanged.",
+      "Direct tenant/register grants and current synthetic metering entitlements are checked atomically with writes and retries.",
+      "Fresh post-wait and final checks roll back imports when authority expires."
     ],
     "verification": [
-      "66 backend cases passed, including real loopback default401 and unconfigured503 checks.",
-      "Implementation7f2d51e; existing local database container healthy with no published port."
+      "All9 integrated foundation stages passed, including71 backend cases and real restricted PostgreSQL/API receipt, retry, revocation and lock-wait expiry checks.",
+      "Additive migration0025 applied through checksummed history; separate subscription demo retains Core4/Billing8/Operations12/provider0.",
+      "Implementation commit7b86a02."
     ],
     "limitations": [
-      "No database writer implementation or writable loopback flow yet; role, scope and transaction integration remain pending.",
-      "Metering stays40% scoped milestones; operational readiness is not claimed."
+      "Direct grants only; assignment-based writes remain denied. Coarse authority locks are a prototype contention limit.",
+      "Private listener streaming/writer composition, upload UI and milestone acceptance remain pending; metering stays40%."
     ],
-    "next_selected": "P3-M2 narrow-role PostgreSQL ingestion writer with fresh atomic module/permission/record-scope checks, then bounded HTTP stream forwarding.",
+    "next_selected": "P3-M2 bounded private HTTP request streaming and narrow-writer composition, then CSV/upload presentation and acceptance.",
     "blocker": null
   }
 }
