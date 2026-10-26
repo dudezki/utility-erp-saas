@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T14:12:46+08:00",
+  "data_as_of": "2026-10-26T15:13:22+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M2",
   "current_work_state": "next_selected",
-  "current_priority": "bounded HTTP stream/writer integration; then upload UI/acceptance",
+  "current_priority": "bounded CSV tokenizer and private upload UI; then acceptance",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -24,10 +24,10 @@
       "100% for customer_accounts and service_connections covers their read-foundation milestone, not full CRUD or production login.",
       "No overall average is supplied because milestone scopes differ.",
       "No historical trend or completion-date estimate is supplied.",
-      "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
+      "Initial direct-grant metering JSON import API is verified in loopback; upload UI and milestone acceptance remain pending."
     ]
   },
-  "published_snapshot_at": "2026-10-26T14:12:46+08:00",
+  "published_snapshot_at": "2026-10-26T15:13:23+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -89,15 +89,16 @@
     {
       "module_code": "metering",
       "module_name": "Metering and readings",
-      "milestone_scope": "P3-M2 ingestion workflow",
-      "completion_percent": 40,
+      "milestone_scope": "P3-M2 initial import workflow",
+      "completion_percent": 60,
       "completed_checkpoints": [
         "Schema",
-        "rules"
+        "rules",
+        "API"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "bounded HTTP stream/writer integration; then upload UI/acceptance"
+      "current_or_next_work": "bounded CSV tokenizer and private upload UI; then acceptance"
     },
     {
       "module_code": "tariffs",
@@ -361,23 +362,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T14:12:46+08:00",
-    "summary": "P3-M2 purpose-limited PostgreSQL reading ingestion writer implemented and verified.",
+    "observed_at": "2026-10-26T15:13:22+08:00",
+    "summary": "P3-M2 protected initial import API verified end-to-end; scoped metering progress advances to60%.",
     "completed": [
-      "New narrow database role executes only authorized imports; existing read-only role remains unchanged.",
-      "Direct tenant/register grants and current synthetic metering entitlements are checked atomically with writes and retries.",
-      "Fresh post-wait and final checks roll back imports when authority expires."
+      "Lazy bounded HTTP streaming connects the private listener to the explicitly supplied narrow-role writer.",
+      "Authentication precedes body decoding; origin, byte limits, abort and finite stalled-upload deadline checks are enforced.",
+      "Schema, rules and protected API gates now complete for the initial direct-grant JSON import workflow."
     ],
     "verification": [
-      "All9 integrated foundation stages passed, including71 backend cases and real restricted PostgreSQL/API receipt, retry, revocation and lock-wait expiry checks.",
-      "Additive migration0025 applied through checksummed history; separate subscription demo retains Core4/Billing8/Operations12/provider0.",
-      "Implementation commit7b86a02."
+      "77 backend cases passed, including6 real HTTP streaming tests.",
+      "Real private HTTP/restricted PostgreSQL accepted exact-decimal readings, saved retry receipts, denied revoked authority and expiry after an observed lock wait.",
+      "Existing real account/agreement/staffing HTTP authorization regressions passed. Implementation1e660cb."
     ],
     "limitations": [
-      "Direct grants only; assignment-based writes remain denied. Coarse authority locks are a prototype contention limit.",
-      "Private listener streaming/writer composition, upload UI and milestone acceptance remain pending; metering stays40%."
+      "Preview UI and milestone acceptance remain pending;60% is named prototype checkpoint completion, not production readiness.",
+      "Direct grants only and coarse database authority locks remain prototype limits. Real provider login is unconfigured.",
+      "Already-started commands may complete after a disconnect; clients must retry the identical key/input to recover the receipt."
     ],
-    "next_selected": "P3-M2 bounded private HTTP request streaming and narrow-writer composition, then CSV/upload presentation and acceptance.",
+    "next_selected": "P3-M2 bounded CSV tokenizer and private upload preview, then milestone acceptance checks.",
     "blocker": null
   }
 }
