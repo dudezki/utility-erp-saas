@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T17:17:56+08:00",
+  "data_as_of": "2026-10-26T18:07:03+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "parameterized exact-decimal calculator and complete-boundary tests",
+  "current_priority": "synthetic tariff versions and immutable publication",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-26T17:17:57+08:00",
+  "published_snapshot_at": "2026-10-26T18:07:04+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -110,7 +110,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "parameterized exact-decimal calculator and complete-boundary tests"
+      "current_or_next_work": "synthetic tariff versions and immutable publication"
     },
     {
       "module_code": "billing",
@@ -120,7 +120,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": false,
-      "current_or_next_work": "Queued after demonstration calculator foundation"
+      "current_or_next_work": "Calculator component verified; persisted snapshots/review remain pending"
     },
     {
       "module_code": "collections",
@@ -364,24 +364,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T17:17:56+08:00",
-    "summary": "P3-M2 development prototype accepted; initial-import scope100%. P3-M3 demonstration billing selected.",
+    "observed_at": "2026-10-26T18:07:03+08:00",
+    "summary": "P3-M3 first exact-decimal synthetic energy calculator implemented and verified.",
     "completed": [
-      "Fresh integrated acceptance and independent review close the metering-input development prototype with explicit limits.",
-      "All five named initial-import gates complete; this does not mean full production metering.",
-      "P3-M3 design prepared for parameterized exact-decimal calculations with complete boundary checks; module gates remain0%."
+      "Pure parameterized calculation preserves exact usage, unrounded charges and half-up PHP minor-unit strings without floating-point money.",
+      "Strict supplied-snapshot checks reject missing/mismatched boundaries, cross-installation periods, invalid provenance and unsupported tariff metadata.",
+      "No rates are published and no invoice, authentication or persistence path is introduced."
     ],
     "verification": [
-      "All9 integrated foundation stages passed, including85 backend cases and actual CSV/HTTP/restricted PostgreSQL retry, revocation and expiry checks.",
-      "Desktop/mobile import browser checks passed; successful browser receipt responses were controlled synthetic fixtures.",
-      "Separate subscription checks retain Core4/Billing8/Operations12/provider0. Acceptance commit94c9a6a."
+      "96 backend cases passed, including10 targeted calculator cases and an independent250-case integer rounding/equivalent-scale oracle.",
+      "Review tightened installation-boundary kind checks; immutable input and exact values beyond JS integer precision verified.",
+      "Implementation28b10f6; no SQL migration or persistent data changed."
     ],
     "limitations": [
-      "Phase3 remains open; no approved tariff, production login, issued bill or payment capability is delivered.",
-      "Direct-only import grants, coarse locks, one correction application per chain and deferred full CRUD/correction UI remain prototype limits.",
-      "Missing predecessor rejection is not billing-period completeness; P3-M3 must refuse absent/ambiguous period boundaries."
+      "This is pure calculation on a trusted supplied snapshot, not proof of database freshness, publication or actual billing-period completeness.",
+      "Tariff/billing gates remain0%; one verified component does not complete full module gates.",
+      "No approved tariff, public calculator endpoint, issued bill, payment or production login is delivered."
     ],
-    "next_selected": "P3-M3 parameterized exact-decimal demonstration calculator and synthetic arithmetic/boundary tests.",
+    "next_selected": "P3-M3 tenant-owned synthetic tariffs and immutable published versions/components with effectivity rules.",
     "blocker": null
   }
 }
