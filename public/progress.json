@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T20:09:52+08:00",
+  "data_as_of": "2026-10-26T21:17:00+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "authoritative tariff eligibility and calculation snapshots",
+  "current_priority": "timezone-aware authoritative tariff eligibility loader",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-26T20:11:04+08:00",
+  "published_snapshot_at": "2026-10-26T21:17:01+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -112,7 +112,7 @@
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "authoritative tariff eligibility and calculation snapshots"
+      "current_or_next_work": "timezone-aware authoritative tariff eligibility loader"
     },
     {
       "module_code": "billing",
@@ -366,25 +366,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T20:11:03+08:00",
-    "summary": "P3-M3 synthetic tariff schema implemented with immutable published versions and exact flat-energy components.",
+    "observed_at": "2026-10-26T21:17:00+08:00",
+    "summary": "P3-M3 dated synthetic agreement-to-tariff assignments implemented and verified.",
     "completed": [
-      "Private tenant-owned tariffs, versions and components preserve UUIDv7 identities, lifecycle/audit and read-only isolation.",
-      "Publication requires one active synthetic PHP/kWh component; published facts are immutable and half-open effective periods cannot overlap.",
-      "Tariff schema checkpoint is20%; billing remains0% pending authoritative snapshots and review."
+      "Private same-tenant tariff assignments use finite half-open calendar dates, nonoverlap, UUIDv7, controlled lifecycle and audit.",
+      "Agreement-date changes cannot strand live assignments; concurrent assignment/date mutations serialize and recheck committed bounds.",
+      "Tariffs remains20% for its schema checkpoint; billing remains0% pending authoritative eligibility, snapshots and review."
     ],
     "verification": [
-      "Disposable clean install and SQL policies passed, including exact decimals, publication/history, effectivity, audit and tenant isolation.",
-      "Observed PostgreSQL lock waits verified component removal blocks publication and publication blocks later rate editing; stale isolation rejected.",
-      "96 backend cases and independent250-case arithmetic oracle passed; subscription demo remains Core4/Billing8/Operations12/provider0.",
-      "Implementation59f1bc0; no earlier migration changed and no tariff rate seeded."
+      "Disposable clean install/all SQL and final assignment regressions passed, including stale-snapshot parent-date rejection.",
+      "Observed PostgreSQL lock waits verified both containment mutation orders and one live binding under competing overlaps.",
+      "96 backend cases including the250-case arithmetic oracle passed; implementationff721ac."
     ],
     "limitations": [
-      "Owner/bootstrap schema only: no tariff writer API, production identity or billing authority introduced.",
-      "Only synthetic flat-energy PHP/kWh; no approved tariff, tax, proration, invoice or payment.",
-      "Published effectivity cannot be shortened; explicitly bounded versions required for prototype replacement."
+      "Calendar assignment dates do not select a published tariff version or establish a complete billing period.",
+      "No rate seeded, protected writer/API, production identity, approved tariff, invoice or payment introduced.",
+      "A future loader must pin tenant timezone and explicitly resolve local dates to UTC, then reject absent or partial version coverage."
     ],
-    "next_selected": "P3-M3 authoritative agreement/period/tariff eligibility and source-backed immutable calculation snapshots, then distinct review.",
+    "next_selected": "P3-M3 timezone-aware authoritative agreement/period/tariff eligibility loader, then immutable source-backed calculation snapshots and distinct review.",
     "blocker": null
   }
 }
