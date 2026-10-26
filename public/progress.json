@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-27T07:07:35+08:00",
+  "data_as_of": "2026-10-27T07:39:03+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "immutable distinct-human calculation review",
+  "current_priority": "protected calculation/review authorization and API",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-27T07:07:35+08:00",
+  "published_snapshot_at": "2026-10-27T07:39:03+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -119,11 +119,14 @@
       "module_code": "billing",
       "module_name": "Billing",
       "milestone_scope": "P3-M3 calculation/review",
-      "completion_percent": 0,
-      "completed_checkpoints": [],
-      "milestone_status": "queued",
+      "completion_percent": 40,
+      "completed_checkpoints": [
+        "Schema",
+        "rules"
+      ],
+      "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "immutable distinct-human calculation review"
+      "current_or_next_work": "protected calculation/review authorization and API"
     },
     {
       "module_code": "collections",
@@ -295,8 +298,8 @@
       ],
       "module_count": 8,
       "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 3,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 2,
       "current_priority_modules": [
         "billing"
       ],
@@ -325,8 +328,8 @@
       ],
       "module_count": 12,
       "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 7,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 6,
       "current_priority_modules": [
         "billing"
       ],
@@ -367,24 +370,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-27T07:07:35+08:00",
-    "summary": "P3-M3 now saves immutable synthetic calculation inputs and results with authoritative verification and safe retries.",
+    "observed_at": "2026-10-27T07:39:03+08:00",
+    "summary": "A compact interactive tenant-app sandbox is ready to try; synthetic calculation/review backend rules are also verified.",
     "completed": [
-      "Complete authoritative reading/tariff inputs and exact calculation results are saved as immutable tenant-owned attempts with original actor/system attribution and audit.",
-      "New saves reload and compare current sources under transaction locks, independently check exact arithmetic and reject stale or forged facts.",
-      "Identical concurrent retries return one original receipt/audit; changed requests conflict. Historical replay requires the original still-authorized identity."
+      "Linear-style sidebar/header/table layout replaces the larger preview dashboard. Create/edit sample projects or accounts, change status, search/filter/sort and switch sample companies.",
+      "Sandbox edits persist only in this browser per sample workspace, with reset and explicit in-memory fallback when storage is blocked. Registration remains separate and private.",
+      "P3-M3 now has immutable distinct-human calculation review with safe retries and post-wait authority checks. Billing40% credits schema/owner-domain rules; protected API/UI/acceptance remain pending."
     ],
     "verification": [
-      "Implementation51296be; targeted SQL and real PostgreSQL→TypeScript→save/concurrent-retry checks pass.",
-      "33 full-result SQL/TypeScript arithmetic cases passed, including synthetic half-cent edges, zero/scales, tiny rates and128-digit extremes.",
-      "All12 integrated foundation stages passed on final migration bytes, including history/policies/clean install/atomicity, backend contracts, tariff/snapshot/calculation/reading concurrency, actual ingestion and private HTTP PostgreSQL authorization."
+      "Implementation144b6cf (sandbox) and b74a987 (review); all13 integrated backend foundation stages pass.",
+      "Desktop1440/mobile390 actual local registration→sandbox, create/edit/status/search/filter/sort, reload persistence/workspace reset, storage safety/fallback, focus/no overflow and no operational API calls pass.",
+      "Head visually inspected desktop/mobile screenshots; startup and readability issues were fixed before release."
     ],
     "limitations": [
-      "Saved calculation attempts are not reviewed, approved or issued invoices. Distinct review, protected billing API and operational UI remain pending.",
-      "Different request keys can preserve separate attempts; duplicate issued-bill prevention remains in the later invoice workflow.",
-      "All verification uses synthetic data. Public registration/sample app and private PostgreSQL remain separate; no private records or credentials are published."
+      "This is a synthetic browser-local sandbox, not live ERP tenant activation, production login or server-persisted operational data. Planned module pages share sample queues.",
+      "Private calculation/review functions remain trusted-owner workflows; protected application authorization/API and operational screens are next. System-prepared calculations are not eligible for human review yet.",
+      "All rates, records and solar capacities are illustrative. Public registration, disabled social providers and isolated PostgreSQL remain preserved."
     ],
-    "next_selected": "P3-M3 immutable distinct-human calculation review, then protected API and separate tenant-app workflow.",
+    "next_selected": "P3-M3 protected calculation/review authorization and API, then the operational tenant-app workflow.",
     "blocker": null
   }
 }
