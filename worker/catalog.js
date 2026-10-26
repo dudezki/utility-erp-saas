@@ -1,5 +1,6 @@
 import {v7 as uuidv7} from 'uuid';
 import {previewCatalogData} from '../scripts/preview-catalog-data.mjs';
+import {solarCatalogData} from '../scripts/solar-catalog-data.mjs';
 
 export class CatalogSelectionError extends Error {
  constructor(message){super(message);this.status=400;}
@@ -101,34 +102,36 @@ export async function bootstrapCatalog(request,env){
  if(!await authorized(request,env.CATALOG_ADMIN_KEY))return json({error:'Not authorized.'},401);
  if(!request.headers.get('content-type')?.startsWith('application/json'))return json({error:'JSON required.'},415);
  let body;try{body=await boundedBody(request);}catch{return json({error:'Invalid setup request.'},400);}
- if(!body||body.action!=='seed_preview_catalog_v1'||Object.keys(body).some(k=>k!=='action'))return json({error:'Unsupported setup action.'},422);
+ if(!body||!['seed_preview_catalog_v1','seed_solar_catalog_v1'].includes(body.action)||Object.keys(body).some(k=>k!=='action'))return json({error:'Unsupported setup action.'},422);
  if(!env.DB)return json({error:'Catalog storage unavailable.'},503);
  try{
+  const solar=body.action==='seed_solar_catalog_v1';
+  const data=solar?solarCatalogData:previewCatalogData,offset=solar?previewCatalogData.packages.length:0;
   const now=new Date().toISOString(),statements=[];
-  for(const module of previewCatalogData.modules){
+  for(const module of data.modules){
    statements.push(env.DB.prepare(`INSERT INTO catalog_modules(id,code,display_name,availability_status,created_at,updated_at)
     VALUES (?,?,?,?,?,?) ON CONFLICT(code) DO NOTHING`).bind(uuidv7(),module.code,module.display_name,module.availability_status,now,now));
   }
-  for(const [position,pkg] of previewCatalogData.packages.entries()){
+  for(const [position,pkg] of data.packages.entries()){
    statements.push(env.DB.prepare('INSERT INTO packages(id,code,created_at,updated_at) VALUES (?,?,?,?) ON CONFLICT(code) DO NOTHING').bind(uuidv7(),pkg.code,now,now));
    statements.push(env.DB.prepare(`INSERT INTO package_versions(id,package_id,version_code,display_name,publication_status,created_at,updated_at)
     SELECT ?,id,?,?,'draft',?,? FROM packages WHERE code=?
-    ON CONFLICT(package_id,version_code) DO NOTHING`).bind(uuidv7(),previewCatalogData.version_code,pkg.name,now,now,pkg.code));
+    ON CONFLICT(package_id,version_code) DO NOTHING`).bind(uuidv7(),data.version_code,pkg.name,now,now,pkg.code));
    for(const [modulePosition,code] of pkg.module_codes.entries()){
     statements.push(env.DB.prepare(`INSERT INTO package_modules(package_version_id,module_id,display_order)
      SELECT pv.id,cm.id,? FROM package_versions pv JOIN packages p ON p.id=pv.package_id CROSS JOIN catalog_modules cm
      WHERE p.code=? AND pv.version_code=? AND pv.publication_status='draft' AND cm.code=?
-     ON CONFLICT(package_version_id,module_id) DO NOTHING`).bind(modulePosition,pkg.code,previewCatalogData.version_code,code));
+     ON CONFLICT(package_version_id,module_id) DO NOTHING`).bind(modulePosition,pkg.code,data.version_code,code));
    }
    statements.push(env.DB.prepare(`UPDATE package_versions SET publication_status='published',published_at=?,updated_at=?
-    WHERE package_id=(SELECT id FROM packages WHERE code=?) AND version_code=? AND publication_status='draft'`).bind(now,now,pkg.code,previewCatalogData.version_code));
+    WHERE package_id=(SELECT id FROM packages WHERE code=?) AND version_code=? AND publication_status='draft'`).bind(now,now,pkg.code,data.version_code));
    statements.push(env.DB.prepare(`INSERT INTO package_listings(id,package_version_id,market_code,locale,currency,billing_interval,offer_kind,sales_status,is_public,badge,summary,is_featured,display_order,visible_from,created_at,updated_at)
     SELECT ?,pv.id,'PH','en-PH','PHP','monthly','preview','open',1,?,?,?,?,?,?,? FROM package_versions pv JOIN packages p ON p.id=pv.package_id
     WHERE p.code=? AND pv.version_code=? AND pv.publication_status='published'
-    ON CONFLICT(package_version_id,market_code,locale,currency,billing_interval) DO NOTHING`).bind(uuidv7(),pkg.badge,pkg.summary,pkg.featured?1:0,position,now,now,now,pkg.code,previewCatalogData.version_code));
+    ON CONFLICT(package_version_id,market_code,locale,currency,billing_interval) DO NOTHING`).bind(uuidv7(),pkg.badge,pkg.summary,pkg.featured?1:0,offset+position,now,now,now,pkg.code,data.version_code));
   }
   await env.DB.batch(statements);
-  return json({status:'preview_catalog_ready',packages:previewCatalogData.packages.length,prices_set:false});
+  return json({status:solar?'solar_preview_catalog_ready':'preview_catalog_ready',packages:data.packages.length,prices_set:false});
  }catch{return json({error:'Catalog setup failed.'},503);}
 }
 

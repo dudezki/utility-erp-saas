@@ -1,0 +1,986 @@
+{
+  "id": "b3140185-04d2-45e4-9620-f2e26954339a",
+  "prevId": "c129769c-59fc-4c14-8e39-0e4d0d359c4e",
+  "version": "6",
+  "dialect": "sqlite",
+  "tables": {
+    "catalog_modules": {
+      "name": "catalog_modules",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "display_name": {
+          "name": "display_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "availability_status": {
+          "name": "availability_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'planned'"
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "catalog_modules_code_unique": {
+          "name": "catalog_modules_code_unique",
+          "columns": [
+            "code"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "ck_catalog_modules_status": {
+          "name": "ck_catalog_modules_status",
+          "value": "\"catalog_modules\".\"availability_status\" IN ('planned','preview','available')"
+        }
+      }
+    },
+    "package_listings": {
+      "name": "package_listings",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "package_version_id": {
+          "name": "package_version_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "price_id": {
+          "name": "price_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "market_code": {
+          "name": "market_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "locale": {
+          "name": "locale",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "currency": {
+          "name": "currency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "billing_interval": {
+          "name": "billing_interval",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "offer_kind": {
+          "name": "offer_kind",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "sales_status": {
+          "name": "sales_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "is_public": {
+          "name": "is_public",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "badge": {
+          "name": "badge",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "summary": {
+          "name": "summary",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "is_featured": {
+          "name": "is_featured",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": false
+        },
+        "display_order": {
+          "name": "display_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        },
+        "visible_from": {
+          "name": "visible_from",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "visible_until": {
+          "name": "visible_until",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uq_package_listings_version_market": {
+          "name": "uq_package_listings_version_market",
+          "columns": [
+            "package_version_id",
+            "market_code",
+            "locale",
+            "currency",
+            "billing_interval"
+          ],
+          "isUnique": true
+        },
+        "uq_package_listings_version_id": {
+          "name": "uq_package_listings_version_id",
+          "columns": [
+            "package_version_id",
+            "id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "package_listings_package_version_id_package_versions_id_fk": {
+          "name": "package_listings_package_version_id_package_versions_id_fk",
+          "tableFrom": "package_listings",
+          "columnsFrom": [
+            "package_version_id"
+          ],
+          "tableTo": "package_versions",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "package_listings_package_version_id_price_id_package_prices_package_version_id_id_fk": {
+          "name": "package_listings_package_version_id_price_id_package_prices_package_version_id_id_fk",
+          "tableFrom": "package_listings",
+          "columnsFrom": [
+            "package_version_id",
+            "price_id"
+          ],
+          "tableTo": "package_prices",
+          "columnsTo": [
+            "package_version_id",
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "ck_package_listings_kind": {
+          "name": "ck_package_listings_kind",
+          "value": "\"package_listings\".\"offer_kind\" IN ('preview','inquiry','paid')"
+        },
+        "ck_package_listings_sales": {
+          "name": "ck_package_listings_sales",
+          "value": "\"package_listings\".\"sales_status\" IN ('open','inquiry_only','closed')"
+        },
+        "ck_package_listings_paid_price": {
+          "name": "ck_package_listings_paid_price",
+          "value": "\"package_listings\".\"offer_kind\" <> 'paid' OR \"package_listings\".\"price_id\" IS NOT NULL"
+        },
+        "ck_package_listings_interval": {
+          "name": "ck_package_listings_interval",
+          "value": "\"package_listings\".\"visible_until\" IS NULL OR \"package_listings\".\"visible_until\" > \"package_listings\".\"visible_from\""
+        },
+        "ck_package_listings_public_boolean": {
+          "name": "ck_package_listings_public_boolean",
+          "value": "\"package_listings\".\"is_public\" IN (0,1)"
+        },
+        "ck_package_listings_featured_boolean": {
+          "name": "ck_package_listings_featured_boolean",
+          "value": "\"package_listings\".\"is_featured\" IN (0,1)"
+        }
+      }
+    },
+    "package_modules": {
+      "name": "package_modules",
+      "columns": {
+        "package_version_id": {
+          "name": "package_version_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "module_id": {
+          "name": "module_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "display_order": {
+          "name": "display_order",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": 0
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "package_modules_package_version_id_package_versions_id_fk": {
+          "name": "package_modules_package_version_id_package_versions_id_fk",
+          "tableFrom": "package_modules",
+          "columnsFrom": [
+            "package_version_id"
+          ],
+          "tableTo": "package_versions",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "package_modules_module_id_catalog_modules_id_fk": {
+          "name": "package_modules_module_id_catalog_modules_id_fk",
+          "tableFrom": "package_modules",
+          "columnsFrom": [
+            "module_id"
+          ],
+          "tableTo": "catalog_modules",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "package_modules_package_version_id_module_id_pk": {
+          "columns": [
+            "package_version_id",
+            "module_id"
+          ],
+          "name": "package_modules_package_version_id_module_id_pk"
+        }
+      },
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "package_prices": {
+      "name": "package_prices",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "package_version_id": {
+          "name": "package_version_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "currency": {
+          "name": "currency",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "billing_interval": {
+          "name": "billing_interval",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "amount_minor": {
+          "name": "amount_minor",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "publication_status": {
+          "name": "publication_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'draft'"
+        },
+        "valid_from": {
+          "name": "valid_from",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "valid_until": {
+          "name": "valid_until",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uq_package_prices_version_id": {
+          "name": "uq_package_prices_version_id",
+          "columns": [
+            "package_version_id",
+            "id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "package_prices_package_version_id_package_versions_id_fk": {
+          "name": "package_prices_package_version_id_package_versions_id_fk",
+          "tableFrom": "package_prices",
+          "columnsFrom": [
+            "package_version_id"
+          ],
+          "tableTo": "package_versions",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "ck_package_prices_amount": {
+          "name": "ck_package_prices_amount",
+          "value": "\"package_prices\".\"amount_minor\" >= 0"
+        },
+        "ck_package_prices_status": {
+          "name": "ck_package_prices_status",
+          "value": "\"package_prices\".\"publication_status\" IN ('draft','published')"
+        },
+        "ck_package_prices_interval": {
+          "name": "ck_package_prices_interval",
+          "value": "\"package_prices\".\"valid_until\" IS NULL OR \"package_prices\".\"valid_until\" > \"package_prices\".\"valid_from\""
+        }
+      }
+    },
+    "package_versions": {
+      "name": "package_versions",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "package_id": {
+          "name": "package_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "version_code": {
+          "name": "version_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "display_name": {
+          "name": "display_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "publication_status": {
+          "name": "publication_status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false,
+          "default": "'draft'"
+        },
+        "published_at": {
+          "name": "published_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uq_package_versions_code": {
+          "name": "uq_package_versions_code",
+          "columns": [
+            "package_id",
+            "version_code"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "package_versions_package_id_packages_id_fk": {
+          "name": "package_versions_package_id_packages_id_fk",
+          "tableFrom": "package_versions",
+          "columnsFrom": [
+            "package_id"
+          ],
+          "tableTo": "packages",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {
+        "ck_package_versions_status": {
+          "name": "ck_package_versions_status",
+          "value": "\"package_versions\".\"publication_status\" IN ('draft','published')"
+        },
+        "ck_package_versions_published_at": {
+          "name": "ck_package_versions_published_at",
+          "value": "\"package_versions\".\"publication_status\" <> 'published' OR \"package_versions\".\"published_at\" IS NOT NULL"
+        }
+      }
+    },
+    "packages": {
+      "name": "packages",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "code": {
+          "name": "code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "packages_code_unique": {
+          "name": "packages_code_unique",
+          "columns": [
+            "code"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "preview_subscriptions": {
+      "name": "preview_subscriptions",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "registration_id": {
+          "name": "registration_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "package_version_id": {
+          "name": "package_version_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "package_listing_id": {
+          "name": "package_listing_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "package_code": {
+          "name": "package_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "package_version": {
+          "name": "package_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "package_name": {
+          "name": "package_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "modules_snapshot": {
+          "name": "modules_snapshot",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "module_codes_snapshot": {
+          "name": "module_codes_snapshot",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "voucher_code": {
+          "name": "voucher_code",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uq_preview_subscriptions_registration": {
+          "name": "uq_preview_subscriptions_registration",
+          "columns": [
+            "registration_id"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {
+        "preview_subscriptions_registration_id_registrations_id_fk": {
+          "name": "preview_subscriptions_registration_id_registrations_id_fk",
+          "tableFrom": "preview_subscriptions",
+          "columnsFrom": [
+            "registration_id"
+          ],
+          "tableTo": "registrations",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "preview_subscriptions_package_version_id_package_versions_id_fk": {
+          "name": "preview_subscriptions_package_version_id_package_versions_id_fk",
+          "tableFrom": "preview_subscriptions",
+          "columnsFrom": [
+            "package_version_id"
+          ],
+          "tableTo": "package_versions",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "preview_subscriptions_package_listing_id_package_listings_id_fk": {
+          "name": "preview_subscriptions_package_listing_id_package_listings_id_fk",
+          "tableFrom": "preview_subscriptions",
+          "columnsFrom": [
+            "package_listing_id"
+          ],
+          "tableTo": "package_listings",
+          "columnsTo": [
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        },
+        "preview_subscriptions_package_version_id_package_listing_id_package_listings_package_version_id_id_fk": {
+          "name": "preview_subscriptions_package_version_id_package_listing_id_package_listings_package_version_id_id_fk",
+          "tableFrom": "preview_subscriptions",
+          "columnsFrom": [
+            "package_version_id",
+            "package_listing_id"
+          ],
+          "tableTo": "package_listings",
+          "columnsTo": [
+            "package_version_id",
+            "id"
+          ],
+          "onUpdate": "no action",
+          "onDelete": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "registration_rate_limits": {
+      "name": "registration_rate_limits",
+      "columns": {
+        "bucket_key": {
+          "name": "bucket_key",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "request_count": {
+          "name": "request_count",
+          "type": "integer",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    },
+    "registrations": {
+      "name": "registrations",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "text",
+          "primaryKey": true,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "full_name": {
+          "name": "full_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "first_name": {
+          "name": "first_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "middle_name": {
+          "name": "middle_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "last_name": {
+          "name": "last_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "suffix": {
+          "name": "suffix",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        },
+        "email": {
+          "name": "email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "normalized_email": {
+          "name": "normalized_email",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "company_name": {
+          "name": "company_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "request_key": {
+          "name": "request_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "request_fingerprint": {
+          "name": "request_fingerprint",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "privacy_version": {
+          "name": "privacy_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true,
+          "autoincrement": false
+        },
+        "deleted_at": {
+          "name": "deleted_at",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false,
+          "autoincrement": false
+        }
+      },
+      "indexes": {
+        "uq_registrations_request_key": {
+          "name": "uq_registrations_request_key",
+          "columns": [
+            "request_key"
+          ],
+          "isUnique": true
+        }
+      },
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "checkConstraints": {}
+    }
+  },
+  "views": {},
+  "enums": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  },
+  "internal": {
+    "indexes": {}
+  }
+}

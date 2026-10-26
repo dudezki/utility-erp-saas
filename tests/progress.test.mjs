@@ -7,7 +7,7 @@ test('public progress is independently readable without database/auth bindings',
  const r=serveProgress(new Request('https://example.invalid/progress.json'),body);
  assert.equal(r.status,200);assert.match(r.headers.get('content-type'),/application\/json/);
  assert.equal(r.headers.get('cache-control'),'no-store, max-age=0');
- const data=await r.json();assert.equal(data.modules.length,12);assert.equal(data.modules.filter(m=>m.is_current_priority).length,1);
+ const data=await r.json();assert.ok(data.modules.length>=12);assert.equal(new Set(data.modules.map(m=>m.module_code)).size,data.modules.length);assert.equal(data.modules.filter(m=>m.is_current_priority).length,1);
  assert.equal(data.progress_basis.is_production_readiness,false);
  for(const module of data.modules)assert.equal(module.completion_percent,module.completed_checkpoints.length*20);
  assert.ok(data.data_as_of);assert.ok(data.published_snapshot_at);

@@ -22,6 +22,13 @@
       "when": 1792865409136,
       "tag": "0002_tired_abomination",
       "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "6",
+      "when": 1792980189316,
+      "tag": "0003_solar_preview_catalog",
+      "breakpoints": true
     }
   ]
 }

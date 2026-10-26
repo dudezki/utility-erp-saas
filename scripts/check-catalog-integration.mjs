@@ -8,7 +8,7 @@ async function get(){const r=await fetch(base+'/api/public/package-catalog');ass
 async function seed(key){return fetch(base+'/api/admin/catalog/bootstrap',{method:'POST',headers:{authorization:'Bearer '+key,'content-type':'application/json'},body:JSON.stringify({action:'seed_preview_catalog_v1'})});}
 assert.equal((await seed('wrong')).status,401);
 assert.equal((await seed('local_catalog_test_fixture_not_a_production_secret')).status,200);
-const initial=await get();assert.equal(initial.source,'database');assert.equal(initial.packages.length,3);assert.deepEqual(initial.packages.map(p=>p.modules.length),[4,8,12]);assert.ok(initial.packages.every(p=>p.price===null));
+const initial=await get();assert.equal(initial.source,'database');assert.equal(initial.packages.length,4);assert.deepEqual(initial.packages.map(p=>p.modules.length),[4,8,12,16]);assert.ok(initial.packages.every(p=>p.price===null));
 assert.equal((await seed('local_catalog_test_fixture_not_a_production_secret')).status,200);
 assert.deepEqual((await get()).packages.map(p=>p.package_version_id),initial.packages.map(p=>p.package_version_id));
 assert.equal((await fetch(base+'/api/public/package-catalog?tenant_id=anything')).status,400);
@@ -25,7 +25,7 @@ try{
  sql(`UPDATE package_listings SET summary='Local catalog mutation proof' WHERE id='${chosen.package_listing_id}'`);
  assert.equal((await get()).packages.find(p=>p.id===chosen.id).summary,'Local catalog mutation proof');
  sql(`UPDATE package_listings SET is_public=0 WHERE id='${chosen.package_listing_id}'`);
- assert.equal((await get()).packages.length,2);
+ assert.equal((await get()).packages.length,3);
  response=await post({...data,request_key:crypto.randomUUID().replaceAll('-','')});assert.equal(response.status,409);
  response=await post(data);assert.equal(response.status,200);assert.equal((await response.json()).subscription_id,receipts[0].subscription_id);
 }finally{sql(`UPDATE package_listings SET is_public=1,summary='${chosen.summary.replaceAll("'","''")}' WHERE id='${chosen.package_listing_id}'`);}
@@ -37,9 +37,9 @@ sql(`UPDATE package_prices SET amount_minor=1 WHERE id='${priceId}'`,true);
 // Future and expired listings are excluded; an explicitly listed synthetic price is visible.
 try{
  sql(`UPDATE package_listings SET visible_from='2099-01-01T00:00:00.000Z',visible_until=NULL WHERE id='${chosen.package_listing_id}'`);
- assert.equal((await get()).packages.length,2);
+ assert.equal((await get()).packages.length,3);
  sql(`UPDATE package_listings SET visible_from='1990-01-01T00:00:00.000Z',visible_until='2000-01-01T00:00:00.000Z' WHERE id='${chosen.package_listing_id}'`);
- assert.equal((await get()).packages.length,2);
+ assert.equal((await get()).packages.length,3);
  sql(`UPDATE package_listings SET visible_from='2000-01-01T00:00:00.000Z',visible_until=NULL,offer_kind='paid',price_id='${priceId}' WHERE id='${chosen.package_listing_id}'`);
  assert.equal((await get()).packages.find(p=>p.id===chosen.id).price.amount_minor,9900);
  assert.equal((await post({...data,request_key:crypto.randomUUID().replaceAll('-','')})).status,409);

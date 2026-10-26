@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T09:00:03+08:00",
+  "data_as_of": "2026-10-26T10:08:13+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M2",
@@ -27,7 +27,7 @@
       "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
     ]
   },
-  "published_snapshot_at": "2026-10-26T09:17:42+08:00",
+  "published_snapshot_at": "2026-10-26T10:08:13+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -168,6 +168,86 @@
       "milestone_status": "queued",
       "is_current_priority": false,
       "current_or_next_work": "Queued"
+    },
+    {
+      "module_code": "solar_commercial",
+      "module_name": "Solar sales & contracts",
+      "milestone_scope": "P4-SOL1 / P4-SOL4",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
+    },
+    {
+      "module_code": "solar_site_surveys",
+      "module_name": "Solar site surveys",
+      "milestone_scope": "P4-SOL1 survey workflow",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
+    },
+    {
+      "module_code": "solar_engineering",
+      "module_name": "Solar engineering reviews",
+      "milestone_scope": "P4-SOL1 design approval",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
+    },
+    {
+      "module_code": "solar_procurement",
+      "module_name": "Solar procurement & inventory",
+      "milestone_scope": "P4-SOL2 procurement",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
+    },
+    {
+      "module_code": "solar_projects",
+      "module_name": "Solar installation & commissioning",
+      "milestone_scope": "P4-SOL2 EPC delivery",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
+    },
+    {
+      "module_code": "solar_interconnection",
+      "module_name": "Solar permits & interconnection",
+      "milestone_scope": "P4-SOL2 approval evidence",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
+    },
+    {
+      "module_code": "solar_monitoring",
+      "module_name": "Solar monitoring & performance",
+      "milestone_scope": "P4-SOL3 read-only monitoring",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
+    },
+    {
+      "module_code": "solar_service",
+      "module_name": "Solar O&M & warranty",
+      "milestone_scope": "P4-SOL3 service workflows",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; researched package scope only"
     }
   ]
 }
