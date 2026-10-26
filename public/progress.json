@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T11:00:28+08:00",
+  "data_as_of": "2026-10-26T12:05:14+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M2",
@@ -27,7 +27,7 @@
       "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
     ]
   },
-  "published_snapshot_at": "2026-10-26T11:00:28+08:00",
+  "published_snapshot_at": "2026-10-26T12:05:14+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -361,20 +361,21 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T11:00:28+08:00",
-    "summary": "Per-package milestone statistics added alongside20 module records.",
+    "observed_at": "2026-10-26T12:05:14+08:00",
+    "summary": "P3-M2 bounded reading-import transport decoder implemented and verified.",
     "completed": [
-      "Four public preview packages now expose module membership and counts of complete, in-progress and unstarted scoped milestones.",
-      "Package totals derive from versioned catalog definitions; no private subscriptions are queried."
+      "Strict import envelopes reject client-supplied tenant/actor fields and unsupported encoded payloads.",
+      "Streaming byte limits, strict UTF-8 and exact raw-row preservation support the future ingestion boundary."
     ],
     "verification": [
-      "Automated catalog-membership and milestone count reconciliation included in website tests."
+      "56 backend cases passed, including6 new transport checks and existing loopback regressions.",
+      "Implementation commit788ab3c; no database migrations or privileges changed."
     ],
     "limitations": [
-      "Counts describe different prototype scopes, not overall package readiness; no aggregate percentage is claimed.",
-      "P3-M2 protected ingestion API is still pending."
+      "Decoder is not yet wired to a route, authorization transaction or database writer.",
+      "Metering remains40% scoped milestones; CSV upload and API acceptance remain pending."
     ],
-    "next_selected": "P3-M2 protected ordered-ingestion API with verified principal, module, permission and record scope.",
+    "next_selected": "P3-M2 verified-principal ingestion handler and narrow transaction writer with fresh module, permission and record-scope checks.",
     "blocker": null
   }
 }
