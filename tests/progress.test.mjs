@@ -13,10 +13,29 @@ test('public progress is independently readable without database/auth bindings',
  assert.equal(typeof data.latest_update.summary,'string');assert.ok(Array.isArray(data.latest_update.verification));
  assert.ok(data.data_as_of);assert.ok(data.published_snapshot_at);
  assert.equal(data.evidence,undefined);assert.equal(data.registrations,undefined);assert.equal(data.subscriptions,undefined);
- assert.deepEqual(Object.keys(data).sort(),['schema_version','project_name','data_as_of','timezone','current_phase','current_milestone','current_work_state','current_priority','progress_basis','published_snapshot_at','source_url','update_policy','modules','latest_update'].sort());
+ assert.deepEqual(Object.keys(data).sort(),['schema_version','project_name','data_as_of','timezone','current_phase','current_milestone','current_work_state','current_priority','progress_basis','published_snapshot_at','source_url','update_policy','modules','packages','latest_update'].sort());
 });
 test('progress permits only GET/HEAD and has no public update operation',async()=>{
  assert.equal((await serveProgress(new Request('https://example.invalid/progress.json',{method:'HEAD'}),body).text()),'');
  for(const method of ['POST','PUT','PATCH','DELETE'])assert.equal(serveProgress(new Request('https://example.invalid/progress.json',{method}),body).status,405);
  assert.equal(serveProgress(new Request('https://example.invalid/progress.json')).status,503);
+});
+
+test('package stats match the canonical catalog and scoped module evidence',async()=>{
+ const {previewCatalogData}=await import('../scripts/preview-catalog-data.mjs');
+ const {solarCatalogData}=await import('../scripts/solar-catalog-data.mjs');
+ const data=JSON.parse(body);const modules=new Map(data.modules.map(m=>[m.module_code,m]));
+ const expected=[...previewCatalogData.packages,...solarCatalogData.packages];
+ assert.equal(data.packages.length,expected.length);
+ for(const p of data.packages){
+  assert.deepEqual(p.module_codes,expected.find(e=>e.code===p.package_code).module_codes);
+  const members=p.module_codes.map(c=>modules.get(c));assert.ok(members.every(Boolean));
+  assert.equal(p.module_count,members.length);
+  assert.equal(p.scoped_milestones_complete,members.filter(m=>m.completion_percent===100).length);
+  assert.equal(p.scoped_milestones_in_progress,members.filter(m=>m.completion_percent>0&&m.completion_percent<100).length);
+  assert.equal(p.scoped_milestones_not_started,members.filter(m=>m.completion_percent===0).length);
+  assert.equal(p.scoped_milestones_complete+p.scoped_milestones_in_progress+p.scoped_milestones_not_started,p.module_count);
+  assert.equal(p.completion_percent,null);assert.equal(p.operational_availability,'planned');
+  assert.deepEqual(p.current_priority_modules,members.filter(m=>m.is_current_priority).map(m=>m.module_code));
+ }
 });

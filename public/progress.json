@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T10:08:13+08:00",
+  "data_as_of": "2026-10-26T11:00:28+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M2",
@@ -27,7 +27,7 @@
       "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
     ]
   },
-  "published_snapshot_at": "2026-10-26T10:14:03+08:00",
+  "published_snapshot_at": "2026-10-26T11:00:28+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -250,26 +250,131 @@
       "current_or_next_work": "Queued; researched package scope only"
     }
   ],
+  "packages": [
+    {
+      "package_code": "core-preview",
+      "package_name": "Core",
+      "version_code": "preview-v1",
+      "catalog_status": "published_preview",
+      "operational_availability": "planned",
+      "module_codes": [
+        "party_directory",
+        "customer_accounts",
+        "service_connections",
+        "basic_reports"
+      ],
+      "module_count": 4,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 1,
+      "scoped_milestones_not_started": 1,
+      "current_priority_modules": [],
+      "completion_percent": null,
+      "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
+    },
+    {
+      "package_code": "billing-preview",
+      "package_name": "Billing",
+      "version_code": "preview-v1",
+      "catalog_status": "published_preview",
+      "operational_availability": "planned",
+      "module_codes": [
+        "party_directory",
+        "customer_accounts",
+        "service_connections",
+        "basic_reports",
+        "metering",
+        "tariffs",
+        "billing",
+        "collections"
+      ],
+      "module_count": 8,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 4,
+      "current_priority_modules": [
+        "metering"
+      ],
+      "completion_percent": null,
+      "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
+    },
+    {
+      "package_code": "operations-preview",
+      "package_name": "Operations",
+      "version_code": "preview-v1",
+      "catalog_status": "published_preview",
+      "operational_availability": "planned",
+      "module_codes": [
+        "party_directory",
+        "customer_accounts",
+        "service_connections",
+        "basic_reports",
+        "metering",
+        "tariffs",
+        "billing",
+        "collections",
+        "work_orders",
+        "assets",
+        "customer_portal",
+        "operational_reports"
+      ],
+      "module_count": 12,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 8,
+      "current_priority_modules": [
+        "metering"
+      ],
+      "completion_percent": null,
+      "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
+    },
+    {
+      "package_code": "solar-preview",
+      "package_name": "Solar EPC & O&M",
+      "version_code": "solar-preview-v1",
+      "catalog_status": "published_preview",
+      "operational_availability": "planned",
+      "module_codes": [
+        "party_directory",
+        "customer_accounts",
+        "basic_reports",
+        "collections",
+        "work_orders",
+        "assets",
+        "customer_portal",
+        "operational_reports",
+        "solar_commercial",
+        "solar_site_surveys",
+        "solar_engineering",
+        "solar_procurement",
+        "solar_projects",
+        "solar_interconnection",
+        "solar_monitoring",
+        "solar_service"
+      ],
+      "module_count": 16,
+      "scoped_milestones_complete": 1,
+      "scoped_milestones_in_progress": 1,
+      "scoped_milestones_not_started": 14,
+      "current_priority_modules": [],
+      "completion_percent": null,
+      "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
+    }
+  ],
   "latest_update": {
-    "observed_at": "2026-10-26T10:14:03+08:00",
-    "summary": "Solar EPC & O&M preview package is publicly selectable.",
+    "observed_at": "2026-10-26T11:00:28+08:00",
+    "summary": "Per-package milestone statistics added alongside20 module records.",
     "completed": [
-      "Added an immutable Solar preview version with8 shared and8 solar-specific planned module inclusions.",
-      "Published research-backed solar lifecycle and P4/P5 implementation milestones.",
-      "Expanded progress reporting to20 modules; all8 new solar operational modules remain0%."
+      "Four public preview packages now expose module membership and counts of complete, in-progress and unstarted scoped milestones.",
+      "Package totals derive from versioned catalog definitions; no private subscriptions are queried."
     ],
     "verification": [
-      "18 website test cases passed.",
-      "Owned D1 migration preserved existing package versions and a saved registration; desktop/mobile Solar signup passed.",
-      "Anonymous hosted catalog shows4 packages; existing package/listing IDs unchanged.",
-      "Synthetic hosted Solar signup returned201 and identical retry200 with a pinned16-module snapshot."
+      "Automated catalog-membership and milestone count reconciliation included in website tests."
     ],
     "limitations": [
-      "Preview registration does not create an ERP login or activate operational modules.",
-      "Commercial prices and real design/inverter integrations are not configured.",
-      "Standards-informed planning is not engineering certification or regulatory approval."
+      "Counts describe different prototype scopes, not overall package readiness; no aggregate percentage is claimed.",
+      "P3-M2 protected ingestion API is still pending."
     ],
-    "next_selected": "P3-M2 protected ordered-ingestion API; Solar operational delivery queued under P4-SOL1–4/P5-SOL.",
+    "next_selected": "P3-M2 protected ordered-ingestion API with verified principal, module, permission and record scope.",
     "blocker": null
   }
 }
