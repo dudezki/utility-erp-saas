@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-26T21:17:00+08:00",
+  "data_as_of": "2026-10-26T21:30:37+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-26T21:17:01+08:00",
+  "published_snapshot_at": "2026-10-26T21:30:38+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -366,7 +366,7 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-26T21:17:00+08:00",
+    "observed_at": "2026-10-26T21:30:37+08:00",
     "summary": "P3-M3 dated synthetic agreement-to-tariff assignments implemented and verified.",
     "completed": [
       "Private same-tenant tariff assignments use finite half-open calendar dates, nonoverlap, UUIDv7, controlled lifecycle and audit.",
@@ -376,7 +376,8 @@
     "verification": [
       "Disposable clean install/all SQL and final assignment regressions passed, including stale-snapshot parent-date rejection.",
       "Observed PostgreSQL lock waits verified both containment mutation orders and one live binding under competing overlaps.",
-      "96 backend cases including the250-case arithmetic oracle passed; implementationff721ac."
+      "96 backend cases including the250-case arithmetic oracle passed; implementationff721ac.",
+      "Existing expiry verifier timing fixed in abe7689: nonblocking lock observation and database-clock lease expiry pass, with production timeouts unchanged."
     ],
     "limitations": [
       "Calendar assignment dates do not select a published tariff version or establish a complete billing period.",
