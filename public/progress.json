@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "project_name": "Utility ERP SaaS",
+  "data_as_of": "2026-10-26T09:00:03+08:00",
+  "timezone": "Asia/Manila",
+  "current_phase": 3,
+  "current_milestone": "P3-M2",
+  "current_work_state": "next_selected",
+  "current_priority": "protected ordered-ingestion API; then upload UI/acceptance",
+  "progress_basis": {
+    "measure": "Completed checkpoints for the named prototype milestone",
+    "checkpoint_weight_percent": 20,
+    "checkpoints": [
+      "schema",
+      "domain_rules",
+      "protected_api",
+      "preview_ui",
+      "milestone_acceptance"
+    ],
+    "is_production_readiness": false,
+    "is_effort_estimate": false,
+    "overall_percent": null,
+    "caveats": [
+      "100% for customer_accounts and service_connections covers their read-foundation milestone, not full CRUD or production login.",
+      "No overall average is supplied because milestone scopes differ.",
+      "No historical trend or completion-date estimate is supplied.",
+      "Metering imports remain owner-only; protected ingestion API and upload UI are pending."
+    ]
+  },
+  "published_snapshot_at": "2026-10-26T09:13:21+08:00",
+  "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
+  "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
+  "modules": [
+    {
+      "module_code": "party_directory",
+      "module_name": "People and companies",
+      "milestone_scope": "Directory foundation",
+      "completion_percent": 40,
+      "completed_checkpoints": [
+        "Schema",
+        "rules"
+      ],
+      "milestone_status": "in_progress",
+      "is_current_priority": false,
+      "current_or_next_work": "Private directory API and UI"
+    },
+    {
+      "module_code": "customer_accounts",
+      "module_name": "Customer accounts",
+      "milestone_scope": "P3-M1 read foundation",
+      "completion_percent": 100,
+      "completed_checkpoints": [
+        "Schema",
+        "rules",
+        "API",
+        "preview UI",
+        "acceptance"
+      ],
+      "milestone_status": "complete",
+      "is_current_priority": false,
+      "current_or_next_work": "Completed for this read-foundation scope"
+    },
+    {
+      "module_code": "service_connections",
+      "module_name": "Service connections",
+      "milestone_scope": "P3-M1 read foundation",
+      "completion_percent": 100,
+      "completed_checkpoints": [
+        "Schema",
+        "rules",
+        "API",
+        "preview UI",
+        "acceptance"
+      ],
+      "milestone_status": "complete",
+      "is_current_priority": false,
+      "current_or_next_work": "Completed for this read-foundation scope"
+    },
+    {
+      "module_code": "basic_reports",
+      "module_name": "Basic reports",
+      "milestone_scope": "Reporting workflows",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; reporting delivery"
+    },
+    {
+      "module_code": "metering",
+      "module_name": "Metering and readings",
+      "milestone_scope": "P3-M2 ingestion workflow",
+      "completion_percent": 40,
+      "completed_checkpoints": [
+        "Schema",
+        "rules"
+      ],
+      "milestone_status": "in_progress",
+      "is_current_priority": true,
+      "current_or_next_work": "protected ordered-ingestion API; then upload UI/acceptance"
+    },
+    {
+      "module_code": "tariffs",
+      "module_name": "Tariffs",
+      "milestone_scope": "P3-M3 demonstration tariffs",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued after P3-M2"
+    },
+    {
+      "module_code": "billing",
+      "module_name": "Billing",
+      "milestone_scope": "P3-M3 calculation/review",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued after P3-M2"
+    },
+    {
+      "module_code": "collections",
+      "module_name": "Collections",
+      "milestone_scope": "P3-M4 receivables/payments",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued after billing"
+    },
+    {
+      "module_code": "work_orders",
+      "module_name": "Work orders",
+      "milestone_scope": "Phase4 operational workflows",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued"
+    },
+    {
+      "module_code": "assets",
+      "module_name": "Asset management",
+      "milestone_scope": "Asset-module delivery",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued; detailed milestone scope pending"
+    },
+    {
+      "module_code": "customer_portal",
+      "module_name": "Customer portal",
+      "milestone_scope": "Phase4 customer workflows",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued"
+    },
+    {
+      "module_code": "operational_reports",
+      "module_name": "Operational reports",
+      "milestone_scope": "Phase4 reporting workflows",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
+      "is_current_priority": false,
+      "current_or_next_work": "Queued"
+    }
+  ]
+}

@@ -1,7 +1,9 @@
 import assets from '../.generated/assets.js';
+import {serveProgress} from './progress.js';
 import {json,register} from './registration.js';
 import {handleCatalog,bootstrapCatalog} from './catalog.js';
 export default {async fetch(request,env){const path=new URL(request.url).pathname;
+ if(path==='/progress.json'||path==='/api/public/project-progress')return serveProgress(request,assets['/progress.json']);
  if(path==='/api/public/package-catalog'||path==='/assets/catalog.json')return handleCatalog(request,env);
  if(path==='/api/admin/catalog/bootstrap')return bootstrapCatalog(request,env);
  if(path==='/api/registrations')return register(request,env);
