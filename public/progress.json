@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-27T20:18:04+08:00",
+  "data_as_of": "2026-10-27T21:42:19+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
-  "current_milestone": "P3-M3",
+  "current_milestone": "P3-M4",
   "current_work_state": "next_selected",
-  "current_priority": "integrated P3-M3 preparation/detail/independent-review acceptance",
+  "current_priority": "immutable synthetic invoice facts and issuance contract",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-27T20:18:06+08:00",
+  "published_snapshot_at": "2026-10-27T21:42:22+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -119,16 +119,17 @@
       "module_code": "billing",
       "module_name": "Billing",
       "milestone_scope": "P3-M3 calculation/review",
-      "completion_percent": 80,
+      "completion_percent": 100,
       "completed_checkpoints": [
         "Schema",
         "rules",
         "API",
-        "UI"
+        "UI",
+        "acceptance"
       ],
-      "milestone_status": "in_progress",
-      "is_current_priority": true,
-      "current_or_next_work": "integrated P3-M3 preparation/detail/independent-review acceptance"
+      "milestone_status": "complete",
+      "is_current_priority": false,
+      "current_or_next_work": "Accepted development calculation/review prototype; production limits retained"
     },
     {
       "module_code": "collections",
@@ -137,8 +138,8 @@
       "completion_percent": 0,
       "completed_checkpoints": [],
       "milestone_status": "queued",
-      "is_current_priority": false,
-      "current_or_next_work": "Queued after billing"
+      "is_current_priority": true,
+      "current_or_next_work": "immutable synthetic invoice facts and issuance contract"
     },
     {
       "module_code": "work_orders",
@@ -299,11 +300,11 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 4,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 2,
       "current_priority_modules": [
-        "billing"
+        "collections"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -329,11 +330,11 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 4,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 6,
       "current_priority_modules": [
-        "billing"
+        "collections"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -366,30 +367,32 @@
       "scoped_milestones_complete": 1,
       "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 14,
-      "current_priority_modules": [],
+      "current_priority_modules": [
+        "collections"
+      ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-27T20:18:04+08:00",
-    "summary": "Compact private calculation/review screen verified; billing reaches80% for its named prototype scope.",
+    "observed_at": "2026-10-27T21:42:19+08:00",
+    "summary": "P3-M3 calculation/review prototype accepted after full integrated verification; invoice foundation is selected next.",
     "completed": [
-      "Added a separate private review page with exact saved values, UTC period and reading/tariff provenance. No sample fallback or ERP session is created.",
-      "Independent review uses the protected disposition/reason API. Unknown outcomes freeze the original request; denied recovery retains uncertainty until an exact retry resolves it.",
-      "Context changes clear private facts and suppress stale reads; no browser storage, invoice issuance or public sandbox connection was added."
+      "One real HTTP→restricted PostgreSQL journey now prepares an authoritative calculation, reads its exact saved facts and records a distinct-human immutable review.",
+      "Composite acceptance verifies exact half-cent/beyond-JS arithmetic, pinned provenance, independent permissions/account scopes, self-review denial, retries/conflicts, revoked authority and historical replay with one calculation/review/audit each.",
+      "Billing reaches100% only for the named calculation/review prototype. Phase3 continues with P3-M4 synthetic invoice facts; collections remains0% and tariffs40%."
     ],
     "verification": [
-      "Implementationde5dc1a;137 backend tests pass, including exact asset allowlist/CSP/no-store boundaries.",
-      "Desktop1440/mobile390 browser checks pass real default401 reads/reviews, controlled success/403/404/503/malformed/stale responses, exact values, keyboard/no overflow, identical retries, sticky uncertainty and conflicts.",
-      "Browser success uses intercepted synthetic stress DTOs, not a real identity or database session; earlier actual restricted PostgreSQL/API verification remains independent and unchanged."
+      "Test implementationbec9ca8; all17 integrated foundation stages and137 backend cases pass on final code.",
+      "Targeted composite acceptance passed with owned disposable database/login cleanup; no product/API/migration change was needed.",
+      "Existing private UI desktop/mobile evidence remains valid; successful browser DTOs were controlled synthetic responses, separate from actual PostgreSQL/HTTP acceptance."
     ],
     "limitations": [
-      "Billing80% is schema/rules/API/UI prototype checkpoint completion, not production readiness. Integrated P3-M3 acceptance remains pending.",
-      "The new screen is on the local private app route /app/billing-review, not the hosted public sandbox. Identity remains unconfigured/default-deny.",
-      "GET supplies saved facts, not existing review state or current invoice eligibility. Uncertain private attempts are memory-only and cannot be recovered automatically after leaving/reloading."
+      "Development prototype acceptance is not production billing, complete tariff administration or a full meter-to-cash cycle. Phase3 remains open for invoices/collections and integrated-cycle work.",
+      "Real ERP identity, approved tariffs/commercial terms, invoices, payments, account balances and production deployment remain pending.",
+      "Private APIs/UI remain separate from public registration and the fictional browser-local sandbox. No local PostgreSQL connection or private data was published."
     ],
-    "next_selected": "P3-M3 integrated authoritative preparation → detail → distinct-human review acceptance with actual restricted PostgreSQL/HTTP.",
+    "next_selected": "P3-M4 initial immutable synthetic invoice facts/issuance contract linked to accepted saved calculation and review.",
     "blocker": null
   }
 }
