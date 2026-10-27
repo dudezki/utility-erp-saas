@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-27T13:13:37+08:00",
+  "data_as_of": "2026-10-27T14:16:48+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "narrow review authorization and private review API",
+  "current_priority": "protected calculation detail reads for review UI",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-27T13:13:37+08:00",
+  "published_snapshot_at": "2026-10-27T14:16:49+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -126,7 +126,7 @@
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "narrow review authorization and private review API"
+      "current_or_next_work": "protected calculation detail reads for review UI"
     },
     {
       "module_code": "collections",
@@ -370,24 +370,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-27T13:13:37+08:00",
-    "summary": "Private calculation preparation now derives and saves authoritative synthetic results behind a narrow permission/entitlement boundary.",
+    "observed_at": "2026-10-27T14:16:48+08:00",
+    "summary": "Protected distinct-human calculation review now enforces independent permission, billing entitlement and saved-account scope.",
     "completed": [
-      "Added a purpose-only billing role: preparation entry only, no private table reads/writes or owner review/source functions.",
-      "Reference-only private POST checks server identity, bounded JSON, direct billing permission, billing entitlement and agreement-account scope; sources and amounts are selected server-side.",
-      "Exact requests return one immutable receipt on retry. Current authority is required on retries and after lock waits. Public sandbox/registration remain separate."
+      "Added a narrow review entry without table or old owner-function access. The preparer cannot review their own calculation; system preparation remains fail-closed.",
+      "Private bounded review POST accepts only disposition/reason, binds verified actor and exact saved calculation, and commits before returning an ID-only receipt.",
+      "Concurrent exact retries preserve one immutable decision/audit. Competing reviewers, conflicts and expired/revoked authority are denied; public sandbox/registration stay separate."
     ],
     "verification": [
-      "Implementation9a7c719;14 targeted decoder/factory/adapter/listener cases pass.",
-      "Actual private HTTP→restricted PostgreSQL prepares/retries exact synthetic results, rejects caller rates/origin/revoked access and resets pooled context.",
-      "All14 integrated foundation stages passed on final bytes, including narrow preparation/actual HTTP PostgreSQL, authorization expiry waits and existing ingestion/private HTTP regressions."
+      "Implementationea8cfd5;14 focused decoder/factory/adapter/listener cases and new SQL checks pass.",
+      "Actual private HTTP→restricted PostgreSQL verifies distinct reviewer, exact retry/conflict, revoked authority and pooled context reset.",
+      "All15 integrated foundation stages passed on final bytes, including both narrow write paths/actual HTTP PostgreSQL, concurrency/expiry proofs and existing ingestion/private HTTP regressions."
     ],
     "limitations": [
-      "Preparation is one slice of the protected calculation/review API; review authorization/API and operational screens remain pending. Billing40% is unchanged.",
-      "Prototype direct grants/account scope and coarse shared authority locks only; assignment-based writes and production identity remain deferred.",
-      "The endpoint is private loopback and defaults to denial without configured identity/writer. Public browser-local sandbox is not connected to PostgreSQL or private registration records."
+      "Preparation/review write endpoints are implemented; protected calculation-detail reads and the operational review screen/acceptance remain pending. Billing40% is unchanged.",
+      "Prototype direct grants/account scope and coarse authority locks only. Review concerns saved historical facts, not current invoice eligibility or production billing authority.",
+      "Private endpoints default to denial without configured identity/writers. The hosted sandbox remains fictional/browser-local, with no private PostgreSQL or registration connection."
     ],
-    "next_selected": "P3-M3 narrow distinct-human review authorization and private review endpoint, then operational tenant-app workflow.",
+    "next_selected": "P3-M3 protected allowlisted saved-calculation detail reads, then operational review screen and acceptance.",
     "blocker": null
   }
 }
