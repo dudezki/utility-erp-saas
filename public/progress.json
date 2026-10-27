@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-27T14:16:48+08:00",
+  "data_as_of": "2026-10-27T15:05:55+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "protected calculation detail reads for review UI",
+  "current_priority": "restricted saved-calculation reader authorization and listener integration",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-27T14:16:49+08:00",
+  "published_snapshot_at": "2026-10-27T15:05:55+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -126,7 +126,7 @@
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "protected calculation detail reads for review UI"
+      "current_or_next_work": "restricted saved-calculation reader authorization and listener integration"
     },
     {
       "module_code": "collections",
@@ -370,24 +370,21 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-27T14:16:48+08:00",
-    "summary": "Protected distinct-human calculation review now enforces independent permission, billing entitlement and saved-account scope.",
+    "observed_at": "2026-10-27T15:05:55+08:00",
+    "summary": "Saved-calculation detail response contract now preserves exact values and excludes private raw metadata.",
     "completed": [
-      "Added a narrow review entry without table or old owner-function access. The preparer cannot review their own calculation; system preparation remains fail-closed.",
-      "Private bounded review POST accepts only disposition/reason, binds verified actor and exact saved calculation, and commits before returning an ID-only receipt.",
-      "Concurrent exact retries preserve one immutable decision/audit. Competing reviewers, conflicts and expired/revoked authority are denied; public sandbox/registration stay separate."
+      "Added strict tenant/calculation-bound allowlisted result projection with exact decimal strings, period and reading provenance checks.",
+      "Added an authenticated default-deny GET factory with generic errors and no-store responses; no raw snapshots, retry keys or actor metadata are serialized."
     ],
     "verification": [
-      "Implementationea8cfd5;14 focused decoder/factory/adapter/listener cases and new SQL checks pass.",
-      "Actual private HTTP→restricted PostgreSQL verifies distinct reviewer, exact retry/conflict, revoked authority and pooled context reset.",
-      "All15 integrated foundation stages passed on final bytes, including both narrow write paths/actual HTTP PostgreSQL, concurrency/expiry proofs and existing ingestion/private HTTP regressions."
+      "Implementationfbfe0eb; six focused contract cases and all130 backend tests pass.",
+      "Fresh runtime check confirms healthy isolated PostgreSQL container with no published port. No database migration or privilege changed."
     ],
     "limitations": [
-      "Preparation/review write endpoints are implemented; protected calculation-detail reads and the operational review screen/acceptance remain pending. Billing40% is unchanged.",
-      "Prototype direct grants/account scope and coarse authority locks only. Review concerns saved historical facts, not current invoice eligibility or production billing authority.",
-      "Private endpoints default to denial without configured identity/writers. The hosted sandbox remains fictional/browser-local, with no private PostgreSQL or registration connection."
+      "Read factory is not wired to the listener. Restricted database read authorization and real PostgreSQL/HTTP verification remain pending.",
+      "Billing40% is unchanged; operational review UI and acceptance are not complete. Public app sandbox remains fictional/browser-local."
     ],
-    "next_selected": "P3-M3 protected allowlisted saved-calculation detail reads, then operational review screen and acceptance.",
+    "next_selected": "P3-M3 restricted saved-calculation reader permission/entitlement/account scope and listener integration, then operational review UI.",
     "blocker": null
   }
 }
