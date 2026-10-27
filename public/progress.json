@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-27T18:54:20+08:00",
+  "data_as_of": "2026-10-27T20:18:04+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M3",
   "current_work_state": "next_selected",
-  "current_priority": "compact private operational calculation/review screen",
+  "current_priority": "integrated P3-M3 preparation/detail/independent-review acceptance",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-27T18:57:15+08:00",
+  "published_snapshot_at": "2026-10-27T20:18:06+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -119,15 +119,16 @@
       "module_code": "billing",
       "module_name": "Billing",
       "milestone_scope": "P3-M3 calculation/review",
-      "completion_percent": 60,
+      "completion_percent": 80,
       "completed_checkpoints": [
         "Schema",
         "rules",
-        "API"
+        "API",
+        "UI"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "compact private operational calculation/review screen"
+      "current_or_next_work": "integrated P3-M3 preparation/detail/independent-review acceptance"
     },
     {
       "module_code": "collections",
@@ -371,29 +372,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-27T18:54:20+08:00",
-    "summary": "Billing prototype API checkpoint verified at60%; existing hourly engineering workflow now uses compact durable state and delta context.",
+    "observed_at": "2026-10-27T20:18:04+08:00",
+    "summary": "Compact private calculation/review screen verified; billing reaches80% for its named prototype scope.",
     "completed": [
-      "Added independent billing.read permission with current human membership, billing entitlement and immutable saved-account scope. Missing, foreign and unavailable authority are denied.",
-      "Integrated an explicit narrow database reader and private GET route. Only allowlisted saved result facts are returned; exact decimal strings and provenance survive source retirement.",
-      "Preparation, independent review and detail APIs are verified. Billing earns its third of five prototype checkpoints; the operational review screen is next.",
-      "Added durable task/acceptance/verified-commit checkpoint, stale-update protection, scope/governance checks and interrupted-run recovery without resetting project history.",
-      "Updated and read back the existing scheduler prompt exactly, preserving its enabled hourly cadence. Routine orchestration loads current state and Git delta rather than full historical documents."
+      "Added a separate private review page with exact saved values, UTC period and reading/tariff provenance. No sample fallback or ERP session is created.",
+      "Independent review uses the protected disposition/reason API. Unknown outcomes freeze the original request; denied recovery retains uncertainty until an exact retry resolves it.",
+      "Context changes clear private facts and suppress stale reads; no browser storage, invoice issuance or public sandbox connection was added."
     ],
     "verification": [
-      "Implementation1bacb1a; all16 integrated foundation stages and136 backend tests pass on final bytes.",
-      "12 focused contract/adapter/listener cases pass, plus fresh SQL and actual HTTP→restricted PostgreSQL exact-value, scope, revocation, historical-read and pooled-context-reset checks.",
-      "Observed authority-lock wait followed by grant expiry denies access. Independent security review found no material issue; owned test databases/logins were removed.",
-      "Execution implementation33f80ab/3666a33:10 orchestration tests pass, covering context, fresh-process recovery, interruption, duplicate lock, stale writes, scope and NO_OP.",
-      "Measured orchestration payload approximately3,600–3,900 tokens versus38311 for the old required documents, using characters/4; actual model/billed-token telemetry is unavailable."
+      "Implementationde5dc1a;137 backend tests pass, including exact asset allowlist/CSP/no-store boundaries.",
+      "Desktop1440/mobile390 browser checks pass real default401 reads/reviews, controlled success/403/404/503/malformed/stale responses, exact values, keyboard/no overflow, identical retries, sticky uncertainty and conflicts.",
+      "Browser success uses intercepted synthetic stress DTOs, not a real identity or database session; earlier actual restricted PostgreSQL/API verification remains independent and unchanged."
     ],
     "limitations": [
-      "Billing60% means schema, rules and API checkpoints for the synthetic calculation/review prototype, not production billing readiness. UI and milestone acceptance remain pending.",
-      "Direct grants and coarse authority locks only. The detail DTO excludes raw snapshots, retry keys, preparation identities, review state and current invoice eligibility.",
-      "Private endpoints still require configured verified identity and explicit pools. Public registration and the fictional browser-local sandbox remain separate; no private PostgreSQL connection was published.",
-      "Scheduler prompt configuration is confirmed; future run delivery and platform-injected conversation history remain outside the local helper. Initial scheduled AI invocation cannot be skipped by the exposed scheduler API."
+      "Billing80% is schema/rules/API/UI prototype checkpoint completion, not production readiness. Integrated P3-M3 acceptance remains pending.",
+      "The new screen is on the local private app route /app/billing-review, not the hosted public sandbox. Identity remains unconfigured/default-deny.",
+      "GET supplies saved facts, not existing review state or current invoice eligibility. Uncertain private attempts are memory-only and cannot be recovered automatically after leaving/reloading."
     ],
-    "next_selected": "P3-M3 compact private operational calculation/review screen, then milestone acceptance.",
+    "next_selected": "P3-M3 integrated authoritative preparation → detail → distinct-human review acceptance with actual restricted PostgreSQL/HTTP.",
     "blocker": null
   }
 }
