@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T06:02:02+08:00",
+  "data_as_of": "2026-10-29T07:04:52+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M4",
   "current_work_state": "next_selected",
-  "current_priority": "synthetic payment allocation UI with immutable receipt retries",
+  "current_priority": "synthetic debit/credit adjustment UI with immutable receipt retries",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T06:02:02+08:00",
+  "published_snapshot_at": "2026-10-29T07:04:52+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -143,7 +143,7 @@
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "synthetic payment allocation UI with immutable receipt retries"
+      "current_or_next_work": "synthetic debit/credit adjustment UI with immutable receipt retries"
     },
     {
       "module_code": "work_orders",
@@ -379,24 +379,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T06:02:02+08:00",
-    "summary": "Bounded private recorded-payment UI verified; collections60% remains schema/rules/API.",
+    "observed_at": "2026-10-29T07:04:52+08:00",
+    "summary": "Bounded private allocation UI verified; collections60% remains schema/rules/API.",
     "completed": [
-      "Record a synthetic payment only for an account from a successfully loaded private invoice/payment in the current context. Exact128-digit minor units convert to PHP without floating point.",
-      "Receipt number, account, amount and one request key freeze before send. Pending/unknown locks context and preserves identical retry through later denials/conflicts.",
-      "Only a valid id-only receipt confirms recording; no balance mutation, money transfer, allocation or private browser persistence."
+      "A loaded payment can target an independently authorized same-account invoice; exact saved capacity and128-digit minor-unit input remain precision-safe.",
+      "Allocation and recording share unresolved-command/context locks. Frozen same-key retries retain uncertainty through later denials/conflicts; only an id-only receipt confirms.",
+      "After confirmation old balances clear and both details reload under current authority; refresh failure retains the receipt without showing stale or optimistic balances."
     ],
     "verification": [
-      "Design8ffa947/implementatione396331:231 backend tests and15 focused payment/read/actual HTTP checks pass, including7 new payment cases.",
-      "Loaded-account gate, changed context, exact amounts, invalid input/no key, pending guards, timeout/malformed success, identical recovery and late/page clear verified.",
-      "Interrupted run reconciled from persisted scope/checkpoint before work. Browser visual QA unavailable; existing financial API proof retained, no full27-stage rerun claimed."
+      "Design1f53c49/implementation12446f6:239 backend tests and23 focused allocation/recording/read/actual HTTP checks pass, including8 new allocation cases.",
+      "Wrong/foreign target, stale response/JSON, exact partial/full capacity, invalid input, cross-command locks, identical recovery and confirmed refresh failure verified.",
+      "Browser visual QA unavailable; existing restricted PostgreSQL API proof retained; no full27-stage rerun or production readiness claim."
     ],
     "limitations": [
-      "Collections60% unchanged; allocation/adjustment UI and full UI/milestone acceptance remain pending.",
-      "Operational /app/receivables stays local/private, requires server-verified identity/purpose pools; public registration/sandbox remain separate.",
-      "No production login/hosting, payment provider or approved commercial receipt policy. Unknown-attempt recovery is memory-only and may be lost on close/reload."
+      "Collections60% unchanged; adjustment UI, full UI gate and milestone acceptance remain pending.",
+      "Operational /app/receivables stays local/private with server-verified identity/purpose pools. Public registration/sandbox remain separate.",
+      "No provider/refund/unallocation, new API/schema/login/hosting or private browser persistence. Unknown-attempt recovery is memory-only."
     ],
-    "next_selected": "P3-M4-UI-ALLOCATE-1: design a bounded allocation form from a loaded payment to an independently loaded same-tenant/account invoice, with exact capacity display, frozen request/uncertainty recovery and confirmed-detail refresh; no adjustment/provider execution yet.",
+    "next_selected": "P3-M4-UI-ADJUST-1: design bounded synthetic debit/credit adjustment UI for a loaded invoice, exact Unicode reason/minor units, shared writer lock and frozen receipt recovery, followed by current invoice refresh; assess full UI gate only after required evidence.",
     "blocker": null
   }
 }
