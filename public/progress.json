@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-28T23:25:43+08:00",
+  "data_as_of": "2026-10-29T01:13:23+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M4",
   "current_work_state": "next_selected",
-  "current_priority": "protected synthetic invoice adjustment contract and API",
+  "current_priority": "integrated financial API journey and scope acceptance before private UI",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-28T23:25:43+08:00",
+  "published_snapshot_at": "2026-10-29T01:13:23+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -142,7 +142,7 @@
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "protected synthetic invoice adjustment contract and API"
+      "current_or_next_work": "integrated financial API journey and scope acceptance before private UI"
     },
     {
       "module_code": "work_orders",
@@ -378,24 +378,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-28T23:25:43+08:00",
-    "summary": "Protected synthetic payment allocation verified; Phase3/P3-M4 continues with invoice adjustments.",
+    "observed_at": "2026-10-29T01:13:23+08:00",
+    "summary": "Protected synthetic invoice adjustments verified; Phase3/P3-M4 continues with integrated financial API acceptance.",
     "completed": [
-      "One private synthetic allocation POST requires independent current allocation permission, collections entitlement and exact shared payment/invoice account scope.",
-      "Exact128-digit and beyond-JavaScript amounts, adjusted invoice capacity, original allocation-creator retries and archived history are verified.",
-      "Observed payment/invoice/credit races and authority expiry after financial waits preserve atomic allocation/audit behavior without broad table, balance-helper or owner-command grants."
+      "Private debit/credit adjustment POST requires independent billing adjustment permission, current billing entitlement and exact saved invoice-account scope.",
+      "Exact128-digit amounts and Unicode reason/key, original-creator retries and archived history verified.",
+      "Concurrent credit/allocation capacity and expiry rollback preserve immutable invoice facts and atomic adjustment audits."
     ],
     "verification": [
-      "Implementation601e4d3: all25 integrated foundation stages and194 backend cases pass on final files.",
-      "Fresh0001–0042/all SQL and actual restricted HTTP/PostgreSQL verify exact/full/adjusted capacity, foreign scope, history, rollback and pooled reset.",
-      "Owned verification databases, restricted logins and listeners cleaned; existing billing, reading, recording and private-access paths pass."
+      "Implementation902c2e6; verifier fix44c8cb3. All26 foundation stages covered by integrated first21 and resumed final5;209 backend cases pass.",
+      "Fresh0001–0043/all SQL and actual restricted HTTP/PostgreSQL include escaped full-width Unicode, foreign/current scope, capacity races and pooled reset.",
+      "Observed allocation expiry-test timing failure fixed with startup margin and early-exit diagnostics; final allocation and adjustment verifiers pass; owned resources cleaned."
     ],
     "limitations": [
-      "Private development API requires explicitly configured trusted identity and cashier pool; no production sign-in, hosted ERP API, payment execution or cashier UI delivered.",
-      "Adjustment API/UI/acceptance remain pending. Collections40% stays schema/rules for its named broader scope.",
+      "Private development API requires explicitly configured trusted identity and separate safe purpose pools; no production sign-in, hosted ERP API, provider payment execution or financial UI delivered.",
+      "Collections40% stays schema/rules; broader API gate/UI/acceptance remain open.",
       "Public registration and fictional sandbox remain separate from private financial data; no signup rows or local PostgreSQL connection published."
     ],
-    "next_selected": "P3-M4-ADJUSTMENT-API-1: design protected synthetic invoice adjustments with independent current billing authority, billing entitlement, exact invoice account scope and immutable capacity/history.",
+    "next_selected": "P3-M4-API-ACCEPT-1: inventory the named prototype API and verify one actual restricted HTTP preparation→distinct-human review→issue→record payment→allocate→debit/credit adjust→invoice/payment detail journey with exact conservation; assess the API gate before selecting the first bounded private receivables UI.",
     "blocker": null
   }
 }
