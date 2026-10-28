@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T01:13:23+08:00",
+  "data_as_of": "2026-10-29T02:04:08+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M4",
   "current_work_state": "next_selected",
-  "current_priority": "integrated financial API journey and scope acceptance before private UI",
+  "current_priority": "compact private invoice/payment detail viewer",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T01:13:23+08:00",
+  "published_snapshot_at": "2026-10-29T02:04:09+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -135,14 +135,15 @@
       "module_code": "collections",
       "module_name": "Collections",
       "milestone_scope": "P3-M4 receivables/payments",
-      "completion_percent": 40,
+      "completion_percent": 60,
       "completed_checkpoints": [
         "Schema",
-        "rules"
+        "rules",
+        "API"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "integrated financial API journey and scope acceptance before private UI"
+      "current_or_next_work": "compact private invoice/payment detail viewer"
     },
     {
       "module_code": "work_orders",
@@ -378,24 +379,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T01:13:23+08:00",
-    "summary": "Protected synthetic invoice adjustments verified; Phase3/P3-M4 continues with integrated financial API acceptance.",
+    "observed_at": "2026-10-29T02:04:08+08:00",
+    "summary": "Named synthetic receivables API gate verified; collections60% and private detail UI selected.",
     "completed": [
-      "Private debit/credit adjustment POST requires independent billing adjustment permission, current billing entitlement and exact saved invoice-account scope.",
-      "Exact128-digit amounts and Unicode reason/key, original-creator retries and archived history verified.",
-      "Concurrent credit/allocation capacity and expiry rollback preserve immutable invoice facts and atomic adjustment audits."
+      "One actual restricted HTTP journey now connects calculation and independent review to invoice issuance, recorded payment, partial allocation, debit/credit adjustments, settlement and reconciled details.",
+      "Separate billing/cashier/receivables purpose logins verify independent current permission, exact account scope and entitlement; denials leave financial facts/audits unchanged.",
+      "Exact beyond-JavaScript balances, immutable originals and retry receipts reconcile with one audit per accepted fact."
     ],
     "verification": [
-      "Implementation902c2e6; verifier fix44c8cb3. All26 foundation stages covered by integrated first21 and resumed final5;209 backend cases pass.",
-      "Fresh0001–0043/all SQL and actual restricted HTTP/PostgreSQL include escaped full-width Unicode, foreign/current scope, capacity races and pooled reset.",
-      "Observed allocation expiry-test timing failure fixed with startup margin and early-exit diagnostics; final allocation and adjustment verifiers pass; owned resources cleaned."
+      "Contract95158f5/verifier3ba6d47: composite actual HTTP/PostgreSQL acceptance and all209 backend tests pass.",
+      "One calculation/review/invoice/payment and two allocations/adjustments; exact conservation and three pooled context resets verified; owned resources cleaned.",
+      "27-stage checker registration verified. Prior26-stage baseline retained on unchanged production code; all27 stages were not rerun this run."
     ],
     "limitations": [
-      "Private development API requires explicitly configured trusted identity and separate safe purpose pools; no production sign-in, hosted ERP API, provider payment execution or financial UI delivered.",
-      "Collections40% stays schema/rules; broader API gate/UI/acceptance remain open.",
-      "Public registration and fictional sandbox remain separate from private financial data; no signup rows or local PostgreSQL connection published."
+      "Collections60% measures the named synthetic schema/rules/API scope. UI and milestone acceptance remain pending; Phase3 stays open.",
+      "Read-by-known-id only; no list/search, statements, production ERP identity/hosting, payment provider or new financial UI delivered.",
+      "Public registration and browser-local sandbox remain separate from private PostgreSQL and financial data."
     ],
-    "next_selected": "P3-M4-API-ACCEPT-1: inventory the named prototype API and verify one actual restricted HTTP preparation→distinct-human review→issue→record payment→allocate→debit/credit adjust→invoice/payment detail journey with exact conservation; assess the API gate before selecting the first bounded private receivables UI.",
+    "next_selected": "P3-M4-UI-READ-1: design and implement one compact private invoice/payment detail viewer using existing protected GETs and explicit known IDs; exact balances/history, default-deny/errors and stale-context clearing before write UI.",
     "blocker": null
   }
 }
