@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-28T15:01:09+08:00",
+  "data_as_of": "2026-10-28T16:29:59+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M4",
   "current_work_state": "next_selected",
-  "current_priority": "synthetic payments/allocations implemented; invoice adjustments next",
+  "current_priority": "protected invoice detail and adjusted-balance read foundation",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-28T15:01:09+08:00",
+  "published_snapshot_at": "2026-10-28T16:30:00+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -135,11 +135,14 @@
       "module_code": "collections",
       "module_name": "Collections",
       "milestone_scope": "P3-M4 receivables/payments",
-      "completion_percent": 0,
-      "completed_checkpoints": [],
-      "milestone_status": "queued",
+      "completion_percent": 40,
+      "completed_checkpoints": [
+        "Schema",
+        "rules"
+      ],
+      "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "synthetic payments/allocations implemented; invoice adjustments next"
+      "current_or_next_work": "protected invoice detail and adjusted-balance read foundation"
     },
     {
       "module_code": "work_orders",
@@ -301,8 +304,8 @@
       ],
       "module_count": 8,
       "scoped_milestones_complete": 4,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 2,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 1,
       "current_priority_modules": [
         "collections"
       ],
@@ -331,8 +334,8 @@
       ],
       "module_count": 12,
       "scoped_milestones_complete": 4,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 6,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 5,
       "current_priority_modules": [
         "collections"
       ],
@@ -365,8 +368,8 @@
       ],
       "module_count": 16,
       "scoped_milestones_complete": 1,
-      "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 14,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 13,
       "current_priority_modules": [
         "collections"
       ],
@@ -375,24 +378,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-28T15:01:09+08:00",
-    "summary": "Synthetic payment and allocation foundation verified; Phase3/P3-M4 continues with invoice adjustments.",
+    "observed_at": "2026-10-28T16:29:59+08:00",
+    "summary": "Synthetic invoice adjustments verified; receivables schema and domain rules reach40% for the named prototype scope.",
     "completed": [
-      "Owner-only synthetic payment receipts and immutable partial allocations preserve exact minor-unit amounts, attribution and atomic audit.",
-      "Observed races verify identical retries, both payment/invoice capacity limits, fresh balance reads after waits, actor suspension and account archival; SQL verifies exact128-digit amounts and audit rollback.",
-      "Derived unapplied payment credit and invoice outstanding amounts remain exact projections of immutable facts; no mutable balance cache or live payment execution."
+      "Immutable synthetic debit/credit adjustments preserve original issued facts and distinguish original, net-adjustment, adjusted and outstanding amounts.",
+      "Observed credit/allocation races in both orders prevent invalid settlement; competing credits, exact retries, fresh balance reads and actor/account revocation checks pass.",
+      "Collections40% credits only the now-complete named synthetic schema and domain rules; protected invoice reads are selected next."
     ],
     "verification": [
-      "Implementation05b6228: all19 integrated stages verified across recovery; first18 passed before interruption, final private HTTP/PostgreSQL stage rerun successfully;137 backend cases pass.",
-      "Fresh SQL verifies128-digit exact minor units, zero-total invoice denial, immutable history and both audit-failure rollbacks.",
-      "Observed PostgreSQL waits verify identical retries, both allocation capacities, fresh payment/invoice balances and suspension/archive denials; owned resources cleaned."
+      "Implementation3de084b: all20 integrated foundation stages and137 backend cases pass.",
+      "Fresh0001–0037/seeds/all SQL suites pass, including existing payment compatibility,128-digit exact amounts, zero/credit/debit, immutable history, audit rollback and default denial.",
+      "Owned PostgreSQL concurrency checks pass with unchanged issued/payment facts and exact adjusted-capacity reconciliation; disposable resources cleaned."
     ],
     "limitations": [
-      "Owner-only synthetic database foundation; no cashier permission/API/UI, payment provider, refunds/reversals or production collection authority.",
-      "Invoice adjustments and remaining M4 exit evidence remain pending; collections stays0% until its complete named gate.",
-      "Public registration and fictional sandbox remain separate from private ERP facts; no customer/signup rows or local PostgreSQL connection are published."
+      "Owner-only synthetic foundation. No protected cashier/invoice API/UI, production identity, payment provider, refund or commercial adjustment/tax policy is delivered.",
+      "API, UI and milestone acceptance gates remain pending; Phase3/P3-M4 is open.40% is scoped prototype checkpoint progress, not production readiness.",
+      "Public registration and fictional sandbox remain separate from private financial records; no private rows or local PostgreSQL connection published."
     ],
-    "next_selected": "P3-M4 bounded synthetic invoice adjustment design/facts, preserving immutable issued amounts and reconciling exact remaining capacity.",
+    "next_selected": "P3-M4-INVOICE-READ-1: narrow protected invoice detail/adjusted-balance read contract and integration with independent permission, entitlement and saved-account scope.",
     "blocker": null
   }
 }
