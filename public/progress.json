@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T03:19:15+08:00",
+  "data_as_of": "2026-10-29T04:09:14+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M4",
   "current_work_state": "next_selected",
-  "current_priority": "synthetic invoice issuance UI with immutable receipt retries",
+  "current_priority": "synthetic recorded-payment UI with immutable receipt retries",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T03:19:15+08:00",
+  "published_snapshot_at": "2026-10-29T04:09:15+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -143,7 +143,7 @@
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "synthetic invoice issuance UI with immutable receipt retries"
+      "current_or_next_work": "synthetic recorded-payment UI with immutable receipt retries"
     },
     {
       "module_code": "work_orders",
@@ -379,24 +379,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T03:19:15+08:00",
-    "summary": "Compact private receivables read viewer verified; collections60% remains scoped to schema/rules/API.",
+    "observed_at": "2026-10-29T04:09:14+08:00",
+    "summary": "Bounded private synthetic invoice issuance UI verified; collections60% remains schema/rules/API.",
     "completed": [
-      "Private invoice/payment viewer uses existing authorized known-ID reads in a compact layout, with exact balances, line/history and truncation disclosure.",
-      "Safe text and Asia/Manila/source timestamps preserve precision; context edits, refresh, clear, page restore and late responses cannot restore stale details.",
-      "Default runtime denies operational data access; no financial commands, tenant login or public operational deployment added."
+      "Only a confirmed approved review receipt enables synthetic invoice issuance; server independently checks current authority and source eligibility.",
+      "Exact calculation/review references, synthetic number and one request key freeze before send. Retries preserve identical bytes; later denial/conflict never erases an earlier unknown outcome.",
+      "Only an id-only invoice receipt confirms success. Pending/context/clear guards and memory-only recovery warnings prevent accidental duplicate attempts."
     ],
     "verification": [
-      "Design63e33db/implementationa7f80a8: final217 backend cases pass, including8 focused controlled DOM/actual HTTP route/default-deny cases.",
-      "Deadline review fix prevents success after timeout even if cancellation is ignored; stale JSON, exact128-digit values, history bounds and error cases pass.",
-      "Desktop/mobile browser visual QA unavailable. Existing financial API acceptance retained; no full27-stage rerun claimed."
+      "Design86eb14a/implementation0d0725e:224 backend tests pass; final8 focused review/issuance UI cases pass, including7 new issuance cases.",
+      "Review gate, pending double submit, network/deadline/malformed-success uncertainty, denial after unknown, byte-identical receipt recovery and page clearing verified.",
+      "Actual private HTTP/default-deny regression evidence retained. Desktop/mobile browser QA unavailable; no full27-stage rerun or production readiness claimed."
     ],
     "limitations": [
-      "Collections60% remains schema/rules/API; read-only UI is partial. Command screens and full UI/acceptance gates remain pending.",
-      "Private local /app/receivables requires server-verified identity/purpose pools for data; public registration and fictional sandbox remain separate.",
-      "No production ERP sign-in/hosting, payment provider or commercial policy delivered."
+      "Collections60% unchanged; payment/allocator/adjustment command screens and full UI/acceptance remain pending.",
+      "Local private /app/billing-review requires server-verified identity/purpose pool for financial data; public registration/sandbox remain separate.",
+      "No production login/hosting, approved numbering policy, payment execution or private browser persistence. Closing/reloading may lose unknown-attempt recovery context."
     ],
-    "next_selected": "P3-M4-UI-ISSUE-1: design one bounded synthetic invoice issuance flow from a confirmed approved calculation-review receipt, with explicit synthetic number, immutable retry payload/uncertainty and receipt recovery; server remains sole authority.",
+    "next_selected": "P3-M4-UI-PAYMENT-1: design one bounded synthetic recorded-payment form for an authorized loaded account with exact minor-unit input, explicit SYN receipt number and frozen uncertainty/retry recovery; no allocation or provider execution yet.",
     "blocker": null
   }
 }
