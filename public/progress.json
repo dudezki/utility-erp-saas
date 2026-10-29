@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T23:14:00+08:00",
+  "data_as_of": "2026-10-30T00:40:18+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "integrated worker cycle/reconciliation; adjustment verified, no reports gate earned",
+  "current_priority": "M5/Phase3 exit assessment; integrated cycle verified, no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T23:14:01+08:00",
+  "published_snapshot_at": "2026-10-30T00:40:18+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "integrated worker cycle/reconciliation; adjustment verified, no reports gate earned"
+      "current_or_next_work": "M5/Phase3 exit assessment; integrated cycle verified, no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -383,22 +383,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T23:14:00+08:00",
-    "summary": "Assigned debit/credit adjustment implemented2e12033: independent billing.adjust/current billing entitlement/exact saved invoice account through separate billing login. Exact signed capacity, Unicode reason, original creator and expiry rollback verified. Integrated worker cycle next; M5/Phase3 open/no new gate.",
+    "observed_at": "2026-10-30T00:40:18+08:00",
+    "summary": "Complete assignment-only synthetic financial cycle verified in 5e892cd: distinct-human approval, exact settlement and source-to-fact/audit reconciliation through three restricted purpose logins. Integrated 37-stage checks pass; formal M5/Phase3 exit assessment next, no new gate.",
     "completed": [
-      "Adjustment-only0052 requires independent current billing authority and immutable invoice account.",
-      "Exact debit/credit capacity, Unicode reasons, original creator recovery and expiry rollback preserve financial history."
+      "Actual assignment-only complete financial cycle with distinct-human approval and zero hidden direct grants.",
+      "Bounded source-to-fact/human/audit reconciliation and exact settlement, with one audit per immutable fact."
     ],
     "verification": [
-      "Actual0051 assigned preparation/review/issue/capture/partial allocation/details→adjustment403 baseline→0052 debit200/credit50 passes. Original1845+net150=adjusted1995; allocated100/outstanding1895/payment unapplied900719925474099201.2000 supplementary Unicode characters preserved; retry/change409/other scope-valid creator403, credit-over-capacity422, independent adjust despite issue/read/record rights, billing entitlement/account/tenant/actor/12 lifecycle/direct independence/archive rules/private grants/crossed adapters/reset and immutable original financial/audit fingerprints pass. Observed revocation serialization/new83039wait30s expiry rolls back adjustment/audit; owned resources cleaned.",
-      "Runtime0001–0052 checksums/SQL/clean install/direct adjustment/delegated allocation/248 backend pass.36-stage checker registered/full36 not rerun; no new UI/browser/independent specialist proof."
+      "Actual assigned A preparation/detail→same-user denial→B review/issue→A capture/partial allocation/debit/credit/settlement/details passes with zero direct grants. Missing permission/current entitlement, grant/assignment revocation and valid other-account assignments deny at every operation without new facts/audits. Exact original 900719925474099300 + net 50 = adjusted/allocated 900719925474099350; invoice outstanding 0/payment unapplied 49. Original receipt/conflict/other creator/foreign/default401/missing503/context/private tables/source reading/validation/actor links and one audit per fact including invoice line pass; original financial fingerprints unchanged. Owned DB/three logins/listener cleaned.",
+      "One fresh uninterrupted 37-stage foundation run passes final source:0001–0052 immutable checksums/SQL/clean install/atomicity/248 backend/all direct and delegated financial concurrency/expiry/cycle/ingestion/private access regressions. No new browser test; git diff841c72f -- backend/tenant-app is empty, accepted M4 controlled UI evidence reused separately."
     ],
     "limitations": [
-      "M5/Phase3 open; percentages unchanged.",
-      "All nine individual delegated operations verified; integrated cycle/reconciliation acceptance pending.",
-      "No new UI/browser/production identity/hosting or public ERP data."
+      "M5/Phase3 formal exit assessment pending; percentages unchanged.",
+      "Bounded synthetic verifier report is not a general reporting API/module.",
+      "No new browser test/production identity/hosting or public ERP data."
     ],
-    "next_selected": "P3-M5-CYCLE-1: actual assignment-only complete synthetic cycle and bounded exact reconciliation, then assess M5/phase exit gaps against the approved contract.",
+    "next_selected": "P3-M5-CLOSEOUT-1: assess and record formal M5/Phase3 exits against evidence; preserve any required gap, prepare Phase4 scope, and send the authorized CEO phase report only after newly verified full-phase completion.",
     "blocker": null
   }
 }
