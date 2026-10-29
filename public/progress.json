@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T16:09:40+08:00",
+  "data_as_of": "2026-10-29T17:08:17+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "delegated invoice detail; issuance verified, no reports gate earned",
+  "current_priority": "delegated recorded payment; invoice detail verified, no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T16:09:40+08:00",
+  "published_snapshot_at": "2026-10-29T17:08:18+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "delegated invoice detail; issuance verified, no reports gate earned"
+      "current_or_next_work": "delegated recorded payment; invoice detail verified, no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -383,23 +383,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T16:09:40+08:00",
-    "summary": "Delegated synthetic issuance implementedcbf2a77: original assigned reviewer B issues after A preparation; preparer A cannot issue/replay despite issue authority. Fresh source, immutable invoice/line/audit and expiry rollback verified. Delegated invoice detail next; M5/Phase3 open/no new gate.",
+    "observed_at": "2026-10-29T17:08:17+08:00",
+    "summary": "Delegated invoice detail implemented36dfc22: independent collections.read/current collections entitlement/exact saved account verified through a separate receivables login. Crossed billing/receivables adapters reject, invoice-row expiry returns no DTO. Recorded payment next; M5/Phase3 open/no new gate.",
     "completed": [
-      "Issuance-only0047 permits the original independent assigned reviewer with separate billing.issue; preparer cannot issue/recover another reviewer receipt.",
-      "Retired/stale source blocks new issuance; fresh calculation/approval succeeds, immutable receipt/history retained."
+      "Invoice-reader-only0048 requires independent current collections authority and immutable saved account; separate restricted billing/receivables pools.",
+      "Safe exact invoice balances/history and current revocation/expiry checks preserve original financial facts."
     ],
     "verification": [
-      "Actual restricted HTTP/PG baseline0046 denial→0047 original-reviewer issue, exact invoice/derived line and one audit each; independent issue permission/account/entitlement/12 lifecycle controls/direct independence pass.",
-      "Observed revocation serialization and new second-period83035 wait across30s expiry leave no extra header/line/audits; original fingerprint/context/narrow grants preserved, owned resources cleaned.",
-      "0001–0047 checksums/SQL/clean install/direct issuance/delegated prepare/read/review and248 backend pass.31-stage checker registered/full31 not rerun."
+      "Actual restricted HTTP/PG baseline0047 GET denial after assigned issuance→0048 safe detail; read permission/collections entitlement/account/tenant/actor/12 lifecycle/direct independence/source retirement pass.",
+      "Crossed purpose adapters reject503 and reset both contexts; observed revocation serialization/invoice-row30s expiry returns no DTO or changed financial/audit fingerprint; owned resources cleaned.",
+      "0001–0048 checksums/SQL/clean install/direct invoice detail/delegated issuance and248 backend pass.32-stage checker registered/full32 not rerun."
     ],
     "limitations": [
-      "M5/Phase3 open; module percentages unchanged.",
-      "Invoice/payment reads and cashier operations remain direct-only; no new browser/UI or production identity/hosting.",
-      "No real tariffs/numbering/contracts/payment providers or public operational ERP data."
+      "M5/Phase3 open; percentages unchanged.",
+      "Payment read/cashier commands remain direct-only; no new browser/UI or production identity/hosting.",
+      "No real tariffs/numbering/contracts/payment-provider execution or public operational ERP data."
     ],
-    "next_selected": "P3-M5-INVOICE-READ-1: delegated invoice detail with independent collections.read/current collections entitlement/exact saved account through a separate receivables pool.",
+    "next_selected": "P3-M5-PAYMENT-1: assigned synthetic recorded-payment capture with independent collections.record/current entitlement and separate cashier pool; immutable original-creator receipt recovery.",
     "blocker": null
   }
 }
