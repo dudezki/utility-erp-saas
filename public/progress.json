@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-30T02:06:00+08:00",
+  "data_as_of": "2026-10-30T05:08:28+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 database statement reader; contract verified, no reporting gate earned",
+  "current_priority": "P4-M1 protected statement API; database reader verified, API/UI/acceptance pending; no reporting gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-30T02:06:00+08:00",
+  "published_snapshot_at": "2026-10-30T05:08:28+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -79,12 +79,12 @@
     {
       "module_code": "basic_reports",
       "module_name": "Basic reports",
-      "milestone_scope": "P4-M1 account statement/report contract",
+      "milestone_scope": "P4-M1 known-account statement prototype",
       "completion_percent": 0,
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 database statement reader; contract verified, no reporting gate earned"
+      "current_or_next_work": "P4-M1 protected statement API; database reader verified, API/UI/acceptance pending; no reporting gate earned"
     },
     {
       "module_code": "metering",
@@ -383,22 +383,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-30T02:06:00+08:00",
-    "summary": "Known-account synthetic statement contract completed in ed1f5f5. Independent report authority, consistent account capture, exact balances and bounded history specified; preview catalog/private authorization distinction verified. Next database-only reader; no runtime reporting feature or gate yet.",
+    "observed_at": "2026-10-30T05:08:28+08:00",
+    "summary": "Known-account synthetic statement database reader verified in063386e/0053; additive5b2df51/0054 prevents temporary catalog-view shadowing. Exact reconciled balances and independent report authority checked. Protected API is next; no reporting UI or new module gate yet.",
     "completed": [
-      "Current-capture/date semantics, account lock consistency, independent report authorization and exact no-double-count totals/credit balance defined.",
-      "500-fact capacity/newest50 history and compact private lazy UI/API acceptance specified. Private report module/role/permission/function confirmed absent; registration explicitly required next."
+      "Database-only statement reader with independent report permission/entitlement and narrow role, coherent account capture and exact credit balances.",
+      "500-fact fail-closed capacity/newest50 typed history; catalog lookup hardened without rewriting applied migration."
     ],
     "verification": [
-      "Contract references, actual financial account-lock chain, next0053 and unchanged database/backend/scripts checked; current PostgreSQL18.6/nativeUUIDv7/no host port verified.",
-      "Read-only global metadata corrected catalog-versus-private module assumption; no private/signup rows read. Documentation-only slice, no redundant backend suite or new browser run."
+      "Actual restricted PostgreSQL LOGIN: lifecycle/privacy/large sums/limits/Unicode/history and financial/audit immutability.",
+      "Observed report versus all four financial writer locks, unrelated account progress, revocation and post-wait expiry denial. Temporary-view probe reproduces old behavior and confirms additive fix.",
+      "SQL/checksum/clean install,248 backend and existing direct/assigned financial cycles passed.38 stages registered; full38 not rerun."
     ],
     "limitations": [
-      "basic_reports remains0%; proposed SQL/role/module/API/UI not installed.",
-      "No historical date report, aging/fees, hosted identity or payment movement claimed.",
-      "Phase4 open; Phase3 report already sent, no new email due."
+      "basic_reports remains0%; protected HTTP API, dedicated application pool and private report UI pending.",
+      "Synthetic development only; no historical date report, production identity or payment movement.",
+      "Phase4 open; Phase3 completion report already sent, no new email due."
     ],
-    "next_selected": "P4-M1-DB-1: proposed0053 private report authorization module and narrow account-locked statement projection, with actual restricted PostgreSQL concurrency/expiry proof.",
+    "next_selected": "P4-M1-API-1: safe exact projector, dedicated reports adapter and strict private known-account GET over verified0053/0054.",
     "blocker": null
   }
 }
