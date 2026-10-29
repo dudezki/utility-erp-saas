@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T09:16:13+08:00",
+  "data_as_of": "2026-10-29T10:24:51+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
-  "current_milestone": "P3-M4",
+  "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "formal receivables prototype acceptance",
+  "current_priority": "controlled external-worker cycle contract; no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T09:16:13+08:00",
+  "published_snapshot_at": "2026-10-29T10:24:51+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -79,12 +79,12 @@
     {
       "module_code": "basic_reports",
       "module_name": "Basic reports",
-      "milestone_scope": "Reporting workflows",
+      "milestone_scope": "P3-M5 cycle reconciliation",
       "completion_percent": 0,
       "completed_checkpoints": [],
       "milestone_status": "queued",
-      "is_current_priority": false,
-      "current_or_next_work": "Queued; reporting delivery"
+      "is_current_priority": true,
+      "current_or_next_work": "controlled external-worker cycle contract; no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -135,16 +135,17 @@
       "module_code": "collections",
       "module_name": "Collections",
       "milestone_scope": "P3-M4 receivables/payments",
-      "completion_percent": 80,
+      "completion_percent": 100,
       "completed_checkpoints": [
         "Schema",
         "rules",
         "API",
-        "UI"
+        "UI",
+        "acceptance"
       ],
-      "milestone_status": "in_progress",
-      "is_current_priority": true,
-      "current_or_next_work": "formal receivables prototype acceptance"
+      "milestone_status": "complete",
+      "is_current_priority": false,
+      "current_or_next_work": "Accepted named synthetic development prototype; production limits retained"
     },
     {
       "module_code": "work_orders",
@@ -284,7 +285,9 @@
       "scoped_milestones_complete": 2,
       "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 1,
-      "current_priority_modules": [],
+      "current_priority_modules": [
+        "basic_reports"
+      ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
     },
@@ -305,11 +308,11 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 4,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 5,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 1,
       "current_priority_modules": [
-        "collections"
+        "basic_reports"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -335,11 +338,11 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 4,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 5,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 5,
       "current_priority_modules": [
-        "collections"
+        "basic_reports"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
@@ -369,35 +372,34 @@
         "solar_service"
       ],
       "module_count": 16,
-      "scoped_milestones_complete": 1,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 13,
       "current_priority_modules": [
-        "collections"
+        "basic_reports"
       ],
       "completion_percent": null,
       "progress_note": "Module counts refer to different named prototype scopes; no overall package percentage or production readiness is inferred."
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T09:16:13+08:00",
-    "summary": "Named synthetic receivables UI gate verified on desktop/mobile; collections80%, formal M4 acceptance next.",
+    "observed_at": "2026-10-29T10:24:51+08:00",
+    "summary": "P3-M4 accepted as the named synthetic receivables/payments development prototype; collections100% for this scope. All27 integrated stages/248 backend cases and desktop/mobile browser walkthrough pass. UTF-8 fixture-stream defect reproduced/fixed d97b414 with forced split-byte regression. M5 controlled external-worker integrated-cycle contract selected; Phase3 remains open.",
     "completed": [
-      "Real Chromium desktop/mobile walkthrough connects review/issuance, invoice/payment reads, recording uncertainty/denial/recovery, partial allocation, debit/credit and settlement.",
-      "Exact beyond-JavaScript conservation and same-key receipt continuity pass;26 controlled snapshots match production DTO allowlists. Default runtime401 is verified before interception.",
-      "Visual review corrected unbounded long-history height; full history remains keyboard-focusable/scrollable without displacing forms indefinitely."
+      "Formal named synthetic receivables/payments prototype accepted after all five gates; collections100% applies only to that scope.",
+      "Reproduced and fixed split UTF-8 decoding in the browser fixture verifier; deterministic pre-fix failure/post-fix pass.",
+      "Selected P3-M5 controlled external-worker integrated-cycle contract; no M5 completion credit."
     ],
     "verification": [
-      "Inventoryaa456e8/verification5791665: final desktop1440×1000 and mobile390×844 browser runs pass, no page errors/document overflow/storage; synthetic screenshots inspected.",
-      "248 backend regressions pass. Existing actual restricted HTTP/PostgreSQL acceptance remains independent; browser responses are controlled synthetic fixtures, not a real ERP login.",
-      "Used preinstalled Playwright/system Chromium154, no install. Owned browser/server closed; PostgreSQL18.6/nativeUUIDv7/no exposed port freshly verified."
+      "All27 integrated foundation stages pass in one fresh run, including248 backend tests, immutable financial facts, actual concurrency/expiry and restricted HTTP/PostgreSQL financial reconciliation.",
+      "Desktop/mobile Chromium controlled UI journey and26 production DTO snapshots pass, including forced split-byte regression; screenshots inspected; owned browser/server closed."
     ],
     "limitations": [
-      "Collections80% is schema/rules/API/usable preview UI for the named synthetic scope; formal M4 acceptance and M5/Phase3 remain open.",
-      "Operational UI remains local/private with known IDs. Public registration/sandbox stay separate; no production identity/hosting/provider or commercial policy delivered.",
-      "Controlled browser QA and screenshots do not prove database authority, production readiness or a complete accessibility audit. No full27-stage rerun claimed this run."
+      "Phase3 remains open: M5 controlled external-worker cycle acceptance is pending; no phase-completion email due.",
+      "Known-ID synthetic private workflow only; controlled browser responses do not prove authentication/database persistence.",
+      "No production identity/hosting/payment provider, real tariff/numbering/contract approval, refunds/unallocation, statements or public ERP data."
     ],
-    "next_selected": "P3-M4-ACCEPT-1: run fresh integrated foundation/financial acceptance plus the browser walkthrough, review immutable facts/idempotency/concurrency/reconciliation and limits, then assess M4 prototype acceptance. Select M5 only after verified M4 exit; no full-phase closure inferred.",
+    "next_selected": "P3-M5-CONTRACT-1: define controlled external-worker assignment cycle, independent permissions/scopes, separation of duties, revocation and financial/audit reconciliation before implementation.",
     "blocker": null
   }
 }
