@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T10:24:51+08:00",
+  "data_as_of": "2026-10-29T11:08:35+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "controlled external-worker cycle contract; no reports gate earned",
+  "current_priority": "delegated calculation preparation; M5 reconciliation contract defined, no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T10:24:51+08:00",
+  "published_snapshot_at": "2026-10-29T11:08:36+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "controlled external-worker cycle contract; no reports gate earned"
+      "current_or_next_work": "delegated calculation preparation; M5 reconciliation contract defined, no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -383,23 +383,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T10:24:51+08:00",
-    "summary": "P3-M4 accepted as the named synthetic receivables/payments development prototype; collections100% for this scope. All27 integrated stages/248 backend cases and desktop/mobile browser walkthrough pass. UTF-8 fixture-stream defect reproduced/fixed d97b414 with forced split-byte regression. M5 controlled external-worker integrated-cycle contract selected; Phase3 remains open.",
+    "observed_at": "2026-10-29T11:08:35+08:00",
+    "summary": "M5 controlled external-worker cycle contract committedfac6355; nine financial SQL boundaries remain direct-only. Next selected: additive delegated calculation preparation with exact assignment/account authority and real PostgreSQL/HTTP verification. No M5 gate or percentage increase.",
     "completed": [
-      "Formal named synthetic receivables/payments prototype accepted after all five gates; collections100% applies only to that scope.",
-      "Reproduced and fixed split UTF-8 decoding in the browser fixture verifier; deterministic pre-fix failure/post-fix pass.",
-      "Selected P3-M5 controlled external-worker integrated-cycle contract; no M5 completion credit."
+      "Defined controlled provider-worker/client-representative cycle, distinct-human review, revocation/expiry and independent direct-grant controls.",
+      "Inventoried nine direct-only financial authorization boundaries and selected preparation-first delivery."
     ],
     "verification": [
-      "All27 integrated foundation stages pass in one fresh run, including248 backend tests, immutable financial facts, actual concurrency/expiry and restricted HTTP/PostgreSQL financial reconciliation.",
-      "Desktop/mobile Chromium controlled UI journey and26 production DTO snapshots pass, including forced split-byte regression; screenshots inspected; owned browser/server closed."
+      "Validated contract file references, direct-only predicates in nine migration boundaries and next available migration0044; diff checks pass.",
+      "Fresh runtime read confirms healthy PostgreSQL18.6/nativeUUIDv7/no published port; no database changes. Prior M4 runtime tests are retained evidence, not rerun this design task."
     ],
     "limitations": [
-      "Phase3 remains open: M5 controlled external-worker cycle acceptance is pending; no phase-completion email due.",
-      "Known-ID synthetic private workflow only; controlled browser responses do not prove authentication/database persistence.",
-      "No production identity/hosting/payment provider, real tariff/numbering/contract approval, refunds/unallocation, statements or public ERP data."
+      "M5/Phase3 remain open; contract work earns no module gate or completion percentage.",
+      "Delegated financial operations remain unavailable until additive authorization and actual restricted PostgreSQL/HTTP tests pass.",
+      "No production identity/hosting, real contracts/commercial prices, provider payments or public ERP data."
     ],
-    "next_selected": "P3-M5-CONTRACT-1: define controlled external-worker assignment cycle, independent permissions/scopes, separation of duties, revocation and financial/audit reconciliation before implementation.",
+    "next_selected": "P3-M5-PREPARE-1: implement and verify assignment-derived calculation preparation only; preserve direct callers and defer other operations to separate slices.",
     "blocker": null
   }
 }
