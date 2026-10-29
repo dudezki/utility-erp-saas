@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T18:14:25+08:00",
+  "data_as_of": "2026-10-29T19:13:01+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "delegated payment detail; capture verified, no reports gate earned",
+  "current_priority": "delegated allocation; payment detail verified, no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T18:14:25+08:00",
+  "published_snapshot_at": "2026-10-29T19:13:01+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "delegated payment detail; capture verified, no reports gate earned"
+      "current_or_next_work": "delegated allocation; payment detail verified, no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -383,23 +383,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T18:14:25+08:00",
-    "summary": "Assigned synthetic payment capture implemented0d372ba: independent collections.record/current entitlement through a separate cashier login, exact beyond-JS amount and original-creator receipt recovery verified. Invoice remains unallocated. Payment detail next; M5/Phase3 open/no new gate.",
+    "observed_at": "2026-10-29T19:13:01+08:00",
+    "summary": "Assigned payment detail implemented0289631: independent collections.read/current entitlement/exact saved account through separate receivables login. Exact beyond-JS amount/unapplied and safe history retained; payment-row expiry denies without DTO. Delegated allocation next; M5/Phase3 open/no new gate.",
     "completed": [
-      "Recorded-payment-only0049 requires independent current cashier authority and preserves immutable original-creator receipts.",
-      "Beyond-JavaScript exact synthetic amount, no duplicate fact/audit and no automatic invoice allocation."
+      "Reader-only0050 retains exact immutable payment balances and bounded allocation history.",
+      "Independent current read authority through separate receivables login; record rights alone insufficient."
     ],
     "verification": [
-      "Actual three-purpose HTTP/PG baseline0048 record403→0049 capture/retry, scope-valid other creator403, changed amount/number409, independent record permission/entitlement/account/tenant/12 lifecycle/direct independence/archive rules pass.",
-      "Crossed adapters503/private table-owner denial/all context resets and observed revocation/new83037 wait30s expiry rollback preserve original payment/audit; owned resources cleaned.",
-      "0001–0049 checksums/SQL/clean install/direct recording/delegated invoice detail/248 backend pass.33-stage checker registered/full33 not rerun."
+      "Actual0049 capture→payment GET403 baseline→0050 safe GET passes. Independent read despite record rights/account/tenant/actor/12 lifecycle/direct independence/archive history/private denial/crossed adapters/context and immutable payment/audit pass. Observed revocation serialization and payment-row wait30s expiry deny without DTO/fact/audit change; owned database/three logins/listener cleaned.",
+      "Runtime0001–0050 checksums/SQL/clean install/direct payment detail/delegated recording/248 backend pass.34-stage checker registered/full34 not rerun; no new UI/browser/independent specialist proof."
     ],
     "limitations": [
       "M5/Phase3 open; percentages unchanged.",
-      "Payment read/allocation/adjustment remain direct-only; recorded synthetic fact transfers no money.",
-      "No new browser/UI/production identity/hosting, real contracts/prices/payment providers or public ERP data."
+      "Allocation/adjustment remain direct-only; synthetic payment facts transfer no money.",
+      "No new UI/browser/production identity/hosting or public ERP data."
     ],
-    "next_selected": "P3-M5-PAYMENT-READ-1: assigned payment detail with independent collections.read/current entitlement/exact saved account through receivables pool.",
+    "next_selected": "P3-M5-ALLOCATE-1: assigned synthetic allocation with independent collections.allocate/current entitlement/exact common invoice/payment account; preserve exact capacity, original creator retry and expiry rollback.",
     "blocker": null
   }
 }
