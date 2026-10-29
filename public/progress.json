@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T17:08:17+08:00",
+  "data_as_of": "2026-10-29T18:14:25+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "delegated recorded payment; invoice detail verified, no reports gate earned",
+  "current_priority": "delegated payment detail; capture verified, no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T17:08:18+08:00",
+  "published_snapshot_at": "2026-10-29T18:14:25+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "delegated recorded payment; invoice detail verified, no reports gate earned"
+      "current_or_next_work": "delegated payment detail; capture verified, no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -383,23 +383,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T17:08:17+08:00",
-    "summary": "Delegated invoice detail implemented36dfc22: independent collections.read/current collections entitlement/exact saved account verified through a separate receivables login. Crossed billing/receivables adapters reject, invoice-row expiry returns no DTO. Recorded payment next; M5/Phase3 open/no new gate.",
+    "observed_at": "2026-10-29T18:14:25+08:00",
+    "summary": "Assigned synthetic payment capture implemented0d372ba: independent collections.record/current entitlement through a separate cashier login, exact beyond-JS amount and original-creator receipt recovery verified. Invoice remains unallocated. Payment detail next; M5/Phase3 open/no new gate.",
     "completed": [
-      "Invoice-reader-only0048 requires independent current collections authority and immutable saved account; separate restricted billing/receivables pools.",
-      "Safe exact invoice balances/history and current revocation/expiry checks preserve original financial facts."
+      "Recorded-payment-only0049 requires independent current cashier authority and preserves immutable original-creator receipts.",
+      "Beyond-JavaScript exact synthetic amount, no duplicate fact/audit and no automatic invoice allocation."
     ],
     "verification": [
-      "Actual restricted HTTP/PG baseline0047 GET denial after assigned issuance→0048 safe detail; read permission/collections entitlement/account/tenant/actor/12 lifecycle/direct independence/source retirement pass.",
-      "Crossed purpose adapters reject503 and reset both contexts; observed revocation serialization/invoice-row30s expiry returns no DTO or changed financial/audit fingerprint; owned resources cleaned.",
-      "0001–0048 checksums/SQL/clean install/direct invoice detail/delegated issuance and248 backend pass.32-stage checker registered/full32 not rerun."
+      "Actual three-purpose HTTP/PG baseline0048 record403→0049 capture/retry, scope-valid other creator403, changed amount/number409, independent record permission/entitlement/account/tenant/12 lifecycle/direct independence/archive rules pass.",
+      "Crossed adapters503/private table-owner denial/all context resets and observed revocation/new83037 wait30s expiry rollback preserve original payment/audit; owned resources cleaned.",
+      "0001–0049 checksums/SQL/clean install/direct recording/delegated invoice detail/248 backend pass.33-stage checker registered/full33 not rerun."
     ],
     "limitations": [
       "M5/Phase3 open; percentages unchanged.",
-      "Payment read/cashier commands remain direct-only; no new browser/UI or production identity/hosting.",
-      "No real tariffs/numbering/contracts/payment-provider execution or public operational ERP data."
+      "Payment read/allocation/adjustment remain direct-only; recorded synthetic fact transfers no money.",
+      "No new browser/UI/production identity/hosting, real contracts/prices/payment providers or public ERP data."
     ],
-    "next_selected": "P3-M5-PAYMENT-1: assigned synthetic recorded-payment capture with independent collections.record/current entitlement and separate cashier pool; immutable original-creator receipt recovery.",
+    "next_selected": "P3-M5-PAYMENT-READ-1: assigned payment detail with independent collections.read/current entitlement/exact saved account through receivables pool.",
     "blocker": null
   }
 }
