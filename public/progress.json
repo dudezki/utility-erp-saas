@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T08:11:31+08:00",
+  "data_as_of": "2026-10-29T09:16:13+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M4",
   "current_work_state": "next_selected",
-  "current_priority": "receivables UI inventory and acceptance assessment",
+  "current_priority": "formal receivables prototype acceptance",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T08:11:31+08:00",
+  "published_snapshot_at": "2026-10-29T09:16:13+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -135,15 +135,16 @@
       "module_code": "collections",
       "module_name": "Collections",
       "milestone_scope": "P3-M4 receivables/payments",
-      "completion_percent": 60,
+      "completion_percent": 80,
       "completed_checkpoints": [
         "Schema",
         "rules",
-        "API"
+        "API",
+        "UI"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "receivables UI inventory and acceptance assessment"
+      "current_or_next_work": "formal receivables prototype acceptance"
     },
     {
       "module_code": "work_orders",
@@ -379,24 +380,24 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T08:11:31+08:00",
-    "summary": "Bounded private debit/credit adjustment UI verified; formal full UI assessment selected, collections60% unchanged.",
+    "observed_at": "2026-10-29T09:16:13+08:00",
+    "summary": "Named synthetic receivables UI gate verified on desktop/mobile; collections80%, formal M4 acceptance next.",
     "completed": [
-      "A loaded invoice supports exact debit/credit draft balances and reasons up to2000 Unicode codepoints, preserving text identity and128-digit minor-unit precision.",
-      "Adjustment/recording/allocation share one unresolved-command lock. Five-field payload/key freezes before send; identical retries preserve unknown outcomes through later denial/conflict.",
-      "Only an id receipt confirms adjustment. Old invoice facts/draft balances clear before current-authority refresh, including explicit confirmed/refresh-unavailable handling."
+      "Real Chromium desktop/mobile walkthrough connects review/issuance, invoice/payment reads, recording uncertainty/denial/recovery, partial allocation, debit/credit and settlement.",
+      "Exact beyond-JavaScript conservation and same-key receipt continuity pass;26 controlled snapshots match production DTO allowlists. Default runtime401 is verified before interception.",
+      "Visual review corrected unbounded long-history height; full history remains keyboard-focusable/scrollable without displacing forms indefinitely."
     ],
     "verification": [
-      "Designc5a54a1/implementationde690f7:248 backend tests and32 focused UI/HTTP cases pass, including9 new adjustment cases.",
-      "Supplementary Unicode bounds, credit capacity, shared locks, exact recovery, timeout/malformed receipt and refresh/page failure cases verified. PostgreSQL18.6/nativeUUIDv7 freshly healthy/no published port.",
-      "Browser visual QA unavailable; existing restricted PostgreSQL API proof retained. No full27-stage rerun or production readiness claim."
+      "Inventoryaa456e8/verification5791665: final desktop1440×1000 and mobile390×844 browser runs pass, no page errors/document overflow/storage; synthetic screenshots inspected.",
+      "248 backend regressions pass. Existing actual restricted HTTP/PostgreSQL acceptance remains independent; browser responses are controlled synthetic fixtures, not a real ERP login.",
+      "Used preinstalled Playwright/system Chromium154, no install. Owned browser/server closed; PostgreSQL18.6/nativeUUIDv7/no exposed port freshly verified."
     ],
     "limitations": [
-      "Collections60% unchanged: command screens are bounded increments; formal full UI gate and milestone acceptance remain pending.",
-      "Operational /app/receivables remains local/private with server-verified identity/purpose pools. Public registration/sandbox stay separate.",
-      "No provider/refund/unallocation, new API/schema/login/hosting or private browser persistence; unknown-attempt recovery remains memory-only."
+      "Collections80% is schema/rules/API/usable preview UI for the named synthetic scope; formal M4 acceptance and M5/Phase3 remain open.",
+      "Operational UI remains local/private with known IDs. Public registration/sandbox stay separate; no production identity/hosting/provider or commercial policy delivered.",
+      "Controlled browser QA and screenshots do not prove database authority, production readiness or a complete accessibility audit. No full27-stage rerun claimed this run."
     ],
-    "next_selected": "P3-M4-UI-ACCEPT-1: inventory the full named receivables UI against approved contracts and verify a coherent synthetic walkthrough; explicitly assess UI-gate evidence and visual-QA gaps before any80 credit or M4 acceptance. M5 external-worker cycle remains separate.",
+    "next_selected": "P3-M4-ACCEPT-1: run fresh integrated foundation/financial acceptance plus the browser walkthrough, review immutable facts/idempotency/concurrency/reconciliation and limits, then assess M4 prototype acceptance. Select M5 only after verified M4 exit; no full-phase closure inferred.",
     "blocker": null
   }
 }
