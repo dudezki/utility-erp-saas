@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T11:08:35+08:00",
+  "data_as_of": "2026-10-29T12:12:58+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "delegated calculation preparation; M5 reconciliation contract defined, no reports gate earned",
+  "current_priority": "delegated saved-calculation read; preparation verified, no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T11:08:36+08:00",
+  "published_snapshot_at": "2026-10-29T12:12:58+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "delegated calculation preparation; M5 reconciliation contract defined, no reports gate earned"
+      "current_or_next_work": "delegated saved-calculation read; preparation verified, no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -383,22 +383,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T11:08:35+08:00",
-    "summary": "M5 controlled external-worker cycle contract committedfac6355; nine financial SQL boundaries remain direct-only. Next selected: additive delegated calculation preparation with exact assignment/account authority and real PostgreSQL/HTTP verification. No M5 gate or percentage increase.",
+    "observed_at": "2026-10-29T12:12:58+08:00",
+    "summary": "Delegated calculation preparation implementedb6bfad4: assignment-only restricted HTTP/PostgreSQL, exact account/permission/entitlement, lifecycle revocation and observed expiry rollback pass. Other financial operations remain direct-only; next delegated saved-calculation read. M5/Phase3 remain open; no new module gate.",
     "completed": [
-      "Defined controlled provider-worker/client-representative cycle, distinct-human review, revocation/expiry and independent direct-grant controls.",
-      "Inventoried nine direct-only financial authorization boundaries and selected preparation-first delivery."
+      "Preparation-only assignment authorization via additive0044; direct callers and existing route/request/receipt contracts preserved.",
+      "Current assignment/contract/provider/client state, exact scope and independent direct-grant controls verified; other financial operations stay direct-only."
     ],
     "verification": [
-      "Validated contract file references, direct-only predicates in nine migration boundaries and next available migration0044; diff checks pass.",
-      "Fresh runtime read confirms healthy PostgreSQL18.6/nativeUUIDv7/no published port; no database changes. Prior M4 runtime tests are retained evidence, not rerun this design task."
+      "Actual restricted HTTP/PostgreSQL assignment-only baseline denial→authorized preparation/retry, exact result, saved wrong-account denial,12 lifecycle controls and context/private-table denial pass.",
+      "Observed administrative revocation serialization and post-wait30-second expiry deny without extra calculation/audit; owned verification resources cleaned.",
+      "Migration checksums0001–0044, SQL suite, clean installation, existing direct preparation regression and248 backend tests pass. Integrated checker has28 registered stages; full28 not rerun."
     ],
     "limitations": [
-      "M5/Phase3 remain open; contract work earns no module gate or completion percentage.",
-      "Delegated financial operations remain unavailable until additive authorization and actual restricted PostgreSQL/HTTP tests pass.",
-      "No production identity/hosting, real contracts/commercial prices, provider payments or public ERP data."
+      "M5/Phase3 remain open and module percentages unchanged; preparation alone is not an integrated delegated cycle.",
+      "Saved calculation read, review, issuance and collection operations remain direct-only until separately verified.",
+      "No production identity/hosting, real contracts/prices/payment provider, browser change or public ERP data."
     ],
-    "next_selected": "P3-M5-PREPARE-1: implement and verify assignment-derived calculation preparation only; preserve direct callers and defer other operations to separate slices.",
+    "next_selected": "P3-M5-READ-1: implement and verify delegated saved-calculation read using current assignment authority and exact saved account; preserve independent direct grants and default deny.",
     "blocker": null
   }
 }
