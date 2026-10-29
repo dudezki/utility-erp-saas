@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-29T20:06:35+08:00",
+  "data_as_of": "2026-10-29T23:14:00+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 3,
   "current_milestone": "P3-M5",
   "current_work_state": "next_selected",
-  "current_priority": "delegated adjustment; allocation verified, no reports gate earned",
+  "current_priority": "integrated worker cycle/reconciliation; adjustment verified, no reports gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-29T20:06:35+08:00",
+  "published_snapshot_at": "2026-10-29T23:14:01+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "delegated adjustment; allocation verified, no reports gate earned"
+      "current_or_next_work": "integrated worker cycle/reconciliation; adjustment verified, no reports gate earned"
     },
     {
       "module_code": "metering",
@@ -383,22 +383,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-29T20:06:35+08:00",
-    "summary": "Assigned partial payment allocation implementedebc2c3c: independent collections.allocate/current entitlement/exact shared saved account through separate cashier login. Exact conservation, original-creator receipt and expiry rollback verified. Adjustment next; M5/Phase3 open/no new gate.",
+    "observed_at": "2026-10-29T23:14:00+08:00",
+    "summary": "Assigned debit/credit adjustment implemented2e12033: independent billing.adjust/current billing entitlement/exact saved invoice account through separate billing login. Exact signed capacity, Unicode reason, original creator and expiry rollback verified. Integrated worker cycle next; M5/Phase3 open/no new gate.",
     "completed": [
-      "Allocation-only0051 requires independent current cashier authority and shared immutable invoice/payment account.",
-      "Partial allocation preserves exact invoice/payment conservation, original creator receipts and atomic expiry rollback."
+      "Adjustment-only0052 requires independent current billing authority and immutable invoice account.",
+      "Exact debit/credit capacity, Unicode reasons, original creator recovery and expiry rollback preserve financial history."
     ],
     "verification": [
-      "Actual0050 assigned prepare/review/issue/capture/details→allocation403 baseline→0051 partial100 of1845 passes; outstanding1745/payment unapplied900719925474099201. Original creator exact receipt/change409/other scope-valid creator403, capacity overrun422, independent allocation permission while record/read remain, entitlement/account/tenant/actor/12 lifecycle/direct independence/archive rules/context/private denial/crossed adapters and immutable invoice/payment/allocation/audit pass. Observed revocation serialization and new83038 request wait30s expiry roll back allocation/audit; owned database/three logins/listener cleaned.",
-      "Runtime0001–0051 checksums/SQL/clean install/direct allocation/delegated payment reader/248 backend pass.35-stage checker registered/full35 not rerun; no new UI/browser/independent specialist proof."
+      "Actual0051 assigned preparation/review/issue/capture/partial allocation/details→adjustment403 baseline→0052 debit200/credit50 passes. Original1845+net150=adjusted1995; allocated100/outstanding1895/payment unapplied900719925474099201.2000 supplementary Unicode characters preserved; retry/change409/other scope-valid creator403, credit-over-capacity422, independent adjust despite issue/read/record rights, billing entitlement/account/tenant/actor/12 lifecycle/direct independence/archive rules/private grants/crossed adapters/reset and immutable original financial/audit fingerprints pass. Observed revocation serialization/new83039wait30s expiry rolls back adjustment/audit; owned resources cleaned.",
+      "Runtime0001–0052 checksums/SQL/clean install/direct adjustment/delegated allocation/248 backend pass.36-stage checker registered/full36 not rerun; no new UI/browser/independent specialist proof."
     ],
     "limitations": [
       "M5/Phase3 open; percentages unchanged.",
-      "Adjustment remains direct-only; synthetic facts transfer no money.",
+      "All nine individual delegated operations verified; integrated cycle/reconciliation acceptance pending.",
       "No new UI/browser/production identity/hosting or public ERP data."
     ],
-    "next_selected": "P3-M5-ADJUST-1: assigned debit/credit adjustment with independent billing.adjust/current billing entitlement/exact saved invoice account, exact signed capacity/original creator and expiry rollback.",
+    "next_selected": "P3-M5-CYCLE-1: actual assignment-only complete synthetic cycle and bounded exact reconciliation, then assess M5/phase exit gaps against the approved contract.",
     "blocker": null
   }
 }
