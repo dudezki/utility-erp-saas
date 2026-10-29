@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-30T01:10:02+08:00",
+  "data_as_of": "2026-10-30T02:06:00+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 reporting contract; Phase3 closed, no reporting gate earned",
+  "current_priority": "P4-M1 database statement reader; contract verified, no reporting gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-30T01:10:02+08:00",
+  "published_snapshot_at": "2026-10-30T02:06:00+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 reporting contract; Phase3 closed, no reporting gate earned"
+      "current_or_next_work": "P4-M1 database statement reader; contract verified, no reporting gate earned"
     },
     {
       "module_code": "metering",
@@ -383,22 +383,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-30T01:10:02+08:00",
-    "summary": "Phase 3 meter-to-cash prototype formally closed against M1–M5 exits. Actual assignment-only cycle, exact financial/audit reconciliation and all37 foundation stages verified. Phase4 operational workflows selected; first known-account statement/reporting contract, no code or gate credit yet.",
+    "observed_at": "2026-10-30T02:06:00+08:00",
+    "summary": "Known-account synthetic statement contract completed in ed1f5f5. Independent report authority, consistent account capture, exact balances and bounded history specified; preview catalog/private authorization distinction verified. Next database-only reader; no runtime reporting feature or gate yet.",
     "completed": [
-      "Phase3/M5 exit matrix accepted as a synthetic development prototype; no required exit deferred.",
-      "Phase4 ledger selects bounded known-account statement/report reconciliation contract and preserves approved operational/Solar scope."
+      "Current-capture/date semantics, account lock consistency, independent report authorization and exact no-double-count totals/credit balance defined.",
+      "500-fact capacity/newest50 history and compact private lazy UI/API acceptance specified. Private report module/role/permission/function confirmed absent; registration explicitly required next."
     ],
     "verification": [
-      "5e892cd complete assignment-only three-purpose actual HTTP/PG cycle, source/human/per-fact audit and exact settlement0/49; all37 foundation stages/248 backend passed.",
-      "Current runtime0001–0052 checksums/nativeUUIDv7/no host port confirmed; database/backend/scripts unchanged since verified source. Accepted M4 private UI unchanged; browser evidence reused separately."
+      "Contract references, actual financial account-lock chain, next0053 and unchanged database/backend/scripts checked; current PostgreSQL18.6/nativeUUIDv7/no host port verified.",
+      "Read-only global metadata corrected catalog-versus-private module assumption; no private/signup rows read. Documentation-only slice, no redundant backend suite or new browser run."
     ],
     "limitations": [
-      "No new production ERP login/hosting, approved real tariffs or live payment movement.",
-      "General reports remain0%; Phase4 contract is selected, not implemented.",
-      "Public registration and fictional sandbox remain separate from private tenant/signup data."
+      "basic_reports remains0%; proposed SQL/role/module/API/UI not installed.",
+      "No historical date report, aging/fees, hosted identity or payment movement claimed.",
+      "Phase4 open; Phase3 report already sent, no new email due."
     ],
-    "next_selected": "P4-M1-CONTRACT-1: define exact known-account synthetic financial statement, independent report authority and consistent reconciliation before implementation.",
+    "next_selected": "P4-M1-DB-1: proposed0053 private report authorization module and narrow account-locked statement projection, with actual restricted PostgreSQL concurrency/expiry proof.",
     "blocker": null
   }
 }
