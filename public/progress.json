@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-30T05:08:28+08:00",
+  "data_as_of": "2026-10-30T06:05:50+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 protected statement API; database reader verified, API/UI/acceptance pending; no reporting gate earned",
+  "current_priority": "P4-M1 statement HTTP/PG verification; API boundary unit-tested, actual acceptance/UI pending; no reporting gate earned",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-30T05:08:28+08:00",
+  "published_snapshot_at": "2026-10-30T06:05:50+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -84,7 +84,7 @@
       "completed_checkpoints": [],
       "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 protected statement API; database reader verified, API/UI/acceptance pending; no reporting gate earned"
+      "current_or_next_work": "P4-M1 statement HTTP/PG verification; API boundary unit-tested, actual acceptance/UI pending; no reporting gate earned"
     },
     {
       "module_code": "metering",
@@ -383,23 +383,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-30T05:08:28+08:00",
-    "summary": "Known-account synthetic statement database reader verified in063386e/0053; additive5b2df51/0054 prevents temporary catalog-view shadowing. Exact reconciled balances and independent report authority checked. Protected API is next; no reporting UI or new module gate yet.",
+    "observed_at": "2026-10-30T06:05:50+08:00",
+    "summary": "Statement API boundary implemented in bf45084: exact projector, reports-only adapter and strict private GET. Unit/loopback tests and actual database LOGIN safety prerequisite passed. Authorized financial statement HTTP/database acceptance remains next; no new reporting gate or UI yet.",
     "completed": [
-      "Database-only statement reader with independent report permission/entitlement and narrow role, coherent account capture and exact credit balances.",
-      "500-fact fail-closed capacity/newest50 typed history; catalog lookup hardened without rewriting applied migration."
+      "Exact string/BigInt reconciliation with credit balances, typed history, strict identity/field/order/limit validation.",
+      "Dedicated reports-only adapter, safe failure/status handling and optional private GET dependency; public registration and sandbox unchanged."
     ],
     "verification": [
-      "Actual restricted PostgreSQL LOGIN: lifecycle/privacy/large sums/limits/Unicode/history and financial/audit immutability.",
-      "Observed report versus all four financial writer locks, unrelated account progress, revocation and post-wait expiry denial. Temporary-view probe reproduces old behavior and confirms additive fix.",
-      "SQL/checksum/clean install,248 backend and existing direct/assigned financial cycles passed.38 stages registered; full38 not rerun."
+      "258 backend tests passed, including10 new statement tests. Loopback HTTP uses injected synthetic readers; it is separate from database authority proof.",
+      "Actual restricted LOGIN pool-safety SQL rejects inherited, mixed and custom role authority and public-function ownership; disposable resources cleaned.",
+      "All54 persistent migration checksums unchanged; existing assigned financial HTTP/database regression passed on shared server."
     ],
     "limitations": [
-      "basic_reports remains0%; protected HTTP API, dedicated application pool and private report UI pending.",
-      "Synthetic development only; no historical date report, production identity or payment movement.",
-      "Phase4 open; Phase3 completion report already sent, no new email due."
+      "P4-M1-API-1 remains in progress: actual authorized statement HTTP/database financial fixture and integration-stage registration pending.",
+      "basic_reports remains0%; report UI/application credentials/hosted ERP identity are not delivered.",
+      "Phase4 open; no new phase-completion email due."
     ],
-    "next_selected": "P4-M1-API-1: safe exact projector, dedicated reports adapter and strict private known-account GET over verified0053/0054.",
+    "next_selected": "Resume P4-M1-API-1: actual production reports adapter/HTTP over owned financial facts, lifecycle/privacy/context/exact-value/limit tests; then register integration and select compact private UI.",
     "blocker": null
   }
 }
