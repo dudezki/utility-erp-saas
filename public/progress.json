@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-04T20:33:34+08:00",
+  "data_as_of": "2026-11-05T06:10:13+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 billing-register expiry and safety proof; multi-account/row limits verified, statement v1 accepted",
+  "current_priority": "P4-M1 protected billing-register API; prior statement100% accepted",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-05T05:08:20+08:00",
+  "published_snapshot_at": "2026-11-05T06:10:13+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -79,18 +79,15 @@
     {
       "module_code": "basic_reports",
       "module_name": "Basic reports",
-      "milestone_scope": "P4-M1 known-account statement prototype",
-      "completion_percent": 100,
+      "milestone_scope": "P4-M1 billing-register prototype",
+      "completion_percent": 40,
       "completed_checkpoints": [
         "Schema",
-        "rules",
-        "API",
-        "preview UI",
-        "acceptance"
+        "rules"
       ],
-      "milestone_status": "complete",
+      "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 billing-register expiry and safety proof; multi-account/row limits verified, statement v1 accepted"
+      "current_or_next_work": "P4-M1 protected billing-register API; prior statement100% accepted"
     },
     {
       "module_code": "metering",
@@ -288,8 +285,8 @@
         "basic_reports"
       ],
       "module_count": 4,
-      "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 1,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -314,8 +311,8 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 6,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 5,
+      "scoped_milestones_in_progress": 3,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -344,8 +341,8 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 6,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 5,
+      "scoped_milestones_in_progress": 3,
       "scoped_milestones_not_started": 4,
       "current_priority_modules": [
         "basic_reports"
@@ -378,8 +375,8 @@
         "solar_service"
       ],
       "module_count": 16,
-      "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 1,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 12,
       "current_priority_modules": [
         "basic_reports"
@@ -389,23 +386,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-05T05:08:19+08:00",
-    "summary": "Billing-register proof50b161b verifies multi-account totals,50/51-row ordering/truncation,multiple financial children and an authorized empty tenant. Full DB acceptance remains open;no percentage advanced.",
+    "observed_at": "2026-11-05T06:10:13+08:00",
+    "summary": "Billing-register database slice31ed110 is accepted and migration0055 applied to isolated development. The current basic_reports row now measures the new billing-register scope40%;the earlier statement prototype remains accepted100%.",
     "completed": [
-      "49 new accounts/invoices created through actual validation,restricted calculation,distinct-human review and issuance;50/51-row limits and exact complete totals verified.",
-      "Multiple adjustments and allocations reconcile without multiplied joins;explicitly authorized empty tenant returns zero totals and no rows."
+      "Installed independent tenant-list authority and bounded single-statement financial read model;full actual restricted SQL reconciliation,concurrency,lifecycle/expiry,limits and safety matrix passed.",
+      "Verified128-digit facts/large aggregates and bounded EXPLAIN at500 facts;no added index,financial lock or writer."
     ],
     "verification": [
-      "Full owned verifier reruns financial HTTP source,lifecycle/observed expiry,snapshot races and500/501 capacity;pure reads preserve financial/all-audit fingerprints;owned cleanup confirmed.",
-      "Main PostgreSQL18.6 healthy/nativeUUIDv7/no host port;54 applied migration checksums match and0055 remains unapplied. Python syntax/diff checks pass.",
-      "Reader/migrations unchanged;full backend/integration suite not rerun. Existing named statement acceptance remains prior evidence."
+      "55-migration clean install/seeds/foundation checks,261 backend tests and main foundation/RLS checks pass;all55 applied checksums match and0001–0054 preserved.",
+      "Owned financial HTTP/source SQL matrix reruns;49 new accounts/invoices,50/51 rows,empty tenant,500/501,observed expiry and intra-query snapshots pass;pure reads immutable and owned resources cleaned.",
+      "42 foundation stages registered,full42 not rerun. Unsafe/mixed production pool rejection remains upcoming API acceptance."
     ],
     "limitations": [
-      "Assignment-window expiry,safety/catalog-shadow andEXPLAIN review remain before DB gate/API/main migration acceptance.",
-      "Volume authority and metadata grants exist only in the owned synthetic fixture;no real-user grants or production prices.",
-      "No new percentage or Phase4 closure;private data/public registration/Solar boundaries preserved."
+      "40% is the separate named billing-register prototype:installed schema/read model and rules only. Prior known-account statement100% is retained in accepted-scope history.",
+      "Billing-register protected API/private UI/joined acceptance remain pending;no production ERP login/pool or public signup-to-ERP bridge.",
+      "M1/Phase4/Solar remain open;no phase-completion email due."
     ],
-    "next_selected": "Resume P4-M1-BILLING-DB-1: verify bounded assignment-window expiry after observed wait and safety/catalog boundaries,then EXPLAIN/volume review and final DB acceptance assessment.",
+    "next_selected": "P4-M1-BILLING-API-1:implement strict detached projector,reports-only adapter and protected GET;verify actual HTTP/PostgreSQL and unsafe pool rejection before API gate.",
     "blocker": null
   }
 }
