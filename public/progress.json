@@ -6,7 +6,7 @@
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 billing-register database proof; contract defined, statement v1 accepted",
+  "current_priority": "P4-M1 billing-register concurrency and assignment proof; initial DB slice verified, statement v1 accepted",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-04T21:05:00+08:00",
+  "published_snapshot_at": "2026-11-04T22:11:53+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,7 +90,7 @@
       ],
       "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 billing-register database proof; contract defined, statement v1 accepted"
+      "current_or_next_work": "P4-M1 billing-register concurrency and assignment proof; initial DB slice verified, statement v1 accepted"
     },
     {
       "module_code": "metering",
@@ -389,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-04T21:05:00+08:00",
-    "summary": "Billing-register contract25bf882 is complete: explicit tenant-wide list authority,one financial snapshot,exact issued-charge/adjustment/allocation reconciliation and bounded private UI/API acceptance. Documentation only; no new implementation gates.",
+    "observed_at": "2026-11-04T22:11:53+08:00",
+    "summary": "Initial billing-register database candidate e03bb5f passes bounded real restricted-SQL checks. Full DB acceptance remains in progress; no implementation percentage has advanced.",
     "completed": [
-      "Defined independent billing-register permission and tenant-scope authority; record/account-statement grants cannot become discovery rights.",
-      "Defined single-statement snapshot,500 combined primary facts/newest50 invoices,strict exact-money DTO and real DB/API/browser acceptance requirements."
+      "Candidate tenant-list permission/helper and one-statement financial read model implemented; tested only in an owned isolated database.",
+      "Exact settled invoice totals,record-grant denial,selected current lifecycle denials,archive and500/501 combined-fact capacity verified through restricted LOGINs and existing authorized financial writer."
     ],
     "verification": [
-      "Reviewed immutable invoice/adjustment/allocation sources and accepted report authority against approved initial billing-register scope.",
-      "Current PostgreSQL18.6 is healthy with UUIDv7 and no host port; no migrations or financial data changed.",
-      "Named statement acceptance5ad529d remains100%; its261 backend/actual desktop-mobile proof is prior evidence,not rerun for this documentation-only task."
+      "Owned source financial HTTP journey and corrected restricted SQL proof passed; pure reads preserve financial/all-audit fingerprints and owned resources were cleaned.",
+      "54 applied main migration checksums unchanged;candidate0055 remains unapplied in main. Python syntax and diff checks pass.",
+      "Statement prototype acceptance is prior unchanged evidence;full backend/integration suite not rerun for this initial slice."
     ],
     "limitations": [
-      "Billing register has no installed SQL/API/UI yet; the contract earns no implementation percentage.",
-      "Broader P4-M1 collections/aging/exception reports and Phase4/Solar remain open.",
-      "Production identity/commercial inputs remain separate; public preview signup is not ERP access."
+      "Full billing-register multi-account,50/51 rows,snapshot concurrency,assignment/expiry and safety matrix remains;no new gate or API/UI acceptance.",
+      "Candidate is not applied to main and no real-user grants or production credentials were introduced.",
+      "Statement100% retains its named scope;broader reporting/Phase4/Solar and production identity remain open."
     ],
-    "next_selected": "P4-M1-BILLING-DB-1: implement only the next additive private billing-register authority/read model and prove real SQL snapshot,reconciliation,limits,revocation and read immutability.",
+    "next_selected": "Resume P4-M1-BILLING-DB-1: prove actual concurrent writer/single-snapshot coherence and current assignment/expiry behavior,then finish the remaining DB matrix before accepting gates or advancing API work.",
     "blocker": null
   }
 }
