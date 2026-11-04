@@ -6,7 +6,7 @@
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 billing-register contract; statement v1 accepted, broader reports remain open",
+  "current_priority": "P4-M1 billing-register database proof; contract defined, statement v1 accepted",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-04T20:33:34+08:00",
+  "published_snapshot_at": "2026-11-04T21:05:00+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,7 +90,7 @@
       ],
       "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 billing-register contract; statement v1 accepted, broader reports remain open"
+      "current_or_next_work": "P4-M1 billing-register database proof; contract defined, statement v1 accepted"
     },
     {
       "module_code": "metering",
@@ -389,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-04T20:33:34+08:00",
-    "summary": "Named account-statement prototype accepted in5ad529d by real desktop/mobile UI,private HTTP and PostgreSQL verification. Its five gates are complete; broader operational reporting remains open.",
+    "observed_at": "2026-11-04T21:05:00+08:00",
+    "summary": "Billing-register contract25bf882 is complete: explicit tenant-wide list authority,one financial snapshot,exact issued-charge/adjustment/allocation reconciliation and bounded private UI/API acceptance. Documentation only; no new implementation gates.",
     "completed": [
-      "Actual synthetic financial journey reconciles exact statement totals and typed history through the private UI without successful-response interception.",
-      "Current authorization,revocation,empty/archive,capacity and unsafe-pool states verified; UI reads leave financial facts and all audit rows unchanged."
+      "Defined independent billing-register permission and tenant-scope authority; record/account-statement grants cannot become discovery rights.",
+      "Defined single-statement snapshot,500 combined primary facts/newest50 invoices,strict exact-money DTO and real DB/API/browser acceptance requirements."
     ],
     "verification": [
-      "261 backend tests pass; desktop1440/mobile390 actual Chromium acceptance and full owned statement API proof pass.",
-      "54 persistent migrations unchanged; owned test database/logins cleaned.41 foundation stages registered,full41 not rerun.",
-      "3 presentation unit checks pass; browser presentation case not rerun at this point."
+      "Reviewed immutable invoice/adjustment/allocation sources and accepted report authority against approved initial billing-register scope.",
+      "Current PostgreSQL18.6 is healthy with UUIDv7 and no host port; no migrations or financial data changed.",
+      "Named statement acceptance5ad529d remains100%; its261 backend/actual desktop-mobile proof is prior evidence,not rerun for this documentation-only task."
     ],
     "limitations": [
-      "100% covers the named known-account statement prototype only; billing,collections,aging and exception reports remain in P4-M1.",
-      "Controlled trusted identity and synthetic data; no production ERP login or public signup-to-ERP bridge. Private API/database are not deployed to the public Site.",
-      "Phase4/Solar remain open; no phase-completion email due."
+      "Billing register has no installed SQL/API/UI yet; the contract earns no implementation percentage.",
+      "Broader P4-M1 collections/aging/exception reports and Phase4/Solar remain open.",
+      "Production identity/commercial inputs remain separate; public preview signup is not ERP access."
     ],
-    "next_selected": "P4-M1-BILLING-CONTRACT-1: define a bounded issued-invoice billing-register contract with independent list authority,exact reconciliation,limits and UI/API acceptance before implementation.",
+    "next_selected": "P4-M1-BILLING-DB-1: implement only the next additive private billing-register authority/read model and prove real SQL snapshot,reconciliation,limits,revocation and read immutability.",
     "blocker": null
   }
 }
