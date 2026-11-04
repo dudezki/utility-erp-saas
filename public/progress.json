@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-10-30T06:05:50+08:00",
+  "data_as_of": "2026-11-04T15:06:39+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-10-30T06:05:50+08:00",
+  "published_snapshot_at": "2026-11-04T15:06:39+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -383,16 +383,18 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-10-30T06:05:50+08:00",
-    "summary": "Statement API boundary implemented in bf45084: exact projector, reports-only adapter and strict private GET. Unit/loopback tests and actual database LOGIN safety prerequisite passed. Authorized financial statement HTTP/database acceptance remains next; no new reporting gate or UI yet.",
+    "observed_at": "2026-11-04T15:06:39+08:00",
+    "summary": "Public progress presentation redesigned in61c3964: responsive delivery board, searchable module checkpoints, package perspectives and a prominent JSON endpoint. Engineering milestone values are unchanged. Statement API boundarybf45084 remains implemented; authorized HTTP/database acceptance and private report UI are still pending.",
     "completed": [
+      "Durable HTML template and renderer now power every progress snapshot; the same safe JSON schema and endpoint are preserved.",
       "Exact string/BigInt reconciliation with credit balances, typed history, strict identity/field/order/limit validation.",
       "Dedicated reports-only adapter, safe failure/status handling and optional private GET dependency; public registration and sandbox unchanged."
     ],
     "verification": [
       "258 backend tests passed, including10 new statement tests. Loopback HTTP uses injected synthetic readers; it is separate from database authority proof.",
       "Actual restricted LOGIN pool-safety SQL rejects inherited, mixed and custom role authority and public-function ownership; disposable resources cleaned.",
-      "All54 persistent migration checksums unchanged; existing assigned financial HTTP/database regression passed on shared server."
+      "All54 persistent migration checksums unchanged; existing assigned financial HTTP/database regression passed on shared server.",
+      "4 presentation checks pass, including desktop/mobile Chromium, filters/search/empty/reset/package selection, keyboard details/no-JavaScript fallback, escaping and count arithmetic. No horizontal overflow or JavaScript errors."
     ],
     "limitations": [
       "P4-M1-API-1 remains in progress: actual authorized statement HTTP/database financial fixture and integration-stage registration pending.",
