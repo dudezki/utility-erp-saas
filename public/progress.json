@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-04T15:06:39+08:00",
+  "data_as_of": "2026-11-04T16:18:52+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 statement HTTP/PG verification; API boundary unit-tested, actual acceptance/UI pending; no reporting gate earned",
+  "current_priority": "P4-M1 compact private statement UI; actual API accepted, UI/acceptance pending",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-04T15:13:02+08:00",
+  "published_snapshot_at": "2026-11-04T16:18:52+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,11 +80,15 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 known-account statement prototype",
-      "completion_percent": 0,
-      "completed_checkpoints": [],
-      "milestone_status": "queued",
+      "completion_percent": 60,
+      "completed_checkpoints": [
+        "Schema",
+        "rules",
+        "API"
+      ],
+      "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 statement HTTP/PG verification; API boundary unit-tested, actual acceptance/UI pending; no reporting gate earned"
+      "current_or_next_work": "P4-M1 compact private statement UI; actual API accepted, UI/acceptance pending"
     },
     {
       "module_code": "metering",
@@ -283,8 +287,8 @@
       ],
       "module_count": 4,
       "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 1,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -309,8 +313,8 @@
       ],
       "module_count": 8,
       "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 1,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -339,8 +343,8 @@
       ],
       "module_count": 12,
       "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 5,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 4,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -373,8 +377,8 @@
       ],
       "module_count": 16,
       "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 13,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 12,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -383,26 +387,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-04T15:13:02+08:00",
-    "summary": "Public progress presentation redesigned in61c3964 and CSP-hardened in7d77a87: responsive delivery board, searchable module checkpoints, package perspectives and a prominent JSON endpoint. Engineering milestone values are unchanged. Statement API boundarybf45084 remains implemented; authorized HTTP/database acceptance and private report UI are still pending.",
+    "observed_at": "2026-11-04T16:18:52+08:00",
+    "summary": "Account statement API accepted in3d01854 with actual restricted database logins, production adapter and private HTTP over synthetic financial facts. The named statement prototype reaches60%: schema/read model, rules and API. Compact private UI is selected next; Phase4/M1 stays open.",
     "completed": [
-      "Durable HTML template and renderer now power every progress snapshot; the same safe JSON schema and endpoint are preserved.",
-      "Exact string/BigInt reconciliation with credit balances, typed history, strict identity/field/order/limit validation.",
-      "Dedicated reports-only adapter, safe failure/status handling and optional private GET dependency; public registration and sandbox unchanged."
+      "Independent report authority and exact all-current account capture: invoices, debit/credit adjustments, payments and allocations reconcile without double counting.",
+      "Actual private GET/pool proof covers lifecycle/privacy, huge credit balances, history/capacity limits, Unicode and post-wait authority expiry."
     ],
     "verification": [
-      "258 backend tests passed, including10 new statement tests. Loopback HTTP uses injected synthetic readers; it is separate from database authority proof.",
-      "Actual restricted LOGIN pool-safety SQL rejects inherited, mixed and custom role authority and public-function ownership; disposable resources cleaned.",
-      "All54 persistent migration checksums unchanged; existing assigned financial HTTP/database regression passed on shared server.",
-      "4 presentation checks pass, including desktop/mobile Chromium, filters/search/empty/reset/package selection, keyboard details/no-JavaScript fallback, escaping and count arithmetic. No horizontal overflow or JavaScript errors.",
-      "Hosted release63 exposed self-only CSP blocking inline assets. Corrective external same-origin CSS/JS preserves the policy; browser tests now enforce that exact CSP and computed styles, including320px layout."
+      "Actual restricted reports LOGIN/native PostgreSQL pool/production GET over the original assigned financial HTTP fixture;16 lifecycle controls, direct independence, foreign/unknown/empty/archived account checks.",
+      "500-501 fact limit→422/no DTO;50-51 history; exact>128-digit aggregates; unsafe/crossed pools→503; observed grant/entitlement expiry while waiting→403; clean contexts/discard and immutable facts/audits.",
+      "258 backend tests,54 unchanged migration checksums,owned-resource cleanup pass.39 stages registered; full39 not rerun."
     ],
     "limitations": [
-      "P4-M1-API-1 remains in progress: actual authorized statement HTTP/database financial fixture and integration-stage registration pending.",
-      "basic_reports remains0%; report UI/application credentials/hosted ERP identity are not delivered.",
-      "Phase4 open; no new phase-completion email due."
+      "60% covers the named account-statement prototype only; private UI and final acceptance are pending.",
+      "Synthetic development only. No hosted ERP identity, public registration-to-login bridge, historical date report or production subscription.",
+      "Phase4 remains open; no phase-completion email due."
     ],
-    "next_selected": "Resume P4-M1-API-1: actual production reports adapter/HTTP over owned financial facts, lifecycle/privacy/context/exact-value/limit tests; then register integration and select compact private UI.",
+    "next_selected": "P4-M1-UI-1: compact private lazy statement screen with exact credit balances/history, clear error/limit states and stale-data protection; then named integration acceptance.",
     "blocker": null
   }
 }
