@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-04T16:18:52+08:00",
+  "data_as_of": "2026-11-04T17:19:52+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 compact private statement UI; actual API accepted, UI/acceptance pending",
+  "current_priority": "P4-M1 joined statement acceptance; controlled UI verified, actual-data integration pending",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-04T16:18:52+08:00",
+  "published_snapshot_at": "2026-11-04T17:19:52+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,15 +80,16 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 known-account statement prototype",
-      "completion_percent": 60,
+      "completion_percent": 80,
       "completed_checkpoints": [
         "Schema",
         "rules",
-        "API"
+        "API",
+        "preview UI"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 compact private statement UI; actual API accepted, UI/acceptance pending"
+      "current_or_next_work": "P4-M1 joined statement acceptance; controlled UI verified, actual-data integration pending"
     },
     {
       "module_code": "metering",
@@ -387,23 +388,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-04T16:18:52+08:00",
-    "summary": "Account statement API accepted in3d01854 with actual restricted database logins, production adapter and private HTTP over synthetic financial facts. The named statement prototype reaches60%: schema/read model, rules and API. Compact private UI is selected next; Phase4/M1 stays open.",
+    "observed_at": "2026-11-04T17:19:52+08:00",
+    "summary": "Compact private statement screen implemented in faf8d81. Lazy loading, exact credit balances/history and stale-data protection pass controlled desktop/mobile browser checks. Named statement prototype reaches80%; final joined UI/private API/database acceptance is selected next.",
     "completed": [
-      "Independent report authority and exact all-current account capture: invoices, debit/credit adjustments, payments and allocations reconcile without double counting.",
-      "Actual private GET/pool proof covers lifecycle/privacy, huge credit balances, history/capacity limits, Unicode and post-wait authority expiry."
+      "Read-only private statement view with known account references, exact PHP totals/credit, capture timezone/UTC precision and bounded typed history.",
+      "One shared server/browser validator; allowlisted module loader; clear loading/error/empty/capacity states and cancellation/context guards."
     ],
     "verification": [
-      "Actual restricted reports LOGIN/native PostgreSQL pool/production GET over the original assigned financial HTTP fixture;16 lifecycle controls, direct independence, foreign/unknown/empty/archived account checks.",
-      "500-501 fact limit→422/no DTO;50-51 history; exact>128-digit aggregates; unsafe/crossed pools→503; observed grant/entitlement expiry while waiting→403; clean contexts/discard and immutable facts/audits.",
-      "258 backend tests,54 unchanged migration checksums,owned-resource cleanup pass.39 stages registered; full39 not rerun."
+      "261 backend tests pass; latest3 focused UI contracts pass. Desktop/mobile Chromium uses controlled synthetic DTOs after actual default401; tests huge values,Unicode,50-51 history,500 capacity,failures,context/lifecycle/navigation,late responses and deadlines.",
+      "Shared receivables browser journey/26 production-projector snapshots/splitUTF8 regression passed;54 migration checksums unchanged.",
+      "Actual statement authority/database proof remains3d01854; controlled UI successes are separate evidence.39 foundation stages remain,full39 not rerun."
     ],
     "limitations": [
-      "60% covers the named account-statement prototype only; private UI and final acceptance are pending.",
-      "Synthetic development only. No hosted ERP identity, public registration-to-login bridge, historical date report or production subscription.",
-      "Phase4 remains open; no phase-completion email due."
+      "80% covers this named account-statement prototype; final joined actual-data UI/API/database acceptance is pending.",
+      "Private integration preview only,default401. No production ERP login or public signup-to-ERP bridge; the public sandbox is unchanged.",
+      "Phase4/M1 remains open; no phase-completion email due."
     ],
-    "next_selected": "P4-M1-UI-1: compact private lazy statement screen with exact credit balances/history, clear error/limit states and stale-data protection; then named integration acceptance.",
+    "next_selected": "P4-M1-ACCEPT-1: drive the private screen against actual authorized HTTP/PostgreSQL synthetic facts without success-DTO interception; reconcile and assess the final named acceptance gate.",
     "blocker": null
   }
 }
