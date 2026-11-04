@@ -6,7 +6,7 @@
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 billing-register multi-account and row-limit proof; snapshot/lifecycle verified, statement v1 accepted",
+  "current_priority": "P4-M1 billing-register expiry and safety proof; multi-account/row limits verified, statement v1 accepted",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-05T04:04:25+08:00",
+  "published_snapshot_at": "2026-11-05T05:08:20+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,7 +90,7 @@
       ],
       "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 billing-register multi-account and row-limit proof; snapshot/lifecycle verified, statement v1 accepted"
+      "current_or_next_work": "P4-M1 billing-register expiry and safety proof; multi-account/row limits verified, statement v1 accepted"
     },
     {
       "module_code": "metering",
@@ -389,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-05T04:04:23+08:00",
-    "summary": "Billing-register proof e952923 verifies coherent intra-query financial snapshots during actual restricted issuance and adjustment/allocation commits. Full DB acceptance remains open;no percentage advanced.",
+    "observed_at": "2026-11-05T05:08:19+08:00",
+    "summary": "Billing-register proof50b161b verifies multi-account totals,50/51-row ordering/truncation,multiple financial children and an authorized empty tenant. Full DB acceptance remains open;no percentage advanced.",
     "completed": [
-      "Observed a pause inside the unmodified financial SELECT while a real distinct-reviewed issuance committed;paused DTO stayed pre-commit and fresh read included issuance.",
-      "Repeated with real adjustment/allocation commits;paused totals/rows/facts stayed pre-commit,fresh totals reconciled exact changes. Test-only account view removed and original table/FKs restored."
+      "49 new accounts/invoices created through actual validation,restricted calculation,distinct-human review and issuance;50/51-row limits and exact complete totals verified.",
+      "Multiple adjustments and allocations reconcile without multiplied joins;explicitly authorized empty tenant returns zero totals and no rows."
     ],
     "verification": [
-      "Owned source financial HTTP,restricted SQL,lifecycle/observed expiry/nonblocking writers and500/501 capacity/read-immutability rerun pass;owned resources cleaned.",
-      "Main PostgreSQL18.6 healthy/nativeUUIDv7/no host port;54 applied checksums match and0055 remains unapplied. Python syntax/diff checks pass.",
-      "No production reader/migration change;full backend/integration suite not rerun. Statement prototype acceptance remains prior unchanged evidence."
+      "Full owned verifier reruns financial HTTP source,lifecycle/observed expiry,snapshot races and500/501 capacity;pure reads preserve financial/all-audit fingerprints;owned cleanup confirmed.",
+      "Main PostgreSQL18.6 healthy/nativeUUIDv7/no host port;54 applied migration checksums match and0055 remains unapplied. Python syntax/diff checks pass.",
+      "Reader/migrations unchanged;full backend/integration suite not rerun. Existing named statement acceptance remains prior evidence."
     ],
     "limitations": [
-      "Multi-account/multiple-child,50/51 rows/empty tenant,assignment-window expiry and safety/EXPLAIN checks remain before DB gates/API/main migration acceptance.",
-      "The snapshot pause is owned-fixture instrumentation,not a production hook or financial lock.",
-      "No new percentage or Phase4 closure;public registration/private data/Solar boundaries preserved."
+      "Assignment-window expiry,safety/catalog-shadow andEXPLAIN review remain before DB gate/API/main migration acceptance.",
+      "Volume authority and metadata grants exist only in the owned synthetic fixture;no real-user grants or production prices.",
+      "No new percentage or Phase4 closure;private data/public registration/Solar boundaries preserved."
     ],
-    "next_selected": "Resume P4-M1-BILLING-DB-1: prove multi-account/multiple-child totals,50/51 invoice ordering/truncation and empty tenant,then remaining assignment-window expiry and safety/EXPLAIN matrix.",
+    "next_selected": "Resume P4-M1-BILLING-DB-1: verify bounded assignment-window expiry after observed wait and safety/catalog boundaries,then EXPLAIN/volume review and final DB acceptance assessment.",
     "blocker": null
   }
 }
