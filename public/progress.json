@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-05T19:08:49+08:00",
+  "data_as_of": "2026-11-05T23:06:19+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-COLLECTIONS-DB-1; candidate36e26e5 initial SQL proof passes;remaining DB acceptance,no new gate;prior statement/register100% retained",
+  "current_priority": "P4-M1-COLLECTIONS-DB-1; candidate206793e assignment/expiry proof passes;next MVCC/remaining DB acceptance,no new gate;prior statement/register100% retained",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-05T19:08:49+08:00",
+  "published_snapshot_at": "2026-11-05T23:06:19+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,7 +90,7 @@
       ],
       "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-COLLECTIONS-DB-1; candidate36e26e5 initial SQL proof passes;remaining DB acceptance,no new gate;prior statement/register100% retained"
+      "current_or_next_work": "P4-M1-COLLECTIONS-DB-1; candidate206793e assignment/expiry proof passes;next MVCC/remaining DB acceptance,no new gate;prior statement/register100% retained"
     },
     {
       "module_code": "metering",
@@ -389,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-05T19:08:49+08:00",
-    "summary": "Collections candidate SQL reader36e26e5 passes initial owned real-source reconciliation,authority and boundary proof. Full database acceptance remains in progress;no new gate or main migration application.",
+    "observed_at": "2026-11-05T23:06:19+08:00",
+    "summary": "Collections candidate206793e passes assigned tenant access,lifecycle denials and observed authority-expiry proof. Database acceptance remains in progress;no new gate or main migration application.",
     "completed": [
-      "Implemented independent tenant-wide permission,owner-only helper and bounded single-statement recorded/allocated/unapplied collections reader.",
-      "Owned actual financial-source proof passes direct authority/lifecycle/context/foreign/raw denial,statement/register reconciliation,archive,exact large totals,50/51 receipt rows and500/501 capacity."
+      "Verified same-human tenant assignment,9 provider/worker/contract lifecycle denials and direct authority independent of provider suspension.",
+      "Observed actual report waits crossing grant and entitlement expiry plus a combined assignment/grant lease;all deny without returning report data."
     ],
     "verification": [
-      "Actual authorized receipt/adjustment/allocation writers;no financial clones. Every pure reader call preserves all financial/audit rows;owned DB/logins cleaned.",
-      "55 main applied migration checksums unchanged;candidate0056 tested only in owned database and remains unapplied main. PostgreSQL18.6/native UUIDv7/healthy isolated runtime rechecked.",
-      "No API/UI change;backend/full45-stage suite not rerun or new gate claimed. Existing statement/register100% evidence remains unchanged."
+      "Full owned real-source receipt/allocation reconciliation,archive,128-digit receipts/129-digit totals,50/51 rows and500/501 capacity rerun passes;all financial/audit reads remain immutable and owned resources cleaned.",
+      "55 main applied migration checksums unchanged;candidate0056 remains unapplied. No SQL/API/UI or governance changes.",
+      "No backend/full45-stage rerun or new gate claimed;prior accepted statement/register100% evidence remains unchanged."
     ],
     "limitations": [
-      "Collections DB task remains incomplete:assignment/expiry/MVCC/multi-account/empty/catalog/EXPLAIN/clean-install acceptance still required before gate credit/main apply.",
-      "No collections API/UI,production identity,bank settlement or public signup-to-ERP bridge.",
-      "Prior named statement/register100% retained;broader M1/Phase4/Solar,aging and exception reports remain open."
+      "Combined assignment/grant lease expiry follows immutable storage windows;it does not prove isolated assignment-only expiry.",
+      "Intra-SELECT MVCC/nonblocking writers,multi-account/empty/catalog/privileges/EXPLAIN/clean-install acceptance remain before DB gates/main apply;no collections API/UI.",
+      "Prior named statement/register100% retained;broader M1/Phase4/Solar,aging and exceptions remain open. No production identity or public signup-to-ERP bridge."
     ],
-    "next_selected": "P4-M1-COLLECTIONS-DB-1:continue candidate0056 with same-human assignment/lifecycle and observed authority-expiry proof,then MVCC/multi-account/empty/catalog/EXPLAIN and clean-install acceptance before any gate or main apply.",
+    "next_selected": "P4-M1-COLLECTIONS-DB-1:prove intra-financial-SELECT snapshot coherence and nonblocking authorized receipt/allocation writers,then remaining multi-account/empty/catalog/privilege/EXPLAIN/clean-install acceptance before gate credit/main apply.",
     "blocker": null
   }
 }
