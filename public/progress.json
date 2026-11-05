@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-06T00:22:27+08:00",
+  "data_as_of": "2026-11-06T01:09:35+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-COLLECTIONS-DB-1; candidatebdfdf98 snapshot/concurrency proof passes;next multi-account/empty and remaining DB acceptance,no new gate;prior statement/register100% retained",
+  "current_priority": "P4-M1-COLLECTIONS-DB-1; candidate75f44f9 multi-account/empty proof passes;next catalog/privileges and remaining DB acceptance,no new gate;prior statement/register100% retained",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-06T00:22:27+08:00",
+  "published_snapshot_at": "2026-11-06T01:09:35+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,7 +90,7 @@
       ],
       "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-COLLECTIONS-DB-1; candidatebdfdf98 snapshot/concurrency proof passes;next multi-account/empty and remaining DB acceptance,no new gate;prior statement/register100% retained"
+      "current_or_next_work": "P4-M1-COLLECTIONS-DB-1; candidate75f44f9 multi-account/empty proof passes;next catalog/privileges and remaining DB acceptance,no new gate;prior statement/register100% retained"
     },
     {
       "module_code": "metering",
@@ -389,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-06T00:22:27+08:00",
-    "summary": "Collections candidatebdfdf98 passes observed single-statement snapshot and nonblocking financial-writer proof. Database acceptance remains open;no new gate or main migration application.",
+    "observed_at": "2026-11-06T01:09:35+08:00",
+    "summary": "Collections candidate75f44f9 passes multi-account reconciliation and independently authorized empty-tenant proof. Database acceptance remains open;no new gate or main migration application.",
     "completed": [
-      "Authorized receipt/allocation writers commit while a report transaction remains held;held DTO stays pre-write and fresh totals/counts reconcile.",
-      "Observed pauses inside the actual financial SELECT preserve complete pre-commit rows/totals while real receipt/allocation writes commit;fresh reads include exact committed changes."
+      "Tenant recorded/allocated/unapplied totals reconcile to summed account statements;second invoice-free archived account receipts remain included.",
+      "Explicit tenant B grant+entitlement returns exact empty results;missing entitlement,foreign actor and revocation deny without data mutation."
     ],
     "verification": [
-      "Complete owned real-source authority/assignment/expiry,reconciliation/archive,128-129digit,50/51 rows and500/501 capacity rerun passes;pure reads immutable,owned resources cleaned.",
-      "Fixed fixture lease sequencing after an unobserved-wait failure;finite windows and strict wait/denial assertions preserved. Reader/migration unchanged;55 main checksums unchanged and0056 unapplied.",
-      "No backend/full45-stage rerun or new gate. Prior accepted statement/register100% evidence retained."
+      "Complete owned real-source authority/assignment/expiry/MVCC/reconciliation/archive/128-129digit/50-51/500-501 rerun passes;pure reads immutable,owned cleanup complete.",
+      "55 main migration checksums unchanged;candidate0056 remains unapplied. No SQL/API/UI change.",
+      "No backend/full45-stage rerun or new gate;prior accepted statement/register100% retained."
     ],
     "limitations": [
-      "Multi-account/empty/catalog/privileges/EXPLAIN/clean-install acceptance remains before DB gate credit/main apply;no collections API/UI.",
-      "Combined assignment/grant lease is not isolated assignment-only expiry. Controlled identity and synthetic receipts do not establish production ERP login or bank settlement.",
+      "Catalog/privilege safety,remaining malformed-parent/unreceipted-charge edge cases,EXPLAIN/clean-install/shared checks remain before DB gate/main apply.",
+      "No collections API/UI,production identity,bank settlement or public signup-to-ERP bridge.",
       "Prior named statement/register100% retained;broader M1/Phase4/Solar,aging and exceptions remain open."
     ],
-    "next_selected": "P4-M1-COLLECTIONS-DB-1:verify multi-account and explicitly authorized empty-tenant reconciliation,then catalog/privilege/EXPLAIN/clean-install and shared checks before DB gate credit/main apply.",
+    "next_selected": "P4-M1-COLLECTIONS-DB-1:verify catalog-shadow and restricted LOGIN/function/table privileges,then remaining source edges,EXPLAIN/clean-install/shared checks before gate credit/main apply.",
     "blocker": null
   }
 }
