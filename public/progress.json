@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-05T13:10:03+08:00",
+  "data_as_of": "2026-11-05T17:11:03+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1 joined billing-register acceptance; controlled UI verified,prior statement100% accepted",
+  "current_priority": "P4-M1-COLLECTIONS-CONTRACT-1; named register and prior statement100% accepted,broader reports remain open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-05T13:10:03+08:00",
+  "published_snapshot_at": "2026-11-05T17:11:35+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,16 +80,17 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 billing-register prototype",
-      "completion_percent": 80,
+      "completion_percent": 100,
       "completed_checkpoints": [
         "Schema",
         "rules",
         "API",
-        "preview UI"
+        "preview UI",
+        "acceptance"
       ],
-      "milestone_status": "in_progress",
+      "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1 joined billing-register acceptance; controlled UI verified,prior statement100% accepted"
+      "current_or_next_work": "P4-M1-COLLECTIONS-CONTRACT-1; named register and prior statement100% accepted,broader reports remain open"
     },
     {
       "module_code": "metering",
@@ -287,8 +288,8 @@
         "basic_reports"
       ],
       "module_count": 4,
-      "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 3,
+      "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -313,8 +314,8 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 6,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -343,8 +344,8 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 6,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 4,
       "current_priority_modules": [
         "basic_reports"
@@ -377,8 +378,8 @@
         "solar_service"
       ],
       "module_count": 16,
-      "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 3,
+      "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 12,
       "current_priority_modules": [
         "basic_reports"
@@ -388,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-05T13:10:03+08:00",
-    "summary": "Private billing-register UIdf75c13 is implemented and verified by controlled desktop/mobile browser checks after actual default401. Named register reaches80%;final actual UI/API/database acceptance remains next. Prior statement100% retained.",
+    "observed_at": "2026-11-05T17:11:03+08:00",
+    "summary": "Named synthetic billing-register prototype100% accepted bye0b0635 actual joined desktop/mobile screen,production HTTP and PostgreSQL proof. Prior statement100% retained;broader reporting milestone and Phase4 remain open.",
     "completed": [
-      "Allowlisted lazy screen/shared authoritative validator,exact totals/newest50 invoices,keyboard charge details,capture timezone/UTC precision and explicit private/synthetic limits.",
-      "Context/logout/visibility/navigation clearing,12-second deadline and generation guards;no private browser storage,URL payload or HTML interpretation."
+      "Real UI exact500-fact/51-invoice/129-digit summary and newest50 rows reconcile without response interception.",
+      "Real archive/revocation/tenant/anonymous/reviewer/empty/unsafe503 and successful500→501/422 stale-data clearing pass."
     ],
     "verification": [
-      "275 backend tests and3 focused UI contracts pass. Chromium desktop1440/mobile390/narrow320 checks large values/signed adjustments/Unicode/50-51/500,empty/errors/context/lifecycle/navigation/late fetch/deadlines/no overflow.",
-      "55 migration checksums unchanged;44 foundation stages registered,full44 not rerun;owned browser/server cleanup confirmed.",
-      "Successful UI DTOs are explicitly controlled;actual native API/PG538e8b3 remains separate evidence."
+      "Owned actual financial source/lifecycle/concurrency/snapshot/volume proof passes;every pure browser load preserves financial and audit rows;owned resources cleaned.",
+      "275 backend tests/11 focused checks and55 applied migration checksums pass;45 foundation stages registered,full45 not rerun.",
+      "Desktop1440/mobile390/narrow320 actual Chromium verifies no private browser storage or document overflow."
     ],
     "limitations": [
-      "80% covers named billing-register schema/rules/API/controlled UI;final real joined screen/HTTP/PostgreSQL acceptance is pending.",
-      "Private integration preview/default401;no production ERP login or public signup-to-ERP bridge.",
-      "Prior statement100%,broader reporting/M1/Phase4/Solar and public registration/private-data boundaries preserved;no phase email."
+      "100% refers only to the named synthetic billing-register prototype,not full Basic reports,M1,Phase4,Solar or production readiness.",
+      "Controlled trusted test identity/native purpose pool;default ERP APIs401,no production identity/public signup bridge and no private backend/database deployed to Site.",
+      "Collections summary,receivables aging and reading exceptions remain approved follow-on report work."
     ],
-    "next_selected": "P4-M1-BILLING-ACCEPT-1:drive the real private screen against actual authorized HTTP/PostgreSQL synthetic facts without successful DTO interception;reconcile exact totals/rows and read immutability.",
+    "next_selected": "P4-M1-COLLECTIONS-CONTRACT-1: define bounded read-only synthetic collections summary,reconciled payment/allocation/unapplied totals,current independent tenant-wide report authority and acceptance before implementation.",
     "blocker": null
   }
 }
