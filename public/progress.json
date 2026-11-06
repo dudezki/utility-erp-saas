@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-06T01:09:35+08:00",
+  "data_as_of": "2026-11-06T15:05:02+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-COLLECTIONS-DB-1; candidate75f44f9 multi-account/empty proof passes;next catalog/privileges and remaining DB acceptance,no new gate;prior statement/register100% retained",
+  "current_priority": "P4-M1-COLLECTIONS-API-1; DBc78cf88 accepted;prior named statement/register100% retained,broader reporting remains open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-06T01:09:35+08:00",
+  "published_snapshot_at": "2026-11-06T15:05:02+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -79,18 +79,15 @@
     {
       "module_code": "basic_reports",
       "module_name": "Basic reports",
-      "milestone_scope": "P4-M1 billing-register prototype",
-      "completion_percent": 100,
+      "milestone_scope": "P4-M1 collections-summary prototype",
+      "completion_percent": 40,
       "completed_checkpoints": [
         "Schema",
-        "rules",
-        "API",
-        "preview UI",
-        "acceptance"
+        "rules"
       ],
-      "milestone_status": "complete",
+      "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-COLLECTIONS-DB-1; candidate75f44f9 multi-account/empty proof passes;next catalog/privileges and remaining DB acceptance,no new gate;prior statement/register100% retained"
+      "current_or_next_work": "P4-M1-COLLECTIONS-API-1; DBc78cf88 accepted;prior named statement/register100% retained,broader reporting remains open"
     },
     {
       "module_code": "metering",
@@ -288,8 +285,8 @@
         "basic_reports"
       ],
       "module_count": 4,
-      "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 1,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -314,8 +311,8 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 6,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 5,
+      "scoped_milestones_in_progress": 3,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -344,8 +341,8 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 6,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 5,
+      "scoped_milestones_in_progress": 3,
       "scoped_milestones_not_started": 4,
       "current_priority_modules": [
         "basic_reports"
@@ -378,8 +375,8 @@
         "solar_service"
       ],
       "module_count": 16,
-      "scoped_milestones_complete": 3,
-      "scoped_milestones_in_progress": 1,
+      "scoped_milestones_complete": 2,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 12,
       "current_priority_modules": [
         "basic_reports"
@@ -389,23 +386,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-06T01:09:35+08:00",
-    "summary": "Collections candidate75f44f9 passes multi-account reconciliation and independently authorized empty-tenant proof. Database acceptance remains open;no new gate or main migration application.",
+    "observed_at": "2026-11-06T15:05:02+08:00",
+    "summary": "Collections-summary DBc78cf88 accepted:40% schema/rules for the new named prototype. Prior statement and billing-register prototypes remain100%;protected collections API is next.",
     "completed": [
-      "Tenant recorded/allocated/unapplied totals reconcile to summed account statements;second invoice-free archived account receipts remain included.",
-      "Explicit tenant B grant+entitlement returns exact empty results;missing entitlement,foreign actor and revocation deny without data mutation."
+      "Installed independent tenant-wide permission/helper and bounded single-statement collections reader over immutable financial facts.",
+      "Completed role/catalog/parent safety,unreceipted-charge exclusion,exact reconciliation,observed concurrency/expiry,multi-account/empty and500/501 acceptance."
     ],
     "verification": [
-      "Complete owned real-source authority/assignment/expiry/MVCC/reconciliation/archive/128-129digit/50-51/500-501 rerun passes;pure reads immutable,owned cleanup complete.",
-      "55 main migration checksums unchanged;candidate0056 remains unapplied. No SQL/API/UI change.",
-      "No backend/full45-stage rerun or new gate;prior accepted statement/register100% retained."
+      "Owned full SQL matrix and cleanup pass;EXPLAIN ANALYZE at500 facts confirms2 bounded source limits<=501,existing indexes only.",
+      "56-migration clean install/seeds/SQL checks,275 backend tests,main0056/policy checks and all56 applied checksums pass;prior55 migrations unchanged.",
+      "46 foundation stages registered,full46 not rerun. Fixture tenant-column omission corrected and interrupted verification rerun after runtime recovery."
     ],
     "limitations": [
-      "Catalog/privilege safety,remaining malformed-parent/unreceipted-charge edge cases,EXPLAIN/clean-install/shared checks remain before DB gate/main apply.",
-      "No collections API/UI,production identity,bank settlement or public signup-to-ERP bridge.",
-      "Prior named statement/register100% retained;broader M1/Phase4/Solar,aging and exceptions remain open."
+      "40% is the named collections-summary prototype only;no protected collections API/UI/final acceptance or production identity yet.",
+      "Safe fixture LOGIN observations do not establish rejection of unsafe production pools;that remains API acceptance. No production-throughput or bank-settlement claim.",
+      "Prior statement/register100% retained;broader M1/Phase4/Solar,aging and exceptions remain open."
     ],
-    "next_selected": "P4-M1-COLLECTIONS-DB-1:verify catalog-shadow and restricted LOGIN/function/table privileges,then remaining source edges,EXPLAIN/clean-install/shared checks before gate credit/main apply.",
+    "next_selected": "P4-M1-COLLECTIONS-API-1:implement strict detached collections projection,reports-only safe transaction adapter and protected GET,then actual native HTTP/PostgreSQL proof;default identity remains401.",
     "blocker": null
   }
 }
