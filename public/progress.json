@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T08:06:30+08:00",
+  "data_as_of": "2026-11-12T09:04:43+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-COLLECTIONS-UI-1; API306e182 accepted;prior named statement/register100% retained,broader reporting remains open",
+  "current_priority": "P4-M1-COLLECTIONS-ACCEPT-1; UI374a518 accepted;actual joined screen/HTTP/PG acceptance remains,prior named statement/register100% retained",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T08:06:30+08:00",
+  "published_snapshot_at": "2026-11-12T09:04:43+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,15 +80,16 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 collections-summary prototype",
-      "completion_percent": 60,
+      "completion_percent": 80,
       "completed_checkpoints": [
         "Schema",
         "rules",
-        "API"
+        "API",
+        "private UI"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-COLLECTIONS-UI-1; API306e182 accepted;prior named statement/register100% retained,broader reporting remains open"
+      "current_or_next_work": "P4-M1-COLLECTIONS-ACCEPT-1; UI374a518 accepted;actual joined screen/HTTP/PG acceptance remains,prior named statement/register100% retained"
     },
     {
       "module_code": "metering",
@@ -387,23 +388,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T08:06:30+08:00",
-    "summary": "Collections-summary API306e182/projector93d7c9c accepted:60% schema/rules/protected API for the named prototype. Prior statement and billing-register prototypes remain100%;private collections UI is next.",
+    "observed_at": "2026-11-12T09:04:43+08:00",
+    "summary": "Collections-summary UI374a518 accepted:80% for the named schema/rules/API/private UI prototype. Prior statement and billing-register prototypes remain100%;actual joined collections acceptance is next.",
     "completed": [
-      "Strict detached exact-arithmetic projector,reports-only safe transaction adapter and protected GET implemented.",
-      "Actual native HTTP/PostgreSQL acceptance covers500-fact summaries,authority/revocation/expiry,unsafe pools and501 capacity denial."
+      "Private lazy collections screen uses shared strict validator and exact recorded/allocated/unapplied values,newest receipts and native details.",
+      "Controlled desktop/mobile checks verify errors/context/lifecycle/deadline/late-response clearing and accessible compact presentation."
     ],
     "verification": [
-      "Recovered native proof completed both HTTP stages and owned cleanup;every pure read preserves financial/all-audit rows.",
-      "Fresh backend suite288/288 passes;all56 applied migration checksums verified,SQL unchanged.13 focused projector/adapter/API/server tests included.",
-      "47 foundation stages registered;full47 not rerun."
+      "Controlled Chromium1440/390/320px:partial/full/unapplied,multi-account/archive,Unicode,50/51/500 receipts,131-digit totals,empty/errors/invalid/no private storage/no page errors pass.",
+      "Actual default listener401;3 new asset/shared-validator/UI contracts and full291 backend tests pass. SQL/API unchanged,56 applied migrations remain immutable.",
+      "48 foundation stages registered;full48 not rerun. Controlled successful DTOs remain separate from actual joined acceptance."
     ],
     "limitations": [
-      "60% is the named collections-summary prototype only;private UI/final joined acceptance remain.",
-      "Controlled trusted identity and owned reports LOGIN do not establish production authentication,bank settlement or throughput.",
+      "80% measures the named collections-summary prototype only;actual screen→HTTP→PostgreSQL final acceptance remains.",
+      "Controlled UI successes do not establish production authentication,bank settlement,commercial authority or throughput.",
       "Prior statement/register100% retained;broader M1/Phase4/Solar,aging and exceptions remain open."
     ],
-    "next_selected": "P4-M1-COLLECTIONS-UI-1:private compact lazy screen,shared code-only validator,exact totals/newest receipts and safe lifecycle clearing;controlled UI tests before separate actual joined acceptance.",
+    "next_selected": "P4-M1-COLLECTIONS-ACCEPT-1:actual desktop/mobile screen→production GET→native reports pool→PostgreSQL proof,exact500-fact/newest50 reconciliation and visible501 capacity clearing;no success interception.",
     "blocker": null
   }
 }
