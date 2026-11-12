@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T11:06:23+08:00",
+  "data_as_of": "2026-11-12T12:06:19+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-READING-EXCEPTIONS-DB-1; contract525b205 documented,no new gate;prior statement/register/collections100% retained,broader reporting open",
+  "current_priority": "P4-M1-READING-EXCEPTIONS-DB-1; candidate d388642/0057 initial proof only,full DB acceptance pending;prior statement/register/collections100% retained",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T11:06:23+08:00",
+  "published_snapshot_at": "2026-11-12T12:06:19+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -79,18 +79,12 @@
     {
       "module_code": "basic_reports",
       "module_name": "Basic reports",
-      "milestone_scope": "P4-M1 collections-summary prototype",
-      "completion_percent": 100,
-      "completed_checkpoints": [
-        "Schema",
-        "rules",
-        "API",
-        "private UI",
-        "acceptance"
-      ],
-      "milestone_status": "complete",
+      "milestone_scope": "P4-M1 reading-exceptions prototype",
+      "completion_percent": 0,
+      "completed_checkpoints": [],
+      "milestone_status": "queued",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-DB-1; contract525b205 documented,no new gate;prior statement/register/collections100% retained,broader reporting open"
+      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-DB-1; candidate d388642/0057 initial proof only,full DB acceptance pending;prior statement/register/collections100% retained"
     },
     {
       "module_code": "metering",
@@ -288,9 +282,9 @@
         "basic_reports"
       ],
       "module_count": 4,
-      "scoped_milestones_complete": 3,
+      "scoped_milestones_complete": 2,
       "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 0,
+      "scoped_milestones_not_started": 1,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -314,9 +308,9 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 6,
+      "scoped_milestones_complete": 5,
       "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 0,
+      "scoped_milestones_not_started": 1,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -344,9 +338,9 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 6,
+      "scoped_milestones_complete": 5,
       "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 4,
+      "scoped_milestones_not_started": 5,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -378,9 +372,9 @@
         "solar_service"
       ],
       "module_count": 16,
-      "scoped_milestones_complete": 3,
+      "scoped_milestones_complete": 2,
       "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 12,
+      "scoped_milestones_not_started": 13,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -389,23 +383,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T11:06:23+08:00",
-    "summary": "Reading-exceptions contract525b205 completed,documentation only;no new implementation gate. Prior named statement/register/collections prototypes remain100%. Bounded reading-exceptions DB implementation is next.",
+    "observed_at": "2026-11-12T12:06:19+08:00",
+    "summary": "Candidate reading-exceptions DBd388642/0057 and initial owned proof completed;full DB acceptance remains in progress,so the new named prototype is0%. Prior statement/register/collections prototypes remain100%.",
     "completed": [
-      "Defined initial rejected validations versus unvalidated/quarantined input,and actual applied-child resolution versus approval or baseline application IDs.",
-      "Specified exact count partitions,500 validation-plus-child facts/newest50 rows,independent authority,snapshot/privacy/DTO and verifiable SQL/API/UI acceptance."
+      "Implemented candidate independent list authority and bounded single-source-snapshot reader over initial validations and applied children.",
+      "Initial actual-source proof verifies applied versus baseline resolution,exclusions,current direct denials,read immutability and50/51/500/501 capacity."
     ],
     "verification": [
-      "Installed validation/correction/import sources and8 current rejection reasons reviewed;count examples and unused0057 slot checked.",
-      "No SQL/backend/script/runtime change;56 applied migrations remain immutable.291 backend/49 stages are retained prior evidence,full49 not rerun for documentation.",
-      "No percentage or gate credit;accepted report scopes and package inclusion stay unchanged."
+      "Owned migrations/seeds/report catalog smoke and restricted LOGIN proof pass;actual distinct-human correction and validation functions create source facts.",
+      "Corrected fixture register status to retired;complete initial proof rerun and owned cleanup pass. All56 main applied checksums unchanged;0057 remains unapplied.",
+      "No new gate or foundation stage.49 stages/full49 not rerun;broader matrix and shared clean-install acceptance pending."
     ],
     "limitations": [
-      "Reading-exceptions SQL/API/UI are not implemented;the contract earns no gate.",
-      "Reading sources have no per-row synthetic marker;prototype labeling does not prove production-data provenance or authorize production access.",
-      "Accepted100% scopes are separate named synthetic prototypes;broader M1/Phase4/Solar,aging and exceptions implementation remain open."
+      "This is initial candidate DB proof only;all8-reason/full assignment/expiry/MVCC/parent/catalog-shadow/EXPLAIN/shared acceptance remains.",
+      "New reading-exceptions0% is a different named prototype;prior accepted statement/register/collections100% delivery is retained.",
+      "No reading-exceptions API/UI,production identity or main0057 application;broaderM1/Phase4/Solar remain open."
     ],
-    "next_selected": "P4-M1-READING-EXCEPTIONS-DB-1:independent permission/owner-only helper,bounded one-statement DB reader and owned provenance/authority/count/concurrency proof;no API/UI in this slice.",
+    "next_selected": "Continue P4-M1-READING-EXCEPTIONS-DB-1 with remaining source/provenance,authority/expiry,MVCC,parent/catalog/EXPLAIN and clean-install acceptance before any gate/main application.",
     "blocker": null
   }
 }
