@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T12:06:19+08:00",
+  "published_snapshot_at": "2026-11-12T12:10:27+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -399,7 +399,7 @@
       "New reading-exceptions0% is a different named prototype;prior accepted statement/register/collections100% delivery is retained.",
       "No reading-exceptions API/UI,production identity or main0057 application;broaderM1/Phase4/Solar remain open."
     ],
-    "next_selected": "Continue P4-M1-READING-EXCEPTIONS-DB-1 with remaining source/provenance,authority/expiry,MVCC,parent/catalog/EXPLAIN and clean-install acceptance before any gate/main application.",
+    "next_selected": "Continue P4-M1-READING-EXCEPTIONS-DB-1: finish source provenance, authority and expiry, MVCC, parent and catalog safety, EXPLAIN and clean-install acceptance before gate credit or main application.",
     "blocker": null
   }
 }
