@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T09:04:43+08:00",
+  "data_as_of": "2026-11-12T10:22:02+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-COLLECTIONS-ACCEPT-1; UI374a518 accepted;actual joined screen/HTTP/PG acceptance remains,prior named statement/register100% retained",
+  "current_priority": "P4-M1-READING-EXCEPTIONS-CONTRACT-1; collections69b6fef accepted,prior statement/register100% retained;broader reporting remains open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T09:04:43+08:00",
+  "published_snapshot_at": "2026-11-12T10:22:02+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,16 +80,17 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 collections-summary prototype",
-      "completion_percent": 80,
+      "completion_percent": 100,
       "completed_checkpoints": [
         "Schema",
         "rules",
         "API",
-        "private UI"
+        "private UI",
+        "acceptance"
       ],
-      "milestone_status": "in_progress",
+      "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-COLLECTIONS-ACCEPT-1; UI374a518 accepted;actual joined screen/HTTP/PG acceptance remains,prior named statement/register100% retained"
+      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-CONTRACT-1; collections69b6fef accepted,prior statement/register100% retained;broader reporting remains open"
     },
     {
       "module_code": "metering",
@@ -287,8 +288,8 @@
         "basic_reports"
       ],
       "module_count": 4,
-      "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 3,
+      "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -313,8 +314,8 @@
         "collections"
       ],
       "module_count": 8,
-      "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 6,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
@@ -343,8 +344,8 @@
         "operational_reports"
       ],
       "module_count": 12,
-      "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_complete": 6,
+      "scoped_milestones_in_progress": 2,
       "scoped_milestones_not_started": 4,
       "current_priority_modules": [
         "basic_reports"
@@ -377,8 +378,8 @@
         "solar_service"
       ],
       "module_count": 16,
-      "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_complete": 3,
+      "scoped_milestones_in_progress": 1,
       "scoped_milestones_not_started": 12,
       "current_priority_modules": [
         "basic_reports"
@@ -388,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T09:04:43+08:00",
-    "summary": "Collections-summary UI374a518 accepted:80% for the named schema/rules/API/private UI prototype. Prior statement and billing-register prototypes remain100%;actual joined collections acceptance is next.",
+    "observed_at": "2026-11-12T10:22:02+08:00",
+    "summary": "Collections-summary69b6fef accepted100% for the named synthetic prototype through actual desktop/mobile screen→HTTP→PostgreSQL proof. Prior statement/register100% retained;reading-exceptions contract is next.",
     "completed": [
-      "Private lazy collections screen uses shared strict validator and exact recorded/allocated/unapplied values,newest receipts and native details.",
-      "Controlled desktop/mobile checks verify errors/context/lifecycle/deadline/late-response clearing and accessible compact presentation."
+      "Actual unmodified screen/native reports GET reconciles500 facts,newest50 receipts,129-digit totals,archive/empty and current authority denials.",
+      "An authorized cashier adds one receipt after both screens show500;actual501→422 clears prior financial DOM/capture with immutable pure reads and owned cleanup."
     ],
     "verification": [
-      "Controlled Chromium1440/390/320px:partial/full/unapplied,multi-account/archive,Unicode,50/51/500 receipts,131-digit totals,empty/errors/invalid/no private storage/no page errors pass.",
-      "Actual default listener401;3 new asset/shared-validator/UI contracts and full291 backend tests pass. SQL/API unchanged,56 applied migrations remain immutable.",
-      "48 foundation stages registered;full48 not rerun. Controlled successful DTOs remain separate from actual joined acceptance."
+      "Actual desktop1440/mobile390/320px,grant/permission/entitlement revocation,foreign/anonymous/reviewer/empty,unsafe503,keyboard/no storage/no page errors and full financial/all-audit fingerprints pass.",
+      "Complete SQL/native API matrix rerun and cleanup pass;291 backend tests and all56 applied migration checksums pass. SQL/API/UI unchanged.",
+      "49 foundation stages registered;full49 not rerun. Initial wrapper error fixed before fixture;transient executor fingerprint timeout cleaned up,then full rerun passed unchanged assertions."
     ],
     "limitations": [
-      "80% measures the named collections-summary prototype only;actual screen→HTTP→PostgreSQL final acceptance remains.",
-      "Controlled UI successes do not establish production authentication,bank settlement,commercial authority or throughput.",
-      "Prior statement/register100% retained;broader M1/Phase4/Solar,aging and exceptions remain open."
+      "100% is the named collections-summary synthetic prototype only;broader reporting/M1/Phase4/Solar,aging and exceptions remain open.",
+      "Controlled trusted identity and owned reports pool do not establish production authentication,bank settlement,commercial authority or throughput.",
+      "The public Site receives safe progress assets only;private screens,API and PostgreSQL are not deployed there."
     ],
-    "next_selected": "P4-M1-COLLECTIONS-ACCEPT-1:actual desktop/mobile screen→production GET→native reports pool→PostgreSQL proof,exact500-fact/newest50 reconciliation and visible501 capacity clearing;no success interception.",
+    "next_selected": "P4-M1-READING-EXCEPTIONS-CONTRACT-1:documentation-only contract over immutable submission/validation/correction provenance,independent list authority,exact counts/privacy/snapshot/capacity and verifiable UI/API boundaries before implementation.",
     "blocker": null
   }
 }
