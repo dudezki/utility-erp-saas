@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T13:27:12+08:00",
+  "data_as_of": "2026-11-12T14:22:24+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-READING-EXCEPTIONS-API-1; DB76d70f7 accepted,prior statement/register/collections100% retained;broader reporting open",
+  "current_priority": "P4-M1-READING-EXCEPTIONS-UI-1; API0da490c accepted, prior statement/register/collections100% retained; broader reporting open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T13:27:12+08:00",
+  "published_snapshot_at": "2026-11-12T14:22:25+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,14 +80,15 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 reading-exceptions prototype",
-      "completion_percent": 40,
+      "completion_percent": 60,
       "completed_checkpoints": [
         "Schema",
-        "rules"
+        "rules",
+        "API"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-API-1; DB76d70f7 accepted,prior statement/register/collections100% retained;broader reporting open"
+      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-UI-1; API0da490c accepted, prior statement/register/collections100% retained; broader reporting open"
     },
     {
       "module_code": "metering",
@@ -386,23 +387,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T13:27:12+08:00",
-    "summary": "Reading-exceptions DB76d70f7 accepted at40% for its named schema and rules prototype. Prior statement, billing register and collections summary prototypes remain100%. Protected API is next.",
+    "observed_at": "2026-11-12T14:22:24+08:00",
+    "summary": "Reading-exceptions API0da490c accepted at60% for its named schema,rules and protected API prototype. Prior statement,billing register and collections summary remain100%. Private UI is next.",
     "completed": [
-      "Completed actual source provenance and exact count reconciliation across all8 rejection reasons,applied children,imports,empty and accepted-only cases.",
-      "Verified current direct and assignment authority,subscription lifecycle,observed expiry,nonblocking source writers,coherent snapshots and malformed-source denial."
+      "Implemented strict detached count and row projection,reports-only transaction adapter and protected GET with an optional seventeenth server reader.",
+      "Proved real applied-child resolution versus baseline-only unresolved rows,empty and accepted-only captures,exact500 facts/newest50 and501 rejection."
     ],
     "verification": [
-      "Full owned DB matrix and cleanup pass:50/51 rows,500/501 combined facts,both source overflow probes,stable timestamp ties and bounded EXPLAIN with existing indexes.",
-      "57-migration clean install,seeds and all SQL checks,291 backend tests,main SQL/policy checks and all57 applied checksums pass;prior56 preserved.0057 now immutable.",
-      "50 foundation stages registered;full50 not rerun. NULL guard tightened before application;subscription audit fingerprint boundary corrected and full rerun passes."
+      "301 backend tests and final full owned DB/native HTTP matrix pass;all57 applied migration checksums unchanged.",
+      "Current authority and subscription revocation,observed expiry,unsafe and crossed pools,context reset and pure all-source/financial/audit read immutability pass;owned cleanup confirmed.",
+      "51 foundation stages registered;full51 not rerun. Feasible accepted-child test fixture corrected;full301 rerun passes."
     ],
     "limitations": [
-      "40% is the named reading-exceptions schema and rules scope only;protected API,private UI and joined acceptance remain.",
-      "Controlled development sources and safe reports LOGIN do not prove production authentication,reading-data provenance or throughput.",
+      "60% measures this named prototype only;private UI and final joined browser,HTTP and PostgreSQL acceptance remain.",
+      "Controlled development sources and test identity do not prove production authentication or per-row reading provenance.",
       "Prior accepted report scopes remain100%;broaderM1/Phase4/Solar and aging remain open."
     ],
-    "next_selected": "P4-M1-READING-EXCEPTIONS-API-1: implement a strict count projector, reports-only transaction adapter and protected GET. Then prove real native HTTP and PostgreSQL behavior; no UI in this slice.",
+    "next_selected": "P4-M1-READING-EXCEPTIONS-UI-1: build the private lazy count and history screen with shared validation and authority clearing. Verify desktop and mobile Chromium behavior; joined native acceptance follows separately.",
     "blocker": null
   }
 }
