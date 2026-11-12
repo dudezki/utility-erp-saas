@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T12:06:19+08:00",
+  "data_as_of": "2026-11-12T13:27:12+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-READING-EXCEPTIONS-DB-1; candidate d388642/0057 initial proof only,full DB acceptance pending;prior statement/register/collections100% retained",
+  "current_priority": "P4-M1-READING-EXCEPTIONS-API-1; DB76d70f7 accepted,prior statement/register/collections100% retained;broader reporting open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T12:10:27+08:00",
+  "published_snapshot_at": "2026-11-12T13:27:12+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,11 +80,14 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 reading-exceptions prototype",
-      "completion_percent": 0,
-      "completed_checkpoints": [],
-      "milestone_status": "queued",
+      "completion_percent": 40,
+      "completed_checkpoints": [
+        "Schema",
+        "rules"
+      ],
+      "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-DB-1; candidate d388642/0057 initial proof only,full DB acceptance pending;prior statement/register/collections100% retained"
+      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-API-1; DB76d70f7 accepted,prior statement/register/collections100% retained;broader reporting open"
     },
     {
       "module_code": "metering",
@@ -283,8 +286,8 @@
       ],
       "module_count": 4,
       "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 1,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -309,8 +312,8 @@
       ],
       "module_count": 8,
       "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 1,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 0,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -339,8 +342,8 @@
       ],
       "module_count": 12,
       "scoped_milestones_complete": 5,
-      "scoped_milestones_in_progress": 2,
-      "scoped_milestones_not_started": 5,
+      "scoped_milestones_in_progress": 3,
+      "scoped_milestones_not_started": 4,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -373,8 +376,8 @@
       ],
       "module_count": 16,
       "scoped_milestones_complete": 2,
-      "scoped_milestones_in_progress": 1,
-      "scoped_milestones_not_started": 13,
+      "scoped_milestones_in_progress": 2,
+      "scoped_milestones_not_started": 12,
       "current_priority_modules": [
         "basic_reports"
       ],
@@ -383,23 +386,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T12:06:19+08:00",
-    "summary": "Candidate reading-exceptions DBd388642/0057 and initial owned proof completed;full DB acceptance remains in progress,so the new named prototype is0%. Prior statement/register/collections prototypes remain100%.",
+    "observed_at": "2026-11-12T13:27:12+08:00",
+    "summary": "Reading-exceptions DB76d70f7 accepted at40% for its named schema and rules prototype. Prior statement, billing register and collections summary prototypes remain100%. Protected API is next.",
     "completed": [
-      "Implemented candidate independent list authority and bounded single-source-snapshot reader over initial validations and applied children.",
-      "Initial actual-source proof verifies applied versus baseline resolution,exclusions,current direct denials,read immutability and50/51/500/501 capacity."
+      "Completed actual source provenance and exact count reconciliation across all8 rejection reasons,applied children,imports,empty and accepted-only cases.",
+      "Verified current direct and assignment authority,subscription lifecycle,observed expiry,nonblocking source writers,coherent snapshots and malformed-source denial."
     ],
     "verification": [
-      "Owned migrations/seeds/report catalog smoke and restricted LOGIN proof pass;actual distinct-human correction and validation functions create source facts.",
-      "Corrected fixture register status to retired;complete initial proof rerun and owned cleanup pass. All56 main applied checksums unchanged;0057 remains unapplied.",
-      "No new gate or foundation stage.49 stages/full49 not rerun;broader matrix and shared clean-install acceptance pending."
+      "Full owned DB matrix and cleanup pass:50/51 rows,500/501 combined facts,both source overflow probes,stable timestamp ties and bounded EXPLAIN with existing indexes.",
+      "57-migration clean install,seeds and all SQL checks,291 backend tests,main SQL/policy checks and all57 applied checksums pass;prior56 preserved.0057 now immutable.",
+      "50 foundation stages registered;full50 not rerun. NULL guard tightened before application;subscription audit fingerprint boundary corrected and full rerun passes."
     ],
     "limitations": [
-      "This is initial candidate DB proof only;all8-reason/full assignment/expiry/MVCC/parent/catalog-shadow/EXPLAIN/shared acceptance remains.",
-      "New reading-exceptions0% is a different named prototype;prior accepted statement/register/collections100% delivery is retained.",
-      "No reading-exceptions API/UI,production identity or main0057 application;broaderM1/Phase4/Solar remain open."
+      "40% is the named reading-exceptions schema and rules scope only;protected API,private UI and joined acceptance remain.",
+      "Controlled development sources and safe reports LOGIN do not prove production authentication,reading-data provenance or throughput.",
+      "Prior accepted report scopes remain100%;broaderM1/Phase4/Solar and aging remain open."
     ],
-    "next_selected": "Continue P4-M1-READING-EXCEPTIONS-DB-1: finish source provenance, authority and expiry, MVCC, parent and catalog safety, EXPLAIN and clean-install acceptance before gate credit or main application.",
+    "next_selected": "P4-M1-READING-EXCEPTIONS-API-1: implement a strict count projector, reports-only transaction adapter and protected GET. Then prove real native HTTP and PostgreSQL behavior; no UI in this slice.",
     "blocker": null
   }
 }
