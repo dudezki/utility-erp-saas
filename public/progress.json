@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T14:22:24+08:00",
+  "data_as_of": "2026-11-12T15:02:50+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-READING-EXCEPTIONS-UI-1; API0da490c accepted, prior statement/register/collections100% retained; broader reporting open",
+  "current_priority": "P4-M1-READING-EXCEPTIONS-ACCEPT-1; UI02d3fa1 accepted, prior statement/register/collections100% retained; broader reporting open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T14:22:25+08:00",
+  "published_snapshot_at": "2026-11-12T15:02:51+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,15 +80,16 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 reading-exceptions prototype",
-      "completion_percent": 60,
+      "completion_percent": 80,
       "completed_checkpoints": [
         "Schema",
         "rules",
-        "API"
+        "API",
+        "UI"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-UI-1; API0da490c accepted, prior statement/register/collections100% retained; broader reporting open"
+      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-ACCEPT-1; UI02d3fa1 accepted, prior statement/register/collections100% retained; broader reporting open"
     },
     {
       "module_code": "metering",
@@ -387,23 +388,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T14:22:24+08:00",
-    "summary": "Reading-exceptions API0da490c accepted at60% for its named schema,rules and protected API prototype. Prior statement,billing register and collections summary remain100%. Private UI is next.",
+    "observed_at": "2026-11-12T15:02:50+08:00",
+    "summary": "Reading-exceptions UI02d3fa1 accepted at80% for its named schema,rules,protected API and private UI prototype. Prior statement,billing register and collections summary remain100%. Joined native acceptance is next.",
     "completed": [
-      "Implemented strict detached count and row projection,reports-only transaction adapter and protected GET with an optional seventeenth server reader.",
-      "Proved real applied-child resolution versus baseline-only unresolved rows,empty and accepted-only captures,exact500 facts/newest50 and501 rejection."
+      "Built the private lazy reading-exceptions count and history screen using the existing shared validator and independent report permission.",
+      "Verified exact decision counts and resolution references,clear-on-context behavior,stale responses and bounded deadlines in actual desktop and mobile Chromium."
     ],
     "verification": [
-      "301 backend tests and final full owned DB/native HTTP matrix pass;all57 applied migration checksums unchanged.",
-      "Current authority and subscription revocation,observed expiry,unsafe and crossed pools,context reset and pure all-source/financial/audit read immutability pass;owned cleanup confirmed.",
-      "51 foundation stages registered;full51 not rerun. Feasible accepted-child test fixture corrected;full301 rerun passes."
+      "304 backend tests and served-screen Chromium QA pass:all8 reasons,resolved/unresolved,empty and accepted-only,newest50 and51 rows,500 then501422 clearing.",
+      "Invalid and private DTOs,tenant/access/logout/visibility/navigation clearing,late fetch and delayed JSON,keyboard,no storage and320px/no errors pass;screenshots inspected and owned listener/browser cleaned.",
+      "52 foundation stages registered;full52 not rerun. SQL/API/production identity unchanged;57 migration sources preserved."
     ],
     "limitations": [
-      "60% measures this named prototype only;private UI and final joined browser,HTTP and PostgreSQL acceptance remain.",
-      "Controlled development sources and test identity do not prove production authentication or per-row reading provenance.",
+      "80% credits this named private UI prototype only;actual joined browser,HTTP and PostgreSQL acceptance remains.",
+      "Successful UI responses use controlled fixtures;separate native API0da490c evidence is retained. No production identity or per-row reading provenance claim.",
       "Prior accepted report scopes remain100%;broaderM1/Phase4/Solar and aging remain open."
     ],
-    "next_selected": "P4-M1-READING-EXCEPTIONS-UI-1: build the private lazy count and history screen with shared validation and authority clearing. Verify desktop and mobile Chromium behavior; joined native acceptance follows separately.",
+    "next_selected": "P4-M1-READING-EXCEPTIONS-ACCEPT-1: verify the actual desktop and mobile screen through production GET and a native reports pool against owned PostgreSQL sources. Prove visible500 to501 rejection clearing and unchanged source and audit rows.",
     "blocker": null
   }
 }
