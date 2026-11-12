@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-06T15:05:02+08:00",
+  "data_as_of": "2026-11-12T08:06:30+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-COLLECTIONS-API-1; DBc78cf88 accepted;prior named statement/register100% retained,broader reporting remains open",
+  "current_priority": "P4-M1-COLLECTIONS-UI-1; API306e182 accepted;prior named statement/register100% retained,broader reporting remains open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-06T15:05:02+08:00",
+  "published_snapshot_at": "2026-11-12T08:06:30+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -80,14 +80,15 @@
       "module_code": "basic_reports",
       "module_name": "Basic reports",
       "milestone_scope": "P4-M1 collections-summary prototype",
-      "completion_percent": 40,
+      "completion_percent": 60,
       "completed_checkpoints": [
         "Schema",
-        "rules"
+        "rules",
+        "API"
       ],
       "milestone_status": "in_progress",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-COLLECTIONS-API-1; DBc78cf88 accepted;prior named statement/register100% retained,broader reporting remains open"
+      "current_or_next_work": "P4-M1-COLLECTIONS-UI-1; API306e182 accepted;prior named statement/register100% retained,broader reporting remains open"
     },
     {
       "module_code": "metering",
@@ -386,23 +387,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-06T15:05:02+08:00",
-    "summary": "Collections-summary DBc78cf88 accepted:40% schema/rules for the new named prototype. Prior statement and billing-register prototypes remain100%;protected collections API is next.",
+    "observed_at": "2026-11-12T08:06:30+08:00",
+    "summary": "Collections-summary API306e182/projector93d7c9c accepted:60% schema/rules/protected API for the named prototype. Prior statement and billing-register prototypes remain100%;private collections UI is next.",
     "completed": [
-      "Installed independent tenant-wide permission/helper and bounded single-statement collections reader over immutable financial facts.",
-      "Completed role/catalog/parent safety,unreceipted-charge exclusion,exact reconciliation,observed concurrency/expiry,multi-account/empty and500/501 acceptance."
+      "Strict detached exact-arithmetic projector,reports-only safe transaction adapter and protected GET implemented.",
+      "Actual native HTTP/PostgreSQL acceptance covers500-fact summaries,authority/revocation/expiry,unsafe pools and501 capacity denial."
     ],
     "verification": [
-      "Owned full SQL matrix and cleanup pass;EXPLAIN ANALYZE at500 facts confirms2 bounded source limits<=501,existing indexes only.",
-      "56-migration clean install/seeds/SQL checks,275 backend tests,main0056/policy checks and all56 applied checksums pass;prior55 migrations unchanged.",
-      "46 foundation stages registered,full46 not rerun. Fixture tenant-column omission corrected and interrupted verification rerun after runtime recovery."
+      "Recovered native proof completed both HTTP stages and owned cleanup;every pure read preserves financial/all-audit rows.",
+      "Fresh backend suite288/288 passes;all56 applied migration checksums verified,SQL unchanged.13 focused projector/adapter/API/server tests included.",
+      "47 foundation stages registered;full47 not rerun."
     ],
     "limitations": [
-      "40% is the named collections-summary prototype only;no protected collections API/UI/final acceptance or production identity yet.",
-      "Safe fixture LOGIN observations do not establish rejection of unsafe production pools;that remains API acceptance. No production-throughput or bank-settlement claim.",
+      "60% is the named collections-summary prototype only;private UI/final joined acceptance remain.",
+      "Controlled trusted identity and owned reports LOGIN do not establish production authentication,bank settlement or throughput.",
       "Prior statement/register100% retained;broader M1/Phase4/Solar,aging and exceptions remain open."
     ],
-    "next_selected": "P4-M1-COLLECTIONS-API-1:implement strict detached collections projection,reports-only safe transaction adapter and protected GET,then actual native HTTP/PostgreSQL proof;default identity remains401.",
+    "next_selected": "P4-M1-COLLECTIONS-UI-1:private compact lazy screen,shared code-only validator,exact totals/newest receipts and safe lifecycle clearing;controlled UI tests before separate actual joined acceptance.",
     "blocker": null
   }
 }
