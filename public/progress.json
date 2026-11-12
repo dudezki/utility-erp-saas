@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T10:22:02+08:00",
+  "data_as_of": "2026-11-12T11:06:23+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-READING-EXCEPTIONS-CONTRACT-1; collections69b6fef accepted,prior statement/register100% retained;broader reporting remains open",
+  "current_priority": "P4-M1-READING-EXCEPTIONS-DB-1; contract525b205 documented,no new gate;prior statement/register/collections100% retained,broader reporting open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T10:22:02+08:00",
+  "published_snapshot_at": "2026-11-12T11:06:23+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,7 +90,7 @@
       ],
       "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-CONTRACT-1; collections69b6fef accepted,prior statement/register100% retained;broader reporting remains open"
+      "current_or_next_work": "P4-M1-READING-EXCEPTIONS-DB-1; contract525b205 documented,no new gate;prior statement/register/collections100% retained,broader reporting open"
     },
     {
       "module_code": "metering",
@@ -389,23 +389,23 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T10:22:02+08:00",
-    "summary": "Collections-summary69b6fef accepted100% for the named synthetic prototype through actual desktop/mobile screen→HTTP→PostgreSQL proof. Prior statement/register100% retained;reading-exceptions contract is next.",
+    "observed_at": "2026-11-12T11:06:23+08:00",
+    "summary": "Reading-exceptions contract525b205 completed,documentation only;no new implementation gate. Prior named statement/register/collections prototypes remain100%. Bounded reading-exceptions DB implementation is next.",
     "completed": [
-      "Actual unmodified screen/native reports GET reconciles500 facts,newest50 receipts,129-digit totals,archive/empty and current authority denials.",
-      "An authorized cashier adds one receipt after both screens show500;actual501→422 clears prior financial DOM/capture with immutable pure reads and owned cleanup."
+      "Defined initial rejected validations versus unvalidated/quarantined input,and actual applied-child resolution versus approval or baseline application IDs.",
+      "Specified exact count partitions,500 validation-plus-child facts/newest50 rows,independent authority,snapshot/privacy/DTO and verifiable SQL/API/UI acceptance."
     ],
     "verification": [
-      "Actual desktop1440/mobile390/320px,grant/permission/entitlement revocation,foreign/anonymous/reviewer/empty,unsafe503,keyboard/no storage/no page errors and full financial/all-audit fingerprints pass.",
-      "Complete SQL/native API matrix rerun and cleanup pass;291 backend tests and all56 applied migration checksums pass. SQL/API/UI unchanged.",
-      "49 foundation stages registered;full49 not rerun. Initial wrapper error fixed before fixture;transient executor fingerprint timeout cleaned up,then full rerun passed unchanged assertions."
+      "Installed validation/correction/import sources and8 current rejection reasons reviewed;count examples and unused0057 slot checked.",
+      "No SQL/backend/script/runtime change;56 applied migrations remain immutable.291 backend/49 stages are retained prior evidence,full49 not rerun for documentation.",
+      "No percentage or gate credit;accepted report scopes and package inclusion stay unchanged."
     ],
     "limitations": [
-      "100% is the named collections-summary synthetic prototype only;broader reporting/M1/Phase4/Solar,aging and exceptions remain open.",
-      "Controlled trusted identity and owned reports pool do not establish production authentication,bank settlement,commercial authority or throughput.",
-      "The public Site receives safe progress assets only;private screens,API and PostgreSQL are not deployed there."
+      "Reading-exceptions SQL/API/UI are not implemented;the contract earns no gate.",
+      "Reading sources have no per-row synthetic marker;prototype labeling does not prove production-data provenance or authorize production access.",
+      "Accepted100% scopes are separate named synthetic prototypes;broader M1/Phase4/Solar,aging and exceptions implementation remain open."
     ],
-    "next_selected": "P4-M1-READING-EXCEPTIONS-CONTRACT-1:documentation-only contract over immutable submission/validation/correction provenance,independent list authority,exact counts/privacy/snapshot/capacity and verifiable UI/API boundaries before implementation.",
+    "next_selected": "P4-M1-READING-EXCEPTIONS-DB-1:independent permission/owner-only helper,bounded one-statement DB reader and owned provenance/authority/count/concurrency proof;no API/UI in this slice.",
     "blocker": null
   }
 }
