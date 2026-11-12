@@ -1,12 +1,12 @@
 {
   "schema_version": 1,
   "project_name": "Utility ERP SaaS",
-  "data_as_of": "2026-11-12T16:20:21+08:00",
+  "data_as_of": "2026-11-12T19:06:15+08:00",
   "timezone": "Asia/Manila",
   "current_phase": 4,
   "current_milestone": "P4-M1",
   "current_work_state": "next_selected",
-  "current_priority": "P4-M1-AGING-CONTRACT-1; reading-exceptions b1bc85e accepted100%, prior statement/register/collections100% retained; broader reporting open",
+  "current_priority": "P4-M1-AGING-DATE-BASIS-1 blocked; contractd23e727 complete,no approved due-date basis; accepted statement/register/collections/reading-exceptions100% retained; broader reporting open",
   "progress_basis": {
     "measure": "Completed checkpoints for the named prototype milestone",
     "checkpoint_weight_percent": 20,
@@ -27,7 +27,7 @@
       "100% for metering covers the initial reading-import prototype, not billing-period completeness or production integration."
     ]
   },
-  "published_snapshot_at": "2026-11-12T18:04:30+08:00",
+  "published_snapshot_at": "2026-11-12T19:06:15+08:00",
   "source_url": "https://utility-erp-foundation-preview.lj-faderon.chatgpt.site/progress.json",
   "update_policy": "Updated by Angie during engineering runs when verified milestone information changes. Fetch again for the latest published snapshot; this is not a continuous activity feed.",
   "modules": [
@@ -90,7 +90,7 @@
       ],
       "milestone_status": "complete",
       "is_current_priority": true,
-      "current_or_next_work": "P4-M1-AGING-CONTRACT-1; reading-exceptions b1bc85e accepted100%, prior statement/register/collections100% retained; broader reporting open"
+      "current_or_next_work": "P4-M1-AGING-DATE-BASIS-1 blocked; contractd23e727 complete,no approved due-date basis; accepted statement/register/collections/reading-exceptions100% retained; broader reporting open"
     },
     {
       "module_code": "metering",
@@ -389,24 +389,22 @@
     }
   ],
   "latest_update": {
-    "observed_at": "2026-11-12T16:20:21+08:00",
-    "summary": "b1bc85e accepts the named reading-exceptions prototype100% by actual desktop and mobile screen through private HTTP and PostgreSQL. Prior statement,billing register and collections summary remain100%. Receivables-aging contract is next;broader reporting and Phase4 remain open.",
+    "observed_at": "2026-11-12T19:06:15+08:00",
+    "summary": "d23e727 completes the documentation-only receivables-aging contract and source audit. No implementation gate was earned. Accepted statement,billing register,collections summary and reading-exceptions scopes remain100%. Aging implementation is blocked on an approved date basis.",
     "completed": [
-      "Completed actual unmodified screen to production GET and native reports pool against owned PostgreSQL sources,including real resolved versus baseline-only unresolved rows.",
-      "Proved complete500-fact counts and newest50 rows,real authority/subscription changes and same-page clearing after an actual source writer creates501 and returns422."
+      "Audited all57 migration sources and relevant financial report contracts;documented available invoice dates and balances and the absence of persisted due-date/payment-term semantics.",
+      "Defined exact reconciliation and conditional privacy,authority,snapshot,capacity,API,UI and acceptance requirements;documented three decision options without selecting business policy."
     ],
     "verification": [
-      "Full owned DB/native HTTP and desktop/mobile joined matrix passes;every rendered row/reference matches a separate source query and counts reconcile independently.",
-      "304 backend tests,fresh57-migration clean install,seeds/allSQL and all57 applied checksums pass;owned cleanup confirmed and preexisting roles,data and volumes preserved.",
-      "53 foundation stages registered;full53 not rerun. No SQL/API/UI/production identity change or response interception.",
-      "Progress QA stale5-versus6 completed-scope expectation corrected to canonical snapshot count;all4 presentation checks and21 Site tests/build pass."
+      "Exact two-invoice example,invalid credit-capacity case,131-digit aggregate bound and referenced schema files checked.",
+      "Documentation-only:no SQL/API/UI,private data,governance or schedule changes,new stage or gate.53 foundation stages and prior304 backend/native joined proof are retained evidence;full53 not rerun."
     ],
     "limitations": [
-      "100% covers this named synthetic report only;broaderM1,Phase4,Solar and receivables aging remain open.",
-      "Controlled trusted test identity and development reading sources do not prove production authentication or per-row source provenance.",
-      "All8 source reasons have DB and controlled UI coverage;joined proof claims the actual rows rendered,not unseen native display branches."
+      "Invoice creation and service-period dates do not establish due dates or delinquency. No terms,calendar convention,bucket widths,fees or penalties were invented.",
+      "The displayed100% remains the accepted named reading-exceptions prototype,not an aging or overall reporting completion percentage.",
+      "BroaderM1,Phase4,Solar and aging implementation remain open."
     ],
-    "next_selected": "P4-M1-AGING-CONTRACT-1: document the approved receivables-aging report contract from persisted invoice and allocation facts. Distinguish invoice age from days past due;do not invent due dates,payment terms,delinquency or bucket policy.",
-    "blocker": null
+    "next_selected": "P4-M1-AGING-DATE-BASIS-1 is blocked pending an explicit approved date basis and its semantics. The contract records neutral invoice-age,true due-based aging and deferral options;none is selected automatically.",
+    "blocker": "Aging implementation requires an explicit approved date basis and comparison semantics. Existing invoices have no due-date or payment-term fact;invoice age is not delinquency."
   }
 }
