@@ -8,6 +8,6 @@ The original npm graph reported ten advisories (five high and five moderate). Pr
 
 ## Ownership and publication gate
 
-Sites reports the account as owner; the source commits are attributed to Lucky John. Account ownership and author metadata cannot establish legal publication rights. Confirm this is personal work or that explicit public-source permission exists, and that it contains no employer/client-owned material. No license has been invented.
+Sites reports the account as owner; the source commits are attributed to Lucky John. Account ownership and author metadata cannot establish legal publication rights. The owner confirmed permission to publish the selected source and preserved history following this review. No license has been invented.
 
-The original history and Sites identity remain intact. .gitignore now protects local state and permits a safe .env.example. No credentials are embedded in the clone remote. The documented voucher is an intentionally public preview fixture. Public GitHub creation/push is pending the explicit approval required by the uploaded master task. Site access and production settings have not been changed.
+The original history and Sites identity remain intact. .gitignore now protects local state and permits a safe .env.example. No credentials are embedded in the clone remote. The documented voucher is an intentionally public preview fixture. The owner explicitly approved public GitHub publication and confirmed publication rights in this chat on 2026-11-23. Site access and production settings have not been changed.
