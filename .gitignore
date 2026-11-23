@@ -10,3 +10,21 @@ dist/
 .sites-runtime/
 .dev.vars*
 outputs/
+
+# Local configuration, generated state, and private exports
+.env
+.env.*
+!.env.example
+.dev.vars*
+*.pem
+*.key
+*.p12
+*.sqlite*
+*.db
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+*.log
+node_modules/
+dist/
